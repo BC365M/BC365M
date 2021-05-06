@@ -1,0 +1,24 @@
+{
+  "id": "1cc1e08a-cbc0-4f08-b695-e463792a2924",
+  "name": "ContractMgt",
+  "publisher": "BeeCoding",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "features": ["TranslationFile"],
+  "screenshots": [],
+  "platform": "11.0.0.0",
+  "application": "11.0.0.0",
+  "idRange": {
+    "from": 50000,
+    "to": 69990
+  }
+  ,"target": "Internal"
+  ,"showMyCode": true
+}
