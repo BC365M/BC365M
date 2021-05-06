@@ -1,4 +1,4 @@
-tableextension 50005 "Sales Header" extends "Sales Header"
+tableextension 50010 "Sales Invoice Header" extends "Sales Invoice Header"
 {
     fields
     {

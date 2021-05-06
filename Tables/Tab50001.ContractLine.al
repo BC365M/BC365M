@@ -3,10 +3,9 @@ table 50001 "Contract Line"
     DataClassification = ToBeClassified;
     fields
     {
-        field(1; "Contract Type"; Option)
+        field(1; "Contract Type"; Enum "Contract Type")
         {
             DataClassification = ToBeClassified;
-            OptionMembers = Degressive,Package,Local,"out of Local";
         }
         field(2; "Contract No."; code[20])
         {

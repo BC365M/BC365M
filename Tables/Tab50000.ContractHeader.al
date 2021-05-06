@@ -4,10 +4,9 @@ table 50000 "Contract Header"
     LookupPageId = "Contract List";
     fields
     {
-        field(1; "Contract Type"; Option)
+        field(1; "Contract Type"; Enum "Contract Type")
         {
             DataClassification = ToBeClassified;
-            OptionMembers = Degressive,Package,Local,"out of Local";
         }
         field(2; "No."; code[20])
         {

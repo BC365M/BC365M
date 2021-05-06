@@ -5,10 +5,9 @@ table 50002 "Contract Line Slices"
     LookupPageId = "Contract Lines Slices";
     fields
     {
-        field(1; "Contract Type"; Option)
+        field(1; "Contract Type"; Enum "Contract Type")
         {
             DataClassification = ToBeClassified;
-            OptionMembers = Degressive,Package,Local,"out of Local";
         }
         field(2; "Contract No."; code[20])
         {

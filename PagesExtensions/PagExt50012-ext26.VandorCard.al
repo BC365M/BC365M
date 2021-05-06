@@ -1,6 +1,5 @@
 pageextension 50012 "Vendor Card" extends "Vendor Card"
 {
-
     layout
     {
         addlast(General)

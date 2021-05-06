@@ -7,7 +7,16 @@ codeunit 50000 "Contract Managment"
 
     [EventSubscriber(ObjectType::Table, database::"Sales Shipment Line", 'OnBeforeInsertInvLineFromShptLineBeforeInsertTextLine', '', true, true)]
     local procedure OnBeforeInsertInvLineFromShptLineBeforeInsertTextLine(var SalesShptLine: Record "Sales Shipment Line"; var SalesLine: Record "Sales Line")
+    var
+        InvHeader: Record "Sales Header";
     begin
+        InvHeader.Get(SalesLine."Document Type", SalesLine."Document No.");
+        if (InvHeader."Contract Type" = "Document Contract Type"::" ") AND (SalesShptLine."Contract Type" <> "Document Contract Type"::" ") then begin
+            InvHeader."Contract Type" := SalesShptLine."Contract Type";
+            InvHeader.Modify();
+        end;
+        if (InvHeader."Contract Type" <> SalesShptLine."Contract Type") then
+            Error('The Contract Type must be the same');
         SalesLine."Contract Type" := SalesShptLine."Contract Type";
         SalesLine."Contract No." := SalesShptLine."Contract No.";
         SalesLine."Contract Line No." := SalesShptLine."Contract Line No.";
@@ -142,7 +151,7 @@ codeunit 50000 "Contract Managment"
                                 "Unit Price" := ContractPriceLine."Unit Price" - ContractPriceLineSlices."Discount Amount";
                                 Level := ContractPriceLineSlices.Level;
 
-                                "Contract Type" := ContractPriceLine."Contract Type";
+                                "Contract Type" := "Document Contract Type"::Degressive;
                                 "Contract No." := ContractPriceLine."Contract No.";
                                 "Contract Line No." := ContractPriceLine."Line No.";
                                 IsHandled := TRUE;
@@ -189,18 +198,26 @@ codeunit 50000 "Contract Managment"
 
                                 Level := ContractPriceLineSlices.Level;
 
-                                "Contract Type" := ContractPriceLine."Contract Type";
+                                "Contract Type" := "Document Contract Type"::"out of Local";
                                 "Contract No." := ContractPriceLine."Contract No.";
                                 "Contract Line No." := ContractPriceLine."Line No.";
                                 IsHandled := TRUE;
                             END;
                         ContractPriceLine."Contract Type"::Local:
                             begin
-
+                                "Contract Type" := "Document Contract Type"::Local;
+                                "Contract No." := ContractPriceLine."Contract No.";
+                                "Contract Line No." := ContractPriceLine."Line No.";
+                                "Unit Price" := ContractPriceLine."Unit Price";
+                                IsHandled := TRUE;
                             end;
                         ContractPriceLine."Contract Type"::Package:
                             begin
-
+                                "Contract Type" := "Document Contract Type"::Package;
+                                "Contract No." := ContractPriceLine."Contract No.";
+                                "Contract Line No." := ContractPriceLine."Line No.";
+                                "Unit Price" := ContractPriceLine."Unit Price";
+                                IsHandled := TRUE;
                             end;
                     END;
                 END;

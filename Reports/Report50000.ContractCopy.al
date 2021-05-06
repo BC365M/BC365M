@@ -88,7 +88,7 @@ report 50000 "Contract Copy"
                     toContractLine.Init();
                     toContractLine.TransferFields(fromContractLine);
                     toContractLine."Contract Type" := ToContractType;
-                    toContractLine."Contract No." := ToContractNo;
+                    toContractLine."Contract No." := toContract."No.";
                     toContractLine.Insert(true);
                 until fromContractLine.Next() = 0;
 
@@ -99,7 +99,7 @@ report 50000 "Contract Copy"
                     toContractSlice.Init();
                     toContractSlice.TransferFields(fromContractSlice);
                     toContractSlice."Contract Type" := ToContractType;
-                    toContractSlice."Contract No." := ToContractNo;
+                    toContractSlice."Contract No." := toContract."No.";
                     toContractSlice.Insert(true);
                 until fromContractSlice.Next() = 0;
         end;

@@ -2,10 +2,9 @@ tableextension 50004 "Item Journal Line" extends "Item Journal Line"
 {
     fields
     {
-        field(50001; "Contract Type"; Option)
+        field(50001; "Contract Type"; Enum "Document Contract Type")
         {
             DataClassification = ToBeClassified;
-            OptionMembers = Degressive,Package,Local,"out of Local";
         }
         field(50002; "Contract No."; code[20])
         {

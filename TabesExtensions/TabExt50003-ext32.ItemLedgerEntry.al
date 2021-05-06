@@ -2,10 +2,9 @@ tableextension 50003 "Item Ledger Entry" extends "Item Ledger Entry"
 {
     fields
     {
-        field(50001; "Contract Type"; Option)
+        field(50001; "Contract Type"; Enum "Document Contract Type")
         {
             DataClassification = ToBeClassified;
-            OptionMembers = Degressive,Package,Local,"out of Local";
         }
         field(50002; "Contract No."; code[20])
         {
