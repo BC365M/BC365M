@@ -548,6 +548,36 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Sales - Invoice spec - NamedType DocDateCaptionLbl</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3469146285 - Control 1895601803 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Identifiant Fiscal</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Company Information - Control RC - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3469146285 - Control 1998408657 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ICE</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Company Information - Control ICE - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3469146285 - Control 3148070558 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>patente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Company Information - Control Patent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3469146285 - Control 1435030383 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CNSS</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Company Information - Control CNSS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3469146285 - Control 4279566911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>date Création</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Company Information - Control Date Creation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3469146285 - Control 432566233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Information</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Company Information - Control Informations - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 4145206282 - Field 2163916938 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contract Nos.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -933,10 +963,150 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Vendor - Field Identifiant Fiscal - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3118382297 - Field 3178647430 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contract Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Shipment Header - Field Contract Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 809936682 - Field 3178647430 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contract Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Invoice Header - Field Contract Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 591338493 - Field 1998408657 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ICE</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CompanyInformation - Field ICE - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 591338493 - Field 3148070558 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Patent</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CompanyInformation - Field Patent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 591338493 - Field 1895601803 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>RC</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CompanyInformation - Field RC - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 591338493 - Field 111349863 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Identifiant Fiscal</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CompanyInformation - Field Identifiant Fiscal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 591338493 - Field 1435030383 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CNSS</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CompanyInformation - Field CNSS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 591338493 - Field 4279566911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date Création</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CompanyInformation - Field Date Creation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 591338493 - Field 432566233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Information</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CompanyInformation - Field Informations - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3178647430 - EnumValue 3395691325 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Degressive</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Contract Type - EnumValue Degressive - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3178647430 - EnumValue 3820220526 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Package</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Contract Type - EnumValue Package - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3178647430 - EnumValue 452419543 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Local</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Contract Type - EnumValue Local - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3178647430 - EnumValue 3549726334 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>out of Local</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Contract Type - EnumValue out of Local - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1684047948 - EnumValue 3371220206 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Type De Véhicule - EnumValue None - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1684047948 - EnumValue 3885278358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tracteur routier</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Type De Véhicule - EnumValue Tracteur - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1684047948 - EnumValue 2026530348 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Plateau</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Type De Véhicule - EnumValue Plateau - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1684047948 - EnumValue 1454800624 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PLATEAU AVEC RIDELLE</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Type De Véhicule - EnumValue Ampliroll - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1684047948 - EnumValue 4269396072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Porte charge</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Type De Véhicule - EnumValue Porte char - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1684047948 - EnumValue 4235370500 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>fourgonette</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Type De Véhicule - EnumValue fourgon - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1684047948 - EnumValue 4179629846 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Benne</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Type De Véhicule - EnumValue benne - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1684047948 - EnumValue 1651139358 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Citerne</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Type De Véhicule - EnumValue citerne - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1684047948 - EnumValue 1447519948 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Frigorifique</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Type De Véhicule - EnumValue frigorifique - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1684047948 - EnumValue 1633812990 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Porte-grumes</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Type De Véhicule - EnumValue porte-grumes - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Enum 1684047948 - EnumValue 2659682903 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Type Vahécule</source>
+          <source>Grue</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum Type De Véhicule - EnumValue grue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 894256855 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Document Contract Type - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 894256855 - EnumValue 3395691325 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Degressive</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Document Contract Type - EnumValue Degressive - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 894256855 - EnumValue 3820220526 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Package</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Document Contract Type - EnumValue Package - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 894256855 - EnumValue 452419543 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Local</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Document Contract Type - EnumValue Local - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 894256855 - EnumValue 3549726334 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>out of Local</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Document Contract Type - EnumValue out of Local - Property Caption</note>
         </trans-unit>
       </group>
     </body>
