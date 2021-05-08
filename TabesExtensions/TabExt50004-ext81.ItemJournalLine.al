@@ -34,21 +34,21 @@ tableextension 50004 "Item Journal Line" extends "Item Journal Line"
         {
         }
         //SA
-        field(50020; KMDEP; Code[15])
+        field(50020; KMDEP; Decimal)
         {
             DataClassification = ToBeClassified;
 
         }
-        field(50021; KMARR; Code[15])
+        field(50021; KMARR; Decimal)
         {
             DataClassification = ToBeClassified;
         }
-        field(50022; DIFF; Code[15])
+        field(50022; DIFF; Decimal)
         {
             DataClassification = ToBeClassified;
 
         }
-        field(50023; kMREEL; Code[15])
+        field(50023; kMREEL; Decimal)
         {
             DataClassification = ToBeClassified;
         }

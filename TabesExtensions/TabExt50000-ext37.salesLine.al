@@ -58,26 +58,32 @@ tableextension 50000 "Sales Line" extends "Sales Line"
             END;
         }
         //SA
-        field(50020; KMDEP; Code[15])
+        field(50020; KMDEP; Decimal)
         {
             DataClassification = ToBeClassified;
-
+            trigger OnValidate()
+            begin
+                calcDiffValue();
+            end;
         }
-        field(50021; KMARR; Code[15])
+        field(50021; KMARR; Decimal)
         {
             DataClassification = ToBeClassified;
+            trigger OnValidate()
+            begin
+                calcDiffValue();
+            end;
         }
-        field(50022; DIFF; Code[15])
+        field(50022; DIFF; Decimal)
         {
             DataClassification = ToBeClassified;
-
+            Editable = false;
         }
-        field(50023; kMREEL; Code[15])
+        field(50023; kMREEL; Decimal)
         {
             DataClassification = ToBeClassified;
-
+            Editable = false;
         }
-
         //SA
 
     }
@@ -86,5 +92,16 @@ tableextension 50000 "Sales Line" extends "Sales Line"
         if ("Ship-to Code" <> '') and ("Ship-From Code" <> '') and ("Ship-From Code" = "Ship-to Code") then
             Error('Ship-from and Ship-to must be different');
         validate("Zone No.", format("Ship-from Code", 10) + format("Ship-to Code", 10));
+    end;
+
+    local procedure calcDiffValue()
+    var
+        myInt: Integer;
+    begin
+        if KMDEP < KMARR then
+            DIFF := (KMARR - KMDEP)
+        else
+            DIFF := 0;
+        kMREEL := 2 * DIFF;
     end;
 }

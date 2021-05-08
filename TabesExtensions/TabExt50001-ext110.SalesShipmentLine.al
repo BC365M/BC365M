@@ -36,21 +36,21 @@ tableextension 50001 "Sales Shipment Line" extends "Sales Shipment Line"
             TableRelation = "Ship-to Address".Code WHERE ("Customer No." = FIELD ("Sell-to Customer No."));
         }
         //SA
-        field(50020; KMDEP; Code[15])
+        field(50020; KMDEP; Decimal)
         {
             DataClassification = ToBeClassified;
 
         }
-        field(50021; KMARR; Code[15])
+        field(50021; KMARR; Decimal)
         {
             DataClassification = ToBeClassified;
         }
-        field(50022; DIFF; Code[15])
+        field(50022; DIFF;Decimal)
         {
             DataClassification = ToBeClassified;
 
         }
-        field(50023; kMREEL; Code[15])
+        field(50023; kMREEL; Decimal)
         {
             DataClassification = ToBeClassified;
 

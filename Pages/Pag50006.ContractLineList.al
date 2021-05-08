@@ -4,7 +4,7 @@ page 50006 "Contract Line List"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = "Contract Line";
-    Editable = false;
+    //Editable = false;
     layout
     {
         area(Content)

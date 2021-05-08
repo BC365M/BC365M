@@ -39,7 +39,7 @@ page 50012 "Out Of Local Contract Lines"
                 field("Ending Date"; "Ending Date") { ApplicationArea = All; }
                 field(Level; Level) { ApplicationArea = All; Visible = false; }
                 field(Quantity; Quantity) { ApplicationArea = All; Visible = false; }
-                field("Unit Price"; "Unit Price") { ApplicationArea = All; }
+                field("Unit Price"; "Unit Price") { ApplicationArea = All; Visible = false; }
                 field("Discount Amount"; "Discount Amount") { ApplicationArea = All; Visible = false; }
                 field("Details Count"; "Details Count") { ApplicationArea = All; }
                 field("Shipped Qty"; "Shipped Qty") { ApplicationArea = All; }

@@ -83,6 +83,30 @@ report 50206 "Sales - Invoice spec"
                     column(CompanyInfoPhoneNo; CompanyInfo."Phone No.")
                     {
                     }
+                    column(CompanyInfoFaxNo; CompanyInfo."Fax No.")
+                    {
+                    }
+                    column(Comp_ICE; CompanyInfo.ICE)
+                    {
+                    }
+                    column(Comp_Informations; CompanyInfo.Informations)
+                    {
+                    }
+                    column(Comp_CNSS; CompanyInfo.CNSS)
+                    {
+                    }
+                    column(Comp_RC; CompanyInfo.RC)
+                    {
+                    }
+                    column(Comp_Patent; CompanyInfo.patent)
+                    {
+                    }
+                    column(Comp_IdFisc; CompanyInfo."Identifiant Fiscal")
+                    {
+                    }
+                    column(Comp_footer; 'IF ' + CompanyInfo."Identifiant Fiscal" + '- Patente ' + CompanyInfo.Patent + ' RC ' + CompanyInfo.RC + ' CNSS ' + CompanyInfo.CNSS)
+                    {
+                    }
                     column(CustAddr6; CustAddr[6])
                     {
                     }
@@ -1405,10 +1429,15 @@ report 50206 "Sales - Invoice spec"
     end;
 
     local procedure FormatAddressFields(SalesInvoiceHeader: Record "Sales Invoice Header")
+    var
+        cust: Record Customer;
     begin
         FormatAddr.GetCompanyAddr(SalesInvoiceHeader."Responsibility Center", RespCenter, CompanyInfo, CompanyAddr);
         FormatAddr.SalesInvBillTo(CustAddr, SalesInvoiceHeader);
         ShowShippingAddr := FormatAddr.SalesInvShipTo(ShipToAddr, CustAddr, SalesInvoiceHeader);
+        cust.Get(SalesInvoiceHeader."Bill-to Customer No.");
+        CustAddr[2] := SalesInvoiceHeader."Bill-to City";
+        CustAddr[3] := 'ICE:' + cust.ICE;
     end;
 
     local procedure CollectAsmInformation()
