@@ -3567,33 +3567,6 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
                 <VerticalAlign>Middle</VerticalAlign>
               </Style>
             </Textbox>
-            <Textbox Name="CompanyAddr11">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>="Siège Social :" +Code.GetData(10,1) +" "+ Code.GetData(11,1) +" "+ Code.GetData(12,1) +" "+ Code.GetData(13,1)</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Left>4.80081cm</Left>
-              <Height>11pt</Height>
-              <Width>11.19539cm</Width>
-              <ZIndex>4</ZIndex>
-              <Style>
-                <VerticalAlign>Top</VerticalAlign>
-              </Style>
-            </Textbox>
             <Textbox Name="PageNumberTextBox">
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
@@ -3616,33 +3589,11 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
               <Left>16.42302cm</Left>
               <Height>11pt</Height>
               <Width>1.73243cm</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
               </Style>
             </Textbox>
-            <Rectangle Name="Rectangle2">
-              <ReportItems>
-                <Image Name="CompanyInfoPicture1">
-                  <Source>Database</Source>
-                  <Value>=Convert.ToBase64String(Fields!CompanyInfo3Picture.Value)</Value>
-                  <MIMEType>image/bmp</MIMEType>
-                  <Sizing>FitProportional</Sizing>
-                  <Height>16.41126mm</Height>
-                  <Width>40mm</Width>
-                  <Visibility>
-                    <Hidden>=iif(IsNothing(Fields!CompanyInfo3Picture.Value) = TRUE,TRUE,FALSE)</Hidden>
-                  </Visibility>
-                  <DataElementOutput>NoOutput</DataElementOutput>
-                  <Style />
-                </Image>
-              </ReportItems>
-              <KeepTogether>true</KeepTogether>
-              <Height>16.41126mm</Height>
-              <Width>40mm</Width>
-              <ZIndex>6</ZIndex>
-              <Style />
-            </Rectangle>
             <Rectangle Name="Rectangle1">
               <ReportItems>
                 <Textbox Name="CustAddr31">
@@ -3729,7 +3680,7 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
               <Left>10.54643cm</Left>
               <Height>1.42601cm</Height>
               <Width>7.54139cm</Width>
-              <ZIndex>7</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -3757,123 +3708,8 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
               <Left>0.03748cm</Left>
               <Height>11pt</Height>
               <Width>9.02374cm</Width>
-              <ZIndex>8</ZIndex>
+              <ZIndex>6</ZIndex>
               <Style>
-                <VerticalAlign>Middle</VerticalAlign>
-              </Style>
-            </Textbox>
-            <Textbox Name="SalesInvoiceHeaderPostingDateCaption3">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Code.GetData(56,1)</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
-                        <FontSize>12pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>1.75936cm</Top>
-              <Left>0.10513cm</Left>
-              <Height>29.89789pt</Height>
-              <Width>17.98269cm</Width>
-              <ZIndex>9</ZIndex>
-              <Style>
-                <VerticalAlign>Middle</VerticalAlign>
-              </Style>
-            </Textbox>
-            <Textbox Name="CompanyInfoPhoneNo1">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>="Tel :" + Code.GetData(15,1)</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.45861cm</Top>
-              <Left>4.80081cm</Left>
-              <Height>11pt</Height>
-              <Width>6.72922cm</Width>
-              <ZIndex>10</ZIndex>
-              <Style>
-                <VerticalAlign>Middle</VerticalAlign>
-              </Style>
-            </Textbox>
-            <Textbox Name="CompanyInfoHomePageValue">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>="Fax :" +Code.GetData(58,1)</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.8509cm</Top>
-              <Left>4.80081cm</Left>
-              <Height>11pt</Height>
-              <Width>6.72922cm</Width>
-              <ZIndex>11</ZIndex>
-              <Style>
-                <Border />
-                <VerticalAlign>Middle</VerticalAlign>
-              </Style>
-            </Textbox>
-            <Textbox Name="CompanyInfoEMailValue">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>="E-mail :" +Code.GetData(32,1)</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <Top>1.25307cm</Top>
-              <Left>4.80081cm</Left>
-              <Height>11pt</Height>
-              <Width>6.72922cm</Width>
-              <ZIndex>12</ZIndex>
-              <Style>
-                <Border />
                 <VerticalAlign>Middle</VerticalAlign>
               </Style>
             </Textbox>
