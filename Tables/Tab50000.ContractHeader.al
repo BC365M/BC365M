@@ -25,6 +25,7 @@ table 50000 "Contract Header"
         {
             DataClassification = ToBeClassified;
             OptionMembers = Open,Released,Archived;
+            Editable = false;
         }
         field(8; "Starting Date"; date)
         {

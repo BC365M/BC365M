@@ -5,6 +5,36 @@ codeunit 50000 "Contract Managment"
 
     end;
 
+    procedure Release(var contract: Record "Contract Header")
+    var
+        lines: Record "Contract Line";
+    begin
+        if contract.Status <> contract.Status::Open then exit;
+        contract.Status := contract.Status::Released;
+        contract.Modify();
+        Lines.SetRange("Contract Type", contract."Contract Type");
+        Lines.SetRange("Contract No.", contract."No.");
+        Lines.ModifyAll(Status, contract.Status);
+    end;
+
+    procedure Open(var contract: Record "Contract Header")
+    var
+        lines: Record "Contract Line";
+    begin
+        if contract.Status <> contract.Status::Released then exit;
+        contract.Status := contract.Status::Open;
+        contract.Modify();
+        Lines.SetRange("Contract Type", contract."Contract Type");
+        Lines.SetRange("Contract No.", contract."No.");
+        Lines.ModifyAll(Status, contract.Status);
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Get Shipment", 'OnRunAfterFilterSalesShpLine', '', true, true)]
+    local procedure OnRunAfterFilterSalesShpLine(SalesHeader: Record "Sales Header"; var SalesShptLine: Record "Sales Shipment Line")
+    begin
+        SalesShptLine.SetRange("Contract Type", SalesHeader."Contract Type");
+    end;
+
     [EventSubscriber(ObjectType::Table, database::"Sales Shipment Line", 'OnBeforeInsertInvLineFromShptLineBeforeInsertTextLine', '', true, true)]
     local procedure OnBeforeInsertInvLineFromShptLineBeforeInsertTextLine(var SalesShptLine: Record "Sales Shipment Line"; var SalesLine: Record "Sales Line")
     var

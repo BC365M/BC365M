@@ -28,13 +28,30 @@ page 50016 "Local Contract"
     {
         area(Processing)
         {
-            action(ActionName)
+           action(Release)
             {
                 ApplicationArea = All;
-
+                Image = ReleaseDoc;
+                Promoted = true;
+                PromotedIsBig = true;
                 trigger OnAction()
+                var
+                    cu: Codeunit "Contract Managment";
                 begin
-
+                    cu.Release(rec);
+                end;
+            }
+            action(Reopen)
+            {
+                ApplicationArea = All;
+                Image = ReOpen;
+                Promoted = true;
+                PromotedIsBig = true;
+                trigger OnAction()
+                var
+                    cu: Codeunit "Contract Managment";
+                begin
+                    cu.Open(rec);
                 end;
             }
         }

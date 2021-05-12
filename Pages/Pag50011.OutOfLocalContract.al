@@ -2,7 +2,7 @@ page 50011 "Out Of Local Contract"
 {
     PageType = Card;
     SourceTable = "Contract Header";
-    SourceTableView = where("Contract Type" = const("out of Local"));
+    SourceTableView = where ("Contract Type" = const ("out of Local"));
 
     layout
     {
@@ -19,7 +19,7 @@ page 50011 "Out Of Local Contract"
             part(lines; "Out Of Local Contract Lines")
             {
                 ApplicationArea = All;
-                SubPageLink = "Contract No." = field("No.");
+                SubPageLink = "Contract No." = field ("No.");
             }
         }
     }
@@ -28,13 +28,30 @@ page 50011 "Out Of Local Contract"
     {
         area(Processing)
         {
-            action(ActionName)
+            action(Release)
             {
                 ApplicationArea = All;
-
+                Image = ReleaseDoc;
+                Promoted = true;
+                PromotedIsBig = true;
                 trigger OnAction()
+                var
+                    cu: Codeunit "Contract Managment";
                 begin
-
+                    cu.Release(rec);
+                end;
+            }
+            action(Reopen)
+            {
+                ApplicationArea = All;
+                Image = ReOpen;
+                Promoted = true;
+                PromotedIsBig = true;
+                trigger OnAction()
+                var
+                    cu: Codeunit "Contract Managment";
+                begin
+                    cu.Open(rec);
                 end;
             }
         }

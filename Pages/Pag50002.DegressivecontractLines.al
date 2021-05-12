@@ -14,7 +14,7 @@ page 50002 "Degressive Contract Lines"
                 // field("Contract Type"; "Contract Type") { ApplicationArea = All; }
                 // field("Contract No."; "Contract No.") { ApplicationArea = All; }
                 field("Line No."; "Line No.") { ApplicationArea = All; Visible = false; }
-                field("Customer No."; "Customer No.") { ApplicationArea = All; }
+                field("Customer No."; "Customer No.") { ApplicationArea = All; Visible = false; }
                 field(Type; Rec.Type)
                 {
                     ToolTip = 'Specifies the value of the Type field';

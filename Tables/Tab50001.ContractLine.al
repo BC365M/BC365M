@@ -68,6 +68,7 @@ table 50001 "Contract Line"
         {
             DataClassification = ToBeClassified;
             OptionMembers = Open,Released,Archived;
+            Editable = false;
         }
         field(11; "Starting Date"; date)
         {

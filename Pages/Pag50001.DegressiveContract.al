@@ -2,7 +2,7 @@ page 50001 "Degressive Contract"
 {
     PageType = Card;
     SourceTable = "Contract Header";
-    SourceTableView = where("Contract Type" = const(Degressive));
+    SourceTableView = where ("Contract Type" = const (Degressive));
 
     layout
     {
@@ -19,7 +19,7 @@ page 50001 "Degressive Contract"
             part(lines; "Degressive Contract Lines")
             {
                 ApplicationArea = All;
-                SubPageLink = "Contract No." = field("No.");
+                SubPageLink = "Contract No." = field ("No.");
             }
         }
     }
@@ -28,18 +28,32 @@ page 50001 "Degressive Contract"
     {
         area(Processing)
         {
-            action(ActionName)
+            action(Release)
             {
                 ApplicationArea = All;
-
+                Image = ReleaseDoc;
+                Promoted = true;
+                PromotedIsBig = true;
                 trigger OnAction()
+                var
+                    cu: Codeunit "Contract Managment";
                 begin
-
+                    cu.Release(rec);
+                end;
+            }
+            action(Reopen)
+            {
+                ApplicationArea = All;
+                Image = ReOpen;
+                Promoted = true;
+                PromotedIsBig = true;
+                trigger OnAction()
+                var
+                    cu: Codeunit "Contract Managment";
+                begin
+                    cu.Open(rec);
                 end;
             }
         }
     }
-
-    var
-        myInt: Integer;
 }
