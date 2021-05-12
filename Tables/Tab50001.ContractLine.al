@@ -102,7 +102,7 @@ table 50001 "Contract Line"
         }
         field(32; "Ship-From Code"; Code[10])
         {
-            TableRelation = "Ship-to Address".Code WHERE ("Customer No." = FIELD ("Customer No."));
+            TableRelation = "Ship-from/to Address";
             trigger OnValidate()
             BEGIN
                 validateShipingCodes();
@@ -110,7 +110,7 @@ table 50001 "Contract Line"
         }
         field(33; "Ship-to Code"; Code[10])
         {
-            TableRelation = "Ship-to Address".Code WHERE ("Customer No." = FIELD ("Customer No."));
+            TableRelation = "Ship-from/to Address";
             trigger OnValidate()
             BEGIN
                 validateShipingCodes();

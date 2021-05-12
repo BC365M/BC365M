@@ -29,11 +29,11 @@ tableextension 50001 "Sales Shipment Line" extends "Sales Shipment Line"
         }
         field(50012; "Ship-From Code"; Code[10])
         {
-            TableRelation = "Ship-to Address".Code WHERE ("Customer No." = FIELD ("Sell-to Customer No."));
+            TableRelation = "Ship-from/to Address";
         }
         field(50013; "Ship-to Code"; Code[10])
         {
-            TableRelation = "Ship-to Address".Code WHERE ("Customer No." = FIELD ("Sell-to Customer No."));
+            TableRelation = "Ship-from/to Address";
         }
         //SA
         field(50020; KMDEP; Decimal)

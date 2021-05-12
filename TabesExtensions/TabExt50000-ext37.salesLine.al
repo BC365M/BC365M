@@ -43,7 +43,7 @@ tableextension 50000 "Sales Line" extends "Sales Line"
         }
         field(50012; "Ship-From Code"; Code[10])
         {
-            TableRelation = "Ship-to Address".Code WHERE ("Customer No." = FIELD ("Sell-to Customer No."));
+            TableRelation = "Ship-from/to Address";
             trigger OnValidate()
             BEGIN
                 validateShipingCodes();
@@ -51,7 +51,7 @@ tableextension 50000 "Sales Line" extends "Sales Line"
         }
         field(50013; "Ship-to Code"; Code[10])
         {
-            TableRelation = "Ship-to Address".Code WHERE ("Customer No." = FIELD ("Sell-to Customer No."));
+            TableRelation = "Ship-from/to Address";
             trigger OnValidate()
             BEGIN
                 validateShipingCodes();
