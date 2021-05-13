@@ -12,6 +12,7 @@
         </trans-unit>
         <trans-unit id="Table 2706827815 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No.</source>
+          <target> N° </target>
           <target state="needs-translation"/>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table Contract Header - Field No. - Property Caption</note>

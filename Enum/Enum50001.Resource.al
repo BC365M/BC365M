@@ -10,11 +10,14 @@ enum 50001 "Type De Véhicule"
     value(5; "fourgon") { Caption = 'fourgonette'; }
     value(6; "benne") { Caption = 'Benne'; }
     value(8; "citerne") { Caption = 'Citerne'; }
-    value(7; "frigorifique") { Caption = 'Frigorifique'; }
+
     value(10; "porte-grumes") { Caption = 'Porte-grumes'; }
+
     value(11; "grue")
     {
         Caption = 'Grue';
     }
+    value(12; "Camion Solo") { Caption = 'Camion Solo'; }
+
 
 }

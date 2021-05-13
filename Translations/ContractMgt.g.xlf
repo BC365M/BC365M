@@ -208,6 +208,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Contract Line Slices - Field Currency Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2596112237 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ship-from/to Address - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2596112237 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Ship-from/to Address - Field Name - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1134824968 - Control 1878130204 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the value of the Type field</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -267,6 +277,1036 @@
           <source>Specifies the value of the Status field</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Package Contract Lines - Control Status - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Order Processor</source>
+          <note from="Developer" annotates="general" priority="2">{Dependency=Match,"ProfileDescription_ORDERPROCESSOR"}</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1576679897 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manage sales processes, view KPIs, and access your favorite items and customers.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action embedding - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1159415319 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action SalesOrders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1159415319 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Record your agreements with customers to sell certain products on certain delivery and payment terms. Sales orders, unlike sales invoices, allow you to ship partially, deliver directly from your vendor to your customer, initiate warehouse handling, and print various customer-facing documents. Sales invoicing is integrated in the sales order process.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action SalesOrders - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 4222419314 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shipped Not Invoiced</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action SalesOrdersShptNotInv - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 4222419314 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View sales documents that are shipped but not yet invoiced.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action SalesOrdersShptNotInv - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3180006285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Completely Shipped Not Invoiced</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action SalesOrdersComplShtNotInv - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3180006285 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View sales documents that are fully shipped but not fully invoiced.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action SalesOrdersComplShtNotInv - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1554554962 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Items</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Items - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1554554962 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View or edit detailed information for the products that you trade in. The item card can be of type Inventory or Service to specify if the item is a physical unit or a labor time unit. Here you also define if items in inventory or on incoming orders are automatically reserved for outbound documents and whether order tracking links are created between demand and supply to reflect planning actions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Items - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3606140129 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Customers - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3606140129 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View or edit detailed information for the customers that you trade with. From each customer card, you can open related information, such as sales statistics and ongoing orders, and you can define special prices and line discounts that you grant if certain conditions are met.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Customers - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3724520305 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Journals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Item Journals - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3724520305 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post item transactions directly to the item ledger to adjust inventory in connection with purchases, sales, and positive or negative adjustments without using documents. You can save sets of item journal lines as standard journals so that you can perform recurring postings quickly. A condensed version of the item journal function exists on item cards for quick adjustment of an items inventory quantity.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Item Journals - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 561664318 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Journals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action SalesJournals - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 561664318 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post any sales-related transaction directly to a customer, bank, or general ledger account instead of using dedicated documents. You can post all types of financial sales transactions, including payments, refunds, and finance charge amounts. Note that you cannot post item quantities with a sales journal.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action SalesJournals - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1690647457 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cash Receipt Journals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action CashReceiptJournals - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1690647457 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Register received payments by manually applying them to the related customer, vendor, or bank ledger entries. Then, post the payments to G/L accounts and thereby close the related ledger entries.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action CashReceiptJournals - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3061233890 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transfer Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Transfer Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3061233890 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Move inventory items between company locations. With transfer orders, you ship the outbound transfer from one location and receive the inbound transfer at the other location. This allows you to manage the involved warehouse activities and provides more certainty that inventory quantities are updated correctly.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Transfer Orders - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1595006073 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action76 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1595006073 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Make quotes, orders, and credit memos to customers. Manage customers and view transaction history.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action76 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2509234963 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action61 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2509234963 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View or edit detailed information for the customers that you trade with. From each customer card, you can open related information, such as sales statistics and ongoing orders, and you can define special prices and line discounts that you grant if certain conditions are met.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action61 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 734185571 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Quotes</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales Quotes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 734185571 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Make offers to customers to sell certain products on certain delivery and payment terms. While you negotiate with a customer, you can change and resend the sales quote as much as needed. When the customer accepts the offer, you convert the sales quote to a sales invoice or a sales order in which you process the sale.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales Quotes - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 69955983 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 69955983 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Record your agreements with customers to sell certain products on certain delivery and payment terms. Sales orders, unlike sales invoices, allow you to ship partially, deliver directly from your vendor to your customer, initiate warehouse handling, and print various customer-facing documents. Sales invoicing is integrated in the sales order process.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales Orders - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3735619947 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Orders - Microsoft Dynamics 365 for Sales</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales Orders - Microsoft Dynamics 365 for Sales - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3735619947 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View sales orders in Dynamics 365 for Sales that are coupled with sales orders in Business Central.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales Orders - Microsoft Dynamics 365 for Sales - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3925560610 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Blanket Sales Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Blanket Sales Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3925560610 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use blanket sales orders as a framework for a long-term agreement between you and your customers to sell large quantities that are to be delivered in several smaller shipments over a certain period of time. Blanket orders often cover only one item with predetermined delivery dates. The main reason for using a blanket order rather than a sales order is that quantities entered on a blanket order do not affect item availability and thus can be used as a worksheet for monitoring, forecasting, and planning purposes..</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Blanket Sales Orders - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1693997414 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Invoices</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales Invoices - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1693997414 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Register your sales to customers and invite them to pay according to the delivery and payment terms by sending them a sales invoice document. Posting a sales invoice registers shipment and records an open receivable entry on the customer's account, which will be closed when payment is received. To manage the shipment process, use sales orders, in which sales invoicing is integrated.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales Invoices - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3507632001 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Return Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales Return Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3507632001 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Compensate your customers for incorrect or damaged items that you sent to them and received payment for. Sales return orders enable you to receive items from multiple sales documents with one sales return, automatically create related sales credit memos or other return-related documents, such as a replacement sales order, and support warehouse documents for the item handling. Note: If an erroneous sale has not been paid yet, you can simply cancel the posted sales invoice to automatically revert the financial transaction.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales Return Orders - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1948356160 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Credit Memos</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales Credit Memos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1948356160 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Revert the financial transactions involved when your customers want to cancel a purchase or return incorrect or damaged items that you sent to them and received payment for. To include the correct information, you can create the sales credit memo from the related posted sales invoice or you can create a new sales credit memo with copied invoice information. If you need more control of the sales return process, such as warehouse documents for the physical handling, use sales return orders, in which sales credit memos are integrated. Note: If an erroneous sale has not been paid yet, you can simply cancel the posted sales invoice to automatically revert the financial transaction.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales Credit Memos - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2557119366 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Journals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales Journals - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2557119366 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post any sales-related transaction directly to a customer, bank, or general ledger account instead of using dedicated documents. You can post all types of financial sales transactions, including payments, refunds, and finance charge amounts. Note that you cannot post item quantities with a sales journal.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales Journals - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3434938165 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Sales Invoices</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Sales Invoices - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3434938165 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the list of posted sales invoices.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Sales Invoices - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2557560783 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Sales Credit Memos</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Sales Credit Memos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2557560783 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the list of posted sales credit memos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Sales Credit Memos - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2974556624 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Sales Return Receipts</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Sales Return Receipts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2974556624 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the list of posted sales return receipts.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Sales Return Receipts - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1840709038 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Sales Shipments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Sales Shipments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1840709038 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the list of posted sales shipments.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Sales Shipments - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3953537220 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transfer Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action68 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3953537220 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Move inventory items between company locations. With transfer orders, you ship the outbound transfer from one location and receive the inbound transfer at the other location. This allows you to manage the involved warehouse activities and provides more certainty that inventory quantities are updated correctly.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action68 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1386416279 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reminders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Reminders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1386416279 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Remind customers about overdue amounts based on reminder terms and the related reminder levels. Each reminder level includes rules about when the reminder will be issued in relation to the invoice due date or the date of the previous reminder and whether interests are added. Reminders are integrated with finance charge memos, which are documents informing customers of interests or other money penalties for payment delays.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Reminders - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 618528661 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Finance Charge Memos</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Finance Charge Memos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 618528661 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Send finance charge memos to customers with delayed payments, typically following a reminder process. Finance charges are calculated automatically and added to the overdue amounts on the customer's account according to the specified finance charge terms and penalty/interest amounts.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Finance Charge Memos - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3395691325 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Degressive Contract</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Degressive - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2609553765 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Out Of Local Contract</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action OutLocal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 452419543 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Local Contract</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Local - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3820220526 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Package Contract</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Package - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3784628197 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchasing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action63 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3784628197 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View history for sales, shipments, and inventory.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action63 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 713531721 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendors</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Vendors - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 713531721 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View or edit detailed information for the vendors that you trade with. From each vendor card, you can open related information, such as purchase statistics and ongoing orders, and you can define special prices and line discounts that the vendor grants you if certain conditions are met.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Vendors - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1819353702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Quotes</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Purchase Quotes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1819353702 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create purchase quotes to represent your request for quotes from vendors. Quotes can be converted to purchase orders.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Purchase Quotes - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2882327954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Purchase Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2882327954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create purchase orders to mirror sales documents that vendors send to you. This enables you to record the cost of purchases and to track accounts payable. Posting purchase orders dynamically updates inventory levels so that you can minimize inventory costs and provide better customer service. Purchase orders allow partial receipts, unlike with purchase invoices, and enable drop shipment directly from your vendor to your customer. Purchase orders can be created automatically from PDF or image files from your vendors by using the Incoming Documents feature.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Purchase Orders - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1225303959 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Blanket Purchase Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Blanket Purchase Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1225303959 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use blanket purchase orders as a framework for a long-term agreement between you and your vendors to buy large quantities that are to be delivered in several smaller shipments over a certain period of time. Blanket orders often cover only one item with predetermined delivery dates. The main reason for using a blanket order rather than a purchase order is that quantities entered on a blanket order do not affect item availability and thus can be used as a worksheet for monitoring, forecasting, and planning purposes.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Blanket Purchase Orders - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 4037192291 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Invoices</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Purchase Invoices - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 4037192291 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create purchase invoices to mirror sales documents that vendors send to you. This enables you to record the cost of purchases and to track accounts payable. Posting purchase invoices dynamically updates inventory levels so that you can minimize inventory costs and provide better customer service. Purchase invoices can be created automatically from PDF or image files from your vendors by using the Incoming Documents feature.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Purchase Invoices - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 849761688 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Return Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Purchase Return Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 849761688 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create purchase return orders to mirror sales return documents that vendors send to you for incorrect or damaged items that you have paid for and then returned to the vendor. Purchase return orders enable you to ship back items from multiple purchase documents with one purchase return and support warehouse documents for the item handling. Purchase return orders can be created automatically from PDF or image files from your vendors by using the Incoming Documents feature. Note: If you have not yet paid for an erroneous purchase, you can simply cancel the posted purchase invoice to automatically revert the financial transaction.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Purchase Return Orders - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 291926049 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Credit Memos</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Purchase Credit Memos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 291926049 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create purchase credit memos to mirror sales credit memos that vendors send to you for incorrect or damaged items that you have paid for and then returned to the vendor. If you need more control of the purchase return process, such as warehouse documents for the physical handling, use purchase return orders, in which purchase credit memos are integrated. Purchase credit memos can be created automatically from PDF or image files from your vendors by using the Incoming Documents feature. Note: If you have not yet paid for an erroneous purchase, you can simply cancel the posted purchase invoice to automatically revert the financial transaction.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Purchase Credit Memos - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 101427331 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Journals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action PurchaseJournals - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 101427331 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post any purchase-related transaction directly to a vendor, bank, or general ledger account instead of using dedicated documents. You can post all types of financial purchase transactions, including payments, refunds, and finance charge amounts. Note that you cannot post item quantities with a purchase journal.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action PurchaseJournals - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 407220332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Purchase Invoices</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Purchase Invoices - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 407220332 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens a list of posted purchase invoices.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Purchase Invoices - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 4135951594 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Purchase Credit Memos</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Purchase Credit Memos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 4135951594 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens a list of posted purchase credit memos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Purchase Credit Memos - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1497693469 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Purchase Return Shipments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Purchase Return Shipments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1497693469 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens a list of posted purchase return shipments.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Purchase Return Shipments - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1116965951 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Purchase Receipts</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Purchase Receipts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1116965951 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the list of posted purchase receipts.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Purchase Receipts - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 127357518 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inventory</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action62 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 127357518 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manage physical or service-type items that you trade in by setting up item cards with rules for pricing, costing, planning, reservation, and tracking. Set up storage places or warehouses and how to transfer between such locations. Count, adjust, reclassify, or revalue inventory.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action62 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 598289752 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Items</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action93 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 598289752 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View or edit detailed information for the products that you trade in. The item card can be of type Inventory or Service to specify if the item is a physical unit or a labor time unit. Here you also define if items in inventory or on incoming orders are automatically reserved for outbound documents and whether order tracking links are created between demand and supply to reflect planning actions.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action93 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2511379603 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Journals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action96 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2511379603 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post item transactions directly to the item ledger to adjust inventory in connection with purchases, sales, and positive or negative adjustments without using documents. You can save sets of item journal lines as standard journals so that you can perform recurring postings quickly. A condensed version of the item journal function exists on item cards for quick adjustment of an items inventory quantity.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action96 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 200707616 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Charges</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Item Charges - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 200707616 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View or edit the codes for item charges that you can assign to purchase and sales transactions to include any added costs, such as freight, physical handling, and insurance that you incur when purchasing or selling items. This is important to ensure correct inventory valuation. For purchases, the landed cost of a purchased item consists of the vendor's purchase price and all additional direct item charges that can be assigned to individual receipts or return shipments. For sales, knowing the cost of shipping sold items can be as vital to your company as knowing the landed cost of purchased items.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Item Charges - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 339140622 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Attributes</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Item Attributes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 339140622 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Assign item attribute values to your items to enable rich searching and sorting options. When customers inquire about an item, either in correspondence or in an integrated web shop, they can then ask or search according to characteristics, such as height and model year. You can also assign item attributes to item categories, which then apply to the items that use the item categories in question.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Item Attributes - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 392666526 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Tracking</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Item Tracking - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 392666526 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Assign serial numbers and lot numbers to any outbound or inbound document for quality assurance, recall actions, and to control expiration dates and warranties. Use the Item Tracing window to trace items with serial or lot numbers backwards and forward in their supply chain</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Item Tracking - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1480337242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Reclassification Journals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Item Reclassification Journals - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1480337242 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Change information on item ledger entries, such as dimensions, location codes, bin codes, and serial or lot numbers.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Item Reclassification Journals - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1451304824 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Phys. Inventory Journals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Phys. Inventory Journals - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1451304824 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select how you want to maintain an up-to-date record of your inventory at different locations.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Phys. Inventory Journals - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1119230149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Assembly Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Assembly Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1119230149 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Combine components in simple processes without the need of manufacturing functionality. Sell assembled items by building the item to order or by picking from stock.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Assembly Orders - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2818106590 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Drop Shipments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Drop Shipments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2818106590 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Minimize delivery time and inventory cost by having items shipped from your vendor directly to your customer. This simply requires that you mark the sales order for drop shipment and then create a linked purchase order with the customer specified as the recipient. </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Drop Shipments - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 890861418 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Locations</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Locations - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 890861418 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manage the different places or warehouses where you receive, process, or ship inventory to increase customer service and keep inventory costs low.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Locations - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3381351663 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Documents</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Documents - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3381351663 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View the posting history for sales, shipments, and inventory.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Documents - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 902573977 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Sales Invoices</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action32 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 902573977 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the list of posted sales invoices.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action32 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2177967211 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Sales Credit Memos</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action34 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2177967211 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the list of posted sales credit memos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action34 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 699376808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Return Receipts</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Return Receipts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 699376808 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the list of posted return receipts.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Return Receipts - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2610663038 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Sales Shipments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action40 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2610663038 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the list of posted sales shipments.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action40 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 4078311593 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Purchase Invoices</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action54 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 4078311593 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the list of posted purchase invoices.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action54 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1698578788 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Purchase Credit Memos</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action86 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1698578788 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens the list of posted purchase credit memos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action86 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1060882171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Purchase Return Shipments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action87 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1060882171 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens the list of posted purchase return shipments.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action87 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1696434148 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Purchase Receipts</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action53 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1696434148 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the list of posted purchase receipts.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action53 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 627180795 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Transfer Shipments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Transfer Shipments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 627180795 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the list of posted transfer shipments.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Transfer Shipments - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1037826143 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Transfer Receipts</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Transfer Receipts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1037826143 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the list of posted transfer receipts.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Posted Transfer Receipts - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 4091799740 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Issued Reminders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Issued Reminders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 4091799740 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens the list of issued reminders.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Issued Reminders - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 761779018 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Issued Finance Charge Memos</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Issued Finance Charge Memos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 761779018 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens the list of issued finance charge memos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Issued Finance Charge Memos - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 57277866 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Setup &amp; Extensions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action SetupAndExtensions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 57277866 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Overview and change system and application settings, and manage extensions and services</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action SetupAndExtensions - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 799089619 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Assisted Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Assisted Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 799089619 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set up core functionality such as sales tax, sending documents as email, and approval workflow by running through a few pages that guide you through the information.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Assisted Setup - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1325297727 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manual Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Manual Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1325297727 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Define your company policies for business departments and for general activities by filling setup windows manually.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Manual Setup - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2445482498 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fill in your official company information, and define general codes and information that is used across the business functionality, such as currencies and languages. </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action General - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 17419004 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Finance</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Finance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 17419004 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Define your general accounting policies, such as the allowed posting period and how payments are processed. Set up your default dimensions for financial analysis.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Finance - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1406942772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1406942772 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Define your general policies for sales invoicing and returns, such as when to show credit and stockout warnings and how to post sales discounts. Set up your number series for creating customers and different sales documents.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1554716946 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchasing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Purchasing - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1554716946 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Define your general policies for purchase invoicing and returns, such as whether to require vendor invoice numbers and how to post purchase discounts. Set up your number series for creating vendors and different purchase documents.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Purchasing - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3661919152 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Jobs</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Jobs - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3661919152 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Define a project activity by creating a job card with integrated job tasks and job planning lines, structured in two layers. The job task enables you to set up job planning lines and to post consumption to the job. The job planning lines specify the detailed use of resources, items, and various general ledger expenses.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Jobs - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 681560359 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fixed Assets</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Fixed Assets - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 681560359 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manage periodic depreciation of your machinery or machines, keep track of your maintenance costs, manage insurance policies related to fixed assets, and monitor fixed asset statistics.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Fixed Assets - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2905005406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>HR</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action HR - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2905005406 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set up number series for creating new employee cards and define if employment time is measured by days or hours.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action HR - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2105307182 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inventory</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Inventory - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2105307182 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Define your general inventory policies, such as whether to allow negative inventory and how to post and adjust item costs. Set up your number series for creating new inventory items or services.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Inventory - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2187938695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Service - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2187938695 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Configure your company policies for service management.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Service - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3242088303 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action System - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3242088303 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action System - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3372039761 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Relationship Management</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Relationship Management - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3372039761 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set up business relations, configure sales cycles, campaigns, and interactions, and define codes for various marketing communication.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Relationship Management - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3857146285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Intercompany</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Intercompany - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3857146285 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Configure intercompany processes, such as the inbox and outbox for business documents exchanged within your group.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Intercompany - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 892073532 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Connections</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Service Connections - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 892073532 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable and configure external services, such as exchange rate updates, Microsoft Social Engagement, and electronic bank integration.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Service Connections - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1663039630 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Extensions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Extensions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1663039630 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Install Extensions for greater functionality of the system.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Extensions - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2098662804 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Workflows</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Workflows - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2098662804 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set up or enable workflows that connect business-process tasks performed by different users. System tasks, such as automatic posting, can be included as steps in workflows, preceded or followed by user tasks. Requesting and granting approval to create new records are typical workflow steps.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Workflows - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2984996136 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales &amp;Quote</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales &amp;Quote - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2984996136 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create a new sales quote to offer items or services to a customer.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales &amp;Quote - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 4181590817 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales &amp;Invoice</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales &amp;Invoice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 4181590817 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create a new invoice for the sales of items or services. Invoice quantities cannot be posted partially.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales &amp;Invoice - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1333397436 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales &amp;Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales &amp;Order - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1333397436 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create a new sales order for items or services.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales &amp;Order - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3714254622 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales &amp;Return Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales &amp;Return Order - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3714254622 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Compensate your customers for incorrect or damaged items that you sent to them and received payment for. Sales return orders enable you to receive items from multiple sales documents with one sales return, automatically create related sales credit memos or other return-related documents, such as a replacement sales order, and support warehouse documents for the item handling. Note: If an erroneous sale has not been paid yet, you can simply cancel the posted sales invoice to automatically revert the financial transaction.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales &amp;Return Order - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1856194291 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales &amp;Credit Memo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales &amp;Credit Memo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1856194291 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create a new sales credit memo to revert a posted sales invoice.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales &amp;Credit Memo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2973329650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tasks</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Tasks - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2015624257 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales &amp;Journal</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales &amp;Journal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2015624257 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open a sales journal where you can batch post sales transactions to G/L, bank, customer, vendor and fixed assets accounts.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales &amp;Journal - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2311124359 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Price &amp;Worksheet</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales Price &amp;Worksheet - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2311124359 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manage sales prices for individual customers, for a group of customers, for all customers, or for a campaign.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Sales Price &amp;Worksheet - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1335269804 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action42 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 954668148 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&amp;Prices</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action &amp;Prices - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 954668148 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set up different prices for items that you sell to the customer. An item price is automatically granted on invoice lines when the specified criteria are met, such as customer, quantity, or ending date.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action &amp;Prices - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1978809058 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&amp;Line Discounts</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action &amp;Line Discounts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1978809058 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set up different discounts for items that you sell to the customer. An item discount is automatically granted on invoice lines when the specified criteria are met, such as customer, quantity, or ending date.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action &amp;Line Discounts - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 2176459415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reports</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Reports - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1994964448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Customer - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3092092583 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer - &amp;Order Summary</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Customer - &amp;Order Summary - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3092092583 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View the quantity not yet shipped for each customer in three periods of 30 days each, starting from a selected date. There are also columns with orders to be shipped before and after the three periods and a column with the total order detail for each customer. The report can be used to analyze a company's expected sales volume.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Customer - &amp;Order Summary - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3179456745 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer - &amp;Top 10 List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Customer - &amp;Top 10 List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3179456745 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View which customers purchase the most or owe the most in a selected period. Only customers that have either purchases during the period or a balance at the end of the period will be included.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Customer - &amp;Top 10 List - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3209082316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer/&amp;Item Sales</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Customer/&amp;Item Sales - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3209082316 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View a list of item sales for each customer during a selected time period. The report contains information on quantity, sales amount, profit, and possible discounts. It can be used, for example, to analyze a company's customer groups.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Customer/&amp;Item Sales - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 264877360 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Action31 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 810681621 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Salesperson - Sales &amp;Statistics</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Salesperson - Sales &amp;Statistics - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 810681621 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View amounts for sales, profit, invoice discount, and payment discount, as well as profit percentage, for each salesperson for a selected period. The report also shows the adjusted profit and adjusted profit percentage, which reflect any changes to the original costs of the items in the sales.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Salesperson - Sales &amp;Statistics - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3751545307 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price &amp;List</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Price &amp;List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 3751545307 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View a list of your items and their prices, for example, to send to customers. You can create the list for specific customers, campaigns, currencies, or other criteria.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Price &amp;List - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1309467033 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inventory - Sales &amp;Back Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Inventory - Sales &amp;Back Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1309467033 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View a list with the order lines whose shipment date has been exceeded. The following information is shown for the individual orders for each item: number, customer name, customer's telephone number, shipment date, order quantity and quantity on back order. The report also shows whether there are other items for the customer on back order.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Inventory - Sales &amp;Back Orders - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 4201773078 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>History</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action History - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1814405003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Navi&amp;gate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Navi&amp;gate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2262909608 - Action 1814405003 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Find all entries and documents that exist for the document number and posting date on the selected entry or document.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Order Processor RC Spec - Action Navi&amp;gate - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Report 2369156011 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sales - Invoice</source>
@@ -549,9 +1589,14 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report Sales - Invoice spec - NamedType DocDateCaptionLbl</note>
         </trans-unit>
         <trans-unit id="PageExtension 3469146285 - Control 1895601803 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Identifiant Fiscal</source>
+          <source>RC</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Company Information - Control RC - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3469146285 - Control 1205231854 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Identifiant Fiscal</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Company Information - Control idfi - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3469146285 - Control 1998408657 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ICE</source>
@@ -1008,6 +2053,26 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension CompanyInformation - Field Informations - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 1994964448 - Field 1998408657 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ICE</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Customer - Field ICE - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1994964448 - Field 3148070558 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Patent</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Customer - Field Patent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1994964448 - Field 1895601803 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>RC</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Customer - Field RC - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1994964448 - Field 111349863 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Identifiant Fiscal</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Customer - Field Identifiant Fiscal - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Enum 3178647430 - EnumValue 3395691325 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Degressive</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1068,11 +2133,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum Type De Véhicule - EnumValue citerne - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Enum 1684047948 - EnumValue 1447519948 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Frigorifique</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum Type De Véhicule - EnumValue frigorifique - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Enum 1684047948 - EnumValue 1633812990 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Porte-grumes</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1082,6 +2142,11 @@
           <source>Grue</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum Type De Véhicule - EnumValue grue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1684047948 - EnumValue 2026104140 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Camion Solo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Type De Véhicule - EnumValue Camion Solo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 894256855 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>
