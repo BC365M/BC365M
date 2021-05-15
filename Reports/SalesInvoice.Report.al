@@ -656,6 +656,42 @@ report 50206 "Sales - Invoice spec"
                             GetTotalAmountIncVAT := 0;
                         end;
                     }
+                    dataitem(Shipment; "Integer")
+                    {
+                        DataItemTableView = sorting (Number);
+                        column(LineNo; TempSumSalesLine."Line No.")
+                        {
+                        }
+                        column(ResNo; TempSumSalesLine."No.")
+                        {
+                        }
+                        column(shipDate; format(TempSumSalesLine."Delivery Date"))
+                        {
+                        }
+                        column(shipDescription; TempSumSalesLine.Description)
+                        {
+                        }
+                        column(shipQty; TempSumSalesLine.Quantity)
+                        {
+                        }
+                        column(shipAmount; TempSumSalesLine."Line Amount")
+                        {
+                        }
+                        trigger OnPreDataItem()
+                        begin
+                            TempSumSalesLine.Reset();
+                            SetRange(Number, 1, TempSumSalesLine.Count);
+                        end;
+
+                        trigger OnAfterGetRecord()
+                        begin
+                            if Number = 1 then
+                                TempSumSalesLine.FindFirst()
+                            else
+                                TempSumSalesLine.Next();
+                        end;
+
+                    }
                     dataitem(VATCounter; "Integer")
                     {
                         DataItemTableView = SORTING (Number);
@@ -852,6 +888,17 @@ report 50206 "Sales - Invoice spec"
                     dataitem(Total; "Integer")
                     {
                         DataItemTableView = SORTING (Number) WHERE (Number = CONST (1));
+                        column(isTotal; isTotal)
+                        { }
+                        column(TotalAmountInclVATtxt; TotalAmountInclVATtxt)
+                        { }
+                        trigger OnAfterGetRecord()
+                        var
+                            MontantTouteLettre: Codeunit "Montant Toute Lettre - Mgt";
+                        begin
+                            MontantTouteLettre."Montant en texte"(TotalAmountInclVATtxt, TotalAmountInclVAT);
+                            isTotal := true;
+                        end;
                     }
                     dataitem(Total2; "Integer")
                     {
@@ -966,7 +1013,7 @@ report 50206 "Sales - Invoice spec"
                 DimSetEntry1.SetRange("Dimension Set ID", "Dimension Set ID");
 
                 GetLineFeeNoteOnReportHist("No.");
-
+                summarizeShipments();
                 OnAfterGetRecordSalesInvoiceHeader("Sales Invoice Header");
                 OnGetReferenceText("Sales Invoice Header", ReferenceText, Handled);
             end;
@@ -1160,11 +1207,14 @@ report 50206 "Sales - Invoice spec"
         TotalSubTotal: Decimal;
         TotalAmount: Decimal;
         TotalAmountInclVAT: Decimal;
+        TotalAmountInclVATtxt: text;
+        isTotal: Boolean;
         TotalAmountVAT: Decimal;
         TotalInvoiceDiscountAmount: Decimal;
         TotalPaymentDiscountOnVAT: Decimal;
         Text10800: Label 'ShipmentNo';
         ShipmentInvoiced: Record "Shipment Invoiced";
+        TempSumSalesLine: Record "Sales Invoice Line" temporary;
         NoShipmentNumLoop: Integer;
         NoShipmentDatas: array[3] of Text[20];
         NoShipmentText: Text[30];
@@ -1437,7 +1487,7 @@ report 50206 "Sales - Invoice spec"
         ShowShippingAddr := FormatAddr.SalesInvShipTo(ShipToAddr, CustAddr, SalesInvoiceHeader);
         cust.Get(SalesInvoiceHeader."Bill-to Customer No.");
         CustAddr[2] := SalesInvoiceHeader."Bill-to City";
-        CustAddr[3] := 'ICE:' + cust.ICE;
+        CustAddr[3] := 'ICE: ' + cust.ICE;
     end;
 
     local procedure CollectAsmInformation()
@@ -1574,6 +1624,43 @@ report 50206 "Sales - Invoice spec"
             TempLineFeeNoteOnReportHist.Copy(LineFeeNoteOnReportHist);
             TempLineFeeNoteOnReportHist.Insert;
         until TempLineFeeNoteOnReportHist.Next = 0;
+    end;
+
+    local procedure summarizeShipments()
+    var
+        shipInvoiced: Record "Shipment Invoiced";
+        salesInvoiceLine: Record "Sales Invoice Line";
+        salesShipmentLine: Record "Sales Shipment Line";
+        salesShipmentHeader: Record "Sales Shipment Header";
+        LineNo: Integer;
+    begin
+        shipInvoiced.SetRange("Invoice No.", "Sales Invoice Header"."No.");
+        TempSumSalesLine.Reset();
+        TempSumSalesLine.DeleteAll();
+        if shipInvoiced.FindFirst() then
+            repeat
+                salesShipmentLine.Get(shipInvoiced."Shipment No.", shipInvoiced."Shipment Line No.");
+                salesInvoiceLine.Get(shipInvoiced."Invoice No.", shipInvoiced."Invoice Line No.");
+                salesShipmentHeader.Get(shipInvoiced."Shipment No.");
+                TempSumSalesLine.SetRange("No.", salesInvoiceLine."No.");
+                TempSumSalesLine.SetRange("Delivery Date", salesInvoiceLine."Delivery Date");
+                if not TempSumSalesLine.FindFirst() then begin
+                    TempSumSalesLine.Init();
+                    TempSumSalesLine."No." := salesInvoiceLine."No.";
+                    TempSumSalesLine."Delivery Date" := salesshipmentLine."Delivery Date";
+                    TempSumSalesLine.Description := salesShipmentHeader."No."; //salesShipmentHeader."External Document No.";
+                    TempSumSalesLine."Document No." := shipInvoiced."Invoice No.";
+                    LineNo += 10000;
+                    TempSumSalesLine."Line No." := LineNo;
+                    TempSumSalesLine.Insert();
+                end else begin
+                    TempSumSalesLine.Description := TempSumSalesLine.Description + '+' + salesShipmentHeader."No."; //salesShipmentHeader."External Document No.";
+                end;
+                TempSumSalesLine.Quantity += shipInvoiced."Qty. to Invoice";
+                TempSumSalesLine."Line Amount" += (shipInvoiced."Qty. to Invoice" * salesInvoiceLine."Unit Price");
+                TempSumSalesLine.Modify();
+            until shipInvoiced.Next() = 0;
+        TempSumSalesLine.Reset();
     end;
 
     [IntegrationEvent(false, TRUE)]
