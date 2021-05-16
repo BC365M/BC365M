@@ -607,11 +607,16 @@ report 50206 "Sales - Invoice spec"
                         }
 
                         trigger OnAfterGetRecord()
+                        var
+                            resource: Record Resource;
                         begin
                             InitializeShipmentBuffer;
                             if (Type = Type::"G/L Account") and (not ShowInternalInfo) then
                                 "No." := '';
-
+                            if "Sales Invoice Header"."Contract Type" = "Document Contract Type"::"out of Local" then begin
+                                resource.Get("No.");
+                                "No." := resource.Matricule;
+                            end;
                             VATAmountLine.Init;
                             VATAmountLine."VAT Identifier" := "VAT Identifier";
                             VATAmountLine."VAT Calculation Type" := "VAT Calculation Type";
