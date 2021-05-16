@@ -749,6 +749,7 @@ report 50206 "Sales - Invoice spec"
                             lsalesShipmentHeader.Get("Shipment No.");
                             PackUnitPrice := lsalesInvoiceLine."Unit Price";
                             codeZone := lsalesShipmentLine."Zone No.";
+                            "Shipment No." := lsalesShipmentHeader."External Document No.";
                         end;
                     }
                     dataitem(VATCounter; "Integer")
