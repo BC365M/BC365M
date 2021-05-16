@@ -29,6 +29,13 @@ codeunit 50000 "Contract Managment"
         Lines.ModifyAll(Status, contract.Status);
     end;
 
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnBeforePostSalesDoc', '', true, true)]
+    local procedure OnBeforePostSalesDoc(var SalesHeader: Record "Sales Header")
+    begin
+        if (SalesHeader."Document Type" = SalesHeader."Document Type"::Order) and (SalesHeader."Contract Type" <> "Document Contract Type"::" ") then
+            SalesHeader.TestField("External Document No.");
+    end;
+
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Get Shipment", 'OnRunAfterFilterSalesShpLine', '', true, true)]
     local procedure OnRunAfterFilterSalesShpLine(SalesHeader: Record "Sales Header"; var SalesShptLine: Record "Sales Shipment Line")
     begin

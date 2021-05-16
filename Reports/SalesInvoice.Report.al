@@ -1687,6 +1687,8 @@ report 50206 "Sales - Invoice spec"
         LineNo: Integer;
         resource: Record Resource;
     begin
+        if "Sales Invoice Header"."Contract Type" <> "Document Contract Type"::Degressive then
+            exit;
         shipInvoiced.SetRange("Invoice No.", "Sales Invoice Header"."No.");
         TempSumSalesLine.Reset();
         TempSumSalesLine.DeleteAll();
@@ -1704,13 +1706,13 @@ report 50206 "Sales - Invoice spec"
 
                     TempSumSalesLine."No." := resource.Matricule;// salesInvoiceLine."No.";
                     TempSumSalesLine."Delivery Date" := salesshipmentLine."Delivery Date";
-                    TempSumSalesLine.Description := salesShipmentHeader."No."; //salesShipmentHeader."External Document No.";
+                    TempSumSalesLine.Description := salesShipmentHeader."External Document No."; // salesShipmentHeader."No."; //
                     TempSumSalesLine."Document No." := shipInvoiced."Invoice No.";
                     LineNo += 10000;
                     TempSumSalesLine."Line No." := LineNo;
                     TempSumSalesLine.Insert();
                 end else begin
-                    TempSumSalesLine.Description := TempSumSalesLine.Description + '+' + salesShipmentHeader."No."; //salesShipmentHeader."External Document No.";
+                    TempSumSalesLine.Description := TempSumSalesLine.Description + '+' + salesShipmentHeader."External Document No."; //salesShipmentHeader."No."; //
                 end;
                 TempSumSalesLine.Quantity += shipInvoiced."Qty. to Invoice";
                 TempSumSalesLine."Line Amount" += (shipInvoiced."Qty. to Invoice" * salesInvoiceLine."Unit Price");
