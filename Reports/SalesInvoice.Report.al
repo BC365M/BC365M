@@ -721,7 +721,7 @@ report 50206 "Sales - Invoice spec"
                         DataItemLink = "Invoice No." = field ("No.");
                         column(isPackage; true)
                         { }
-                        column(Shipment_No_; "Shipment No.")
+                        column(Shipment_No_; ShipmentNo)
                         { }
                         column(Qty__to_Invoice; "Qty. to Invoice")
                         { }
@@ -749,7 +749,7 @@ report 50206 "Sales - Invoice spec"
                             lsalesShipmentHeader.Get("Shipment No.");
                             PackUnitPrice := lsalesInvoiceLine."Unit Price";
                             codeZone := lsalesShipmentLine."Zone No.";
-                            "Shipment No." := lsalesShipmentHeader."External Document No.";
+                            ShipmentNo := lsalesShipmentHeader."External Document No.";
                         end;
                     }
                     dataitem(VATCounter; "Integer")
@@ -1327,6 +1327,7 @@ report 50206 "Sales - Invoice spec"
         PackUnitPrice: Decimal;
         codeZone: Code[20];
         nbVoyages: Integer;
+        ShipmentNo: Code[20];
         AmtInclVATRemainderAfterRoundingLCY: Decimal;
 
     procedure InitLogInteraction()
