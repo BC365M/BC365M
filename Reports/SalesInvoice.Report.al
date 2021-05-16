@@ -35,6 +35,16 @@ report 50206 "Sales - Invoice spec"
             column(DisplayAdditionalFeeNote; DisplayAdditionalFeeNote)
             {
             }
+            column(isNormal; "Contract Type" = "Document Contract Type"::" ")
+            { }
+            column(isDegressive; "Contract Type" = "Document Contract Type"::Degressive)
+            { }
+            column(isLocal; "Contract Type" = "Document Contract Type"::Local)
+            { }
+            column(isOutOfLocal; "Contract Type" = "Document Contract Type"::"out of Local")
+            { }
+            column(isForfait; "Contract Type" = "Document Contract Type"::Package)
+            { }
             dataitem(CopyLoop; "Integer")
             {
                 DataItemTableView = SORTING (Number);
@@ -679,6 +689,8 @@ report 50206 "Sales - Invoice spec"
                         }
                         trigger OnPreDataItem()
                         begin
+                            if ("Sales Invoice Header"."Contract Type" <> "Document Contract Type"::Degressive) then
+                                CurrReport.Break;
                             TempSumSalesLine.Reset();
                             SetRange(Number, 1, TempSumSalesLine.Count);
                         end;
@@ -691,6 +703,43 @@ report 50206 "Sales - Invoice spec"
                                 TempSumSalesLine.Next();
                         end;
 
+                    }
+                    dataitem(ShipmentInvoicedPackage; "Shipment Invoiced")
+                    {
+                        DataItemTableView = sorting ("Shipment No.");
+                        DataItemLinkReference = "Sales Invoice Header";
+                        DataItemLink = "Invoice No." = field ("No.");
+                        column(isPackage; true)
+                        { }
+                        column(Shipment_No_; "Shipment No.")
+                        { }
+                        column(Qty__to_Invoice; "Qty. to Invoice")
+                        { }
+                        column(PackUnitPrice; PackUnitPrice)
+                        { }
+                        column(PackTotalPrice; PackUnitPrice * "Qty. to Invoice")
+                        { }
+                        column(codeZone; codeZone)
+                        { }
+
+                        trigger OnPreDataItem()
+                        begin
+                            if ("Sales Invoice Header"."Contract Type" <> "Document Contract Type"::Package) then
+                                CurrReport.Break;
+                        end;
+
+                        trigger OnAfterGetRecord()
+                        var
+                            lsalesShipmentLine: Record "Sales Shipment Line";
+                            lsalesInvoiceLine: Record "Sales Invoice Line";
+                            lsalesShipmentHeader: Record "Sales Shipment Header";
+                        begin
+                            lsalesShipmentLine.Get("Shipment No.", "Shipment Line No.");
+                            lsalesInvoiceLine.Get("Invoice No.", "Invoice Line No.");
+                            lsalesShipmentHeader.Get("Shipment No.");
+                            PackUnitPrice := lsalesInvoiceLine."Unit Price";
+                            codeZone := lsalesShipmentLine."Zone No.";
+                        end;
                     }
                     dataitem(VATCounter; "Integer")
                     {
@@ -896,6 +945,7 @@ report 50206 "Sales - Invoice spec"
                         var
                             MontantTouteLettre: Codeunit "Montant Toute Lettre - Mgt";
                         begin
+                            TotalAmountInclVATtxt := '';
                             MontantTouteLettre."Montant en texte"(TotalAmountInclVATtxt, TotalAmountInclVAT);
                             isTotal := true;
                         end;
@@ -1263,6 +1313,8 @@ report 50206 "Sales - Invoice spec"
         DisplayAdditionalFeeNote: Boolean;
         LineNoWithTotal: Integer;
         VATBaseRemainderAfterRoundingLCY: Decimal;
+        PackUnitPrice: Decimal;
+        codeZone: Code[20];
         AmtInclVATRemainderAfterRoundingLCY: Decimal;
 
     procedure InitLogInteraction()
@@ -1633,6 +1685,7 @@ report 50206 "Sales - Invoice spec"
         salesShipmentLine: Record "Sales Shipment Line";
         salesShipmentHeader: Record "Sales Shipment Header";
         LineNo: Integer;
+        resource: Record Resource;
     begin
         shipInvoiced.SetRange("Invoice No.", "Sales Invoice Header"."No.");
         TempSumSalesLine.Reset();
@@ -1642,11 +1695,14 @@ report 50206 "Sales - Invoice spec"
                 salesShipmentLine.Get(shipInvoiced."Shipment No.", shipInvoiced."Shipment Line No.");
                 salesInvoiceLine.Get(shipInvoiced."Invoice No.", shipInvoiced."Invoice Line No.");
                 salesShipmentHeader.Get(shipInvoiced."Shipment No.");
-                TempSumSalesLine.SetRange("No.", salesInvoiceLine."No.");
+                resource.Get(salesInvoiceLine."No.");
+
+                TempSumSalesLine.SetRange("No.", resource.Matricule); //salesInvoiceLine."No.");
                 TempSumSalesLine.SetRange("Delivery Date", salesInvoiceLine."Delivery Date");
                 if not TempSumSalesLine.FindFirst() then begin
                     TempSumSalesLine.Init();
-                    TempSumSalesLine."No." := salesInvoiceLine."No.";
+
+                    TempSumSalesLine."No." := resource.Matricule;// salesInvoiceLine."No.";
                     TempSumSalesLine."Delivery Date" := salesshipmentLine."Delivery Date";
                     TempSumSalesLine.Description := salesShipmentHeader."No."; //salesShipmentHeader."External Document No.";
                     TempSumSalesLine."Document No." := shipInvoiced."Invoice No.";
