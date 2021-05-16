@@ -1538,8 +1538,9 @@ report 50206 "Sales - Invoice spec"
         FormatAddr.SalesInvBillTo(CustAddr, SalesInvoiceHeader);
         ShowShippingAddr := FormatAddr.SalesInvShipTo(ShipToAddr, CustAddr, SalesInvoiceHeader);
         cust.Get(SalesInvoiceHeader."Bill-to Customer No.");
-        CustAddr[2] := SalesInvoiceHeader."Bill-to City";
-        CustAddr[3] := 'ICE: ' + cust.ICE;
+        //CustAddr[2] := SalesInvoiceHeader."Bill-to City";
+        CustAddr[6] := 'ICE: ' + cust.ICE;
+        CompressArray(CustAddr);
     end;
 
     local procedure CollectAsmInformation()
