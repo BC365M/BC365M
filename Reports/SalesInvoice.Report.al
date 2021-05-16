@@ -43,7 +43,7 @@ report 50206 "Sales - Invoice spec"
             { }
             column(isOutOfLocal; "Contract Type" = "Document Contract Type"::"out of Local")
             { }
-            column(isForfait; "Contract Type" = "Document Contract Type"::Package)
+            column(isForfait; "Contract Type" in  ["Document Contract Type"::Package,"Document Contract Type"::Local])
             { }
             dataitem(CopyLoop; "Integer")
             {
