@@ -613,7 +613,7 @@ report 50206 "Sales - Invoice spec"
                             InitializeShipmentBuffer;
                             if (Type = Type::"G/L Account") and (not ShowInternalInfo) then
                                 "No." := '';
-                            if "Sales Invoice Header"."Contract Type" = "Document Contract Type"::"out of Local" then begin
+                            if ("Sales Invoice Header"."Contract Type" = "Document Contract Type"::"out of Local")and (Type = Type::Resource) then begin
                                 resource.Get("No.");
                                 "No." := resource.Matricule;
                             end;
