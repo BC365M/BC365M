@@ -434,6 +434,8 @@ report 50206 "Sales - Invoice spec"
                         column(VATIdentifier_SalesInvLineCaption; FieldCaption("VAT Identifier"))
                         {
                         }
+                        column(nbVoyages; nbVoyages)
+                        { }
                         column(IsLineWithTotals; LineNoWithTotal = "Line No.")
                         {
                         }
@@ -611,11 +613,13 @@ report 50206 "Sales - Invoice spec"
                             resource: Record Resource;
                         begin
                             InitializeShipmentBuffer;
+                            nbVoyages := 0;
                             if (Type = Type::"G/L Account") and (not ShowInternalInfo) then
                                 "No." := '';
-                            if ("Sales Invoice Header"."Contract Type" = "Document Contract Type"::"out of Local")and (Type = Type::Resource) then begin
+                            if ("Sales Invoice Header"."Contract Type" = "Document Contract Type"::"out of Local") and (Type = Type::Resource) then begin
                                 resource.Get("No.");
                                 "No." := resource.Matricule;
+                                nbVoyages := 1;
                             end;
                             VATAmountLine.Init;
                             VATAmountLine."VAT Identifier" := "VAT Identifier";
@@ -669,6 +673,7 @@ report 50206 "Sales - Invoice spec"
                             GetTotalInvDiscAmount := 0;
                             GetTotalAmount := 0;
                             GetTotalAmountIncVAT := 0;
+                            nbVoyages := 0;
                         end;
                     }
                     dataitem(Shipment; "Integer")
@@ -1320,6 +1325,7 @@ report 50206 "Sales - Invoice spec"
         VATBaseRemainderAfterRoundingLCY: Decimal;
         PackUnitPrice: Decimal;
         codeZone: Code[20];
+        nbVoyages: Integer;
         AmtInclVATRemainderAfterRoundingLCY: Decimal;
 
     procedure InitLogInteraction()

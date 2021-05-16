@@ -4599,7 +4599,7 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>NOMBRE DE VOYAGES</Value>
+                                                    <Value>NOMBRE DE VOYAGES                       </Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>8pt</FontSize>
@@ -4615,8 +4615,17 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
                                             <rd:DefaultName>Textbox58</rd:DefaultName>
                                             <Style>
                                               <Border>
-                                                <Style>Solid</Style>
+                                                <Style>None</Style>
                                               </Border>
+                                              <TopBorder>
+                                                <Style>Solid</Style>
+                                              </TopBorder>
+                                              <BottomBorder>
+                                                <Style>Solid</Style>
+                                              </BottomBorder>
+                                              <RightBorder>
+                                                <Style>Solid</Style>
+                                              </RightBorder>
                                               <PaddingLeft>2pt</PaddingLeft>
                                               <PaddingRight>2pt</PaddingRight>
                                               <PaddingTop>2pt</PaddingTop>
@@ -4636,7 +4645,7 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Count(Fields!Quantity_SalesInvLine.Value)</Value>
+                                                    <Value>=SUM(Fields!nbVoyages.Value)</Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>8pt</FontSize>
@@ -4659,6 +4668,7 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
                                               <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
                                           </Textbox>
+                                          <rd:Selected>true</rd:Selected>
                                         </CellContents>
                                       </TablixCell>
                                     </TablixCells>
@@ -4675,7 +4685,7 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>TOTAL KILOMETRAGE</Value>
+                                                    <Value>TOTAL KILOMETRAGE                        </Value>
                                                     <Style>
                                                       <FontFamily>Segoe UI</FontFamily>
                                                       <FontSize>8pt</FontSize>
@@ -4691,8 +4701,17 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
                                             <rd:DefaultName>Textbox71</rd:DefaultName>
                                             <Style>
                                               <Border>
-                                                <Style>Solid</Style>
+                                                <Style>None</Style>
                                               </Border>
+                                              <TopBorder>
+                                                <Style>Solid</Style>
+                                              </TopBorder>
+                                              <BottomBorder>
+                                                <Style>Solid</Style>
+                                              </BottomBorder>
+                                              <RightBorder>
+                                                <Style>Solid</Style>
+                                              </RightBorder>
                                               <PaddingLeft>2pt</PaddingLeft>
                                               <PaddingRight>2pt</PaddingRight>
                                               <PaddingTop>2pt</PaddingTop>
@@ -4944,8 +4963,17 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
                                           <rd:DefaultName>Textbox20</rd:DefaultName>
                                           <Style>
                                             <Border>
-                                              <Style>Solid</Style>
+                                              <Style>None</Style>
                                             </Border>
+                                            <TopBorder>
+                                              <Style>Solid</Style>
+                                            </TopBorder>
+                                            <BottomBorder>
+                                              <Style>Solid</Style>
+                                            </BottomBorder>
+                                            <LeftBorder>
+                                              <Style>Solid</Style>
+                                            </LeftBorder>
                                             <PaddingLeft>2pt</PaddingLeft>
                                             <PaddingRight>2pt</PaddingRight>
                                             <PaddingTop>2pt</PaddingTop>
@@ -4986,8 +5014,17 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
                                           <rd:DefaultName>Textbox29</rd:DefaultName>
                                           <Style>
                                             <Border>
-                                              <Style>Solid</Style>
+                                              <Style>None</Style>
                                             </Border>
+                                            <TopBorder>
+                                              <Style>Solid</Style>
+                                            </TopBorder>
+                                            <BottomBorder>
+                                              <Style>Solid</Style>
+                                            </BottomBorder>
+                                            <LeftBorder>
+                                              <Style>Solid</Style>
+                                            </LeftBorder>
                                             <PaddingLeft>2pt</PaddingLeft>
                                             <PaddingRight>2pt</PaddingRight>
                                             <PaddingTop>2pt</PaddingTop>
@@ -5020,7 +5057,7 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
                                 </Filter>
                               </Filters>
                               <Top>7.25561cm</Top>
-                              <Left>0.06765cm</Left>
+                              <Left>0.10137cm</Left>
                               <Height>2.816cm</Height>
                               <Width>17.94897cm</Width>
                               <ZIndex>6</ZIndex>
@@ -5956,6 +5993,9 @@ End Function</Code>
         </Field>
         <Field Name="VATIdentifier_SalesInvLineCaption">
           <DataField>VATIdentifier_SalesInvLineCaption</DataField>
+        </Field>
+        <Field Name="nbVoyages">
+          <DataField>nbVoyages</DataField>
         </Field>
         <Field Name="IsLineWithTotals">
           <DataField>IsLineWithTotals</DataField>
