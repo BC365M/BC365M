@@ -43,7 +43,7 @@ report 50206 "Sales - Invoice spec"
             { }
             column(isOutOfLocal; "Contract Type" = "Document Contract Type"::"out of Local")
             { }
-            column(isForfait; "Contract Type" in  ["Document Contract Type"::Package,"Document Contract Type"::Local])
+            column(isForfait; "Contract Type" in ["Document Contract Type"::Package, "Document Contract Type"::Local])
             { }
             dataitem(CopyLoop; "Integer")
             {
@@ -735,7 +735,8 @@ report 50206 "Sales - Invoice spec"
                         trigger OnPreDataItem()
                         begin
                             if ("Sales Invoice Header"."Contract Type" <> "Document Contract Type"::Package) then
-                                CurrReport.Break;
+                                if ("Sales Invoice Header"."Contract Type" <> "Document Contract Type"::Local) then
+                                    CurrReport.Break;
                         end;
 
                         trigger OnAfterGetRecord()
