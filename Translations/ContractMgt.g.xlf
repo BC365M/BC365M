@@ -1688,6 +1688,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Line - Field kMREEL - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 2574427010 - Field 3433290474 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lieu Livraison</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Line - Field Lieu Livraison - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 1114148978 - Field 3178647430 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contract Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1747,6 +1752,11 @@
           <source>kMREEL</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Shipment Line - Field kMREEL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1114148978 - Field 3433290474 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lieu Livraison</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Shipment Line - Field Lieu Livraison - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2079186865 - Field 3178647430 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contract Type</source>
@@ -1808,6 +1818,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Invoice Line - Field kMREEL - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 2079186865 - Field 3433290474 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lieu Livraison</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Invoice Line - Field Lieu Livraison - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 4089294192 - Field 3178647430 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contract Type</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1867,6 +1882,11 @@
           <source>kMREEL</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Ledger Entry - Field kMREEL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4089294192 - Field 3433290474 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lieu Livraison</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Item Ledger Entry - Field Lieu Livraison - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 346005766 - Field 3178647430 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contract Type</source>

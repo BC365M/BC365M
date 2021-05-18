@@ -13,6 +13,7 @@ pageextension 50003 "Posted Sales Invoice Subform" extends "Posted Sales Invoice
             field(Level; Level) { ApplicationArea = All; }
             field("Ship-From Code"; "Ship-From Code") { ApplicationArea = All; }
             field("Ship-to Code"; "Ship-to Code") { ApplicationArea = All; }
+            field("Lieu Livraison"; "Lieu Livraison") { ApplicationArea = All; }
         }
     }
 

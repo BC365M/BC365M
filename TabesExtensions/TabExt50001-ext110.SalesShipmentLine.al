@@ -45,7 +45,7 @@ tableextension 50001 "Sales Shipment Line" extends "Sales Shipment Line"
         {
             DataClassification = ToBeClassified;
         }
-        field(50022; DIFF;Decimal)
+        field(50022; DIFF; Decimal)
         {
             DataClassification = ToBeClassified;
 
@@ -54,6 +54,10 @@ tableextension 50001 "Sales Shipment Line" extends "Sales Shipment Line"
         {
             DataClassification = ToBeClassified;
 
+        }
+        field(50025; "Lieu Livraison"; Text[50])
+        {
+            DataClassification = CustomerContent;
         }
 
         //SA

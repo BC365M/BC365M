@@ -34,17 +34,21 @@ tableextension 50003 "Item Ledger Entry" extends "Item Ledger Entry"
         {
         }
         //SA
-        field(50020; KMDEP;Decimal)
+        field(50020; KMDEP; Decimal)
         {
         }
-        field(50021; KMARR;Decimal)
+        field(50021; KMARR; Decimal)
         {
         }
         field(50022; DIFF; Decimal)
         {
         }
-        field(50023; kMREEL;Decimal)
+        field(50023; kMREEL; Decimal)
         {
+        }
+        field(50025; "Lieu Livraison"; Text[50])
+        {
+
         }
 
         //SA

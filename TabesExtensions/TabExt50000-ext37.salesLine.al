@@ -84,6 +84,10 @@ tableextension 50000 "Sales Line" extends "Sales Line"
             DataClassification = ToBeClassified;
             Editable = false;
         }
+        field(50025; "Lieu Livraison"; Text[50])
+        {
+            DataClassification = CustomerContent;
+        }
         //SA
 
     }

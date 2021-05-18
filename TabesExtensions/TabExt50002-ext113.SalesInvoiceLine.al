@@ -55,6 +55,10 @@ tableextension 50002 "Sales Invoice Line" extends "Sales Invoice Line"
             DataClassification = ToBeClassified;
 
         }
+        field(50025; "Lieu Livraison"; Text[50])
+        {
+            DataClassification = CustomerContent;
+        }
 
         //SA
     }

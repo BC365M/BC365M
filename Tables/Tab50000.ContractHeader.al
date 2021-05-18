@@ -3,6 +3,8 @@ table 50000 "Contract Header"
     DataClassification = ToBeClassified;
     LookupPageId = "Contract List";
     fields
+
+
     {
         field(1; "Contract Type"; Enum "Contract Type")
         {
