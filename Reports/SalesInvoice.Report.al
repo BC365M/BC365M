@@ -39,11 +39,11 @@ report 50206 "Sales - Invoice spec"
             { }
             column(isDegressive; "Contract Type" = "Document Contract Type"::Degressive)
             { }
-            column(isLocal; "Contract Type" = "Document Contract Type"::Local)
+            column(isLocalhead; "Contract Type" = "Document Contract Type"::Local)
             { }
             column(isOutOfLocal; "Contract Type" = "Document Contract Type"::"out of Local")
             { }
-            column(isForfait; "Contract Type" in ["Document Contract Type"::Package, "Document Contract Type"::Local])
+            column(isForfait; "Contract Type" = "Document Contract Type"::Package)
             { }
             dataitem(CopyLoop; "Integer")
             {
@@ -719,7 +719,9 @@ report 50206 "Sales - Invoice spec"
                         DataItemTableView = sorting ("Shipment No.");
                         DataItemLinkReference = "Sales Invoice Header";
                         DataItemLink = "Invoice No." = field ("No.");
-                        column(isPackage; true)
+                        column(isPackage; "Sales Invoice Header"."Contract Type" = "Document Contract Type"::Package)
+                        { }
+                        column(islocal; "Sales Invoice Header"."Contract Type" = "Document Contract Type"::Local)
                         { }
                         column(Shipment_No_; ShipmentNo)
                         { }
@@ -734,9 +736,8 @@ report 50206 "Sales - Invoice spec"
 
                         trigger OnPreDataItem()
                         begin
-                            if ("Sales Invoice Header"."Contract Type" <> "Document Contract Type"::Package) then
-                                if ("Sales Invoice Header"."Contract Type" <> "Document Contract Type"::Local) then
-                                    CurrReport.Break;
+                            if ("Sales Invoice Header"."Contract Type" <> "Document Contract Type"::Package) AND ("Sales Invoice Header"."Contract Type" <> "Document Contract Type"::Local) then
+                                CurrReport.Break;
                         end;
 
                         trigger OnAfterGetRecord()
