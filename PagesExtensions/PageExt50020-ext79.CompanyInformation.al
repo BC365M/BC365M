@@ -1,5 +1,6 @@
 pageextension 50020 "Company Information" extends "Company Information"
 {
+    Caption = 'Information Société';
     layout
     {
         addlast(Communication)

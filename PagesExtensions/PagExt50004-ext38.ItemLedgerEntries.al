@@ -1,5 +1,6 @@
 pageextension 50004 "Item Ledger Entries" extends "Item Ledger Entries"
 {
+    Caption = 'Ecritures Comptable Article';
     layout
     {
         // Add changes to page layout here

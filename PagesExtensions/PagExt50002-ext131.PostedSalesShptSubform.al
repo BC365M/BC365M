@@ -1,5 +1,6 @@
 pageextension 50002 "Posted Sales Shpt. Subform" extends "Posted Sales Shpt. Subform"
 {
+    Caption = 'Expedition Vente Enregistrer';
     layout
     {
         // Add changes to page layout here

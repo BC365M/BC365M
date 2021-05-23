@@ -1,5 +1,6 @@
 tableextension 50000 "Sales Line" extends "Sales Line"
 {
+
     fields
     {
         // Add changes to table fields here
@@ -91,17 +92,6 @@ tableextension 50000 "Sales Line" extends "Sales Line"
         field(50026; Matricule; Code[20])
         {
             DataClassification = CustomerContent;
-
-            trigger OnValidate()
-            var
-                MatriculChauffeur: Integer;
-                Res: Record Resource;
-            begin
-                if type = Type::Resource then
-                    // MatriculChauffeur := Format(Res.Matricule);
-                    Matricule := Res.Matricule;
-
-            end;
         }
         field(50030; Avance; Decimal)
         {
@@ -127,4 +117,5 @@ tableextension 50000 "Sales Line" extends "Sales Line"
             DIFF := 0;
         kMREEL := 2 * DIFF;
     end;
+
 }

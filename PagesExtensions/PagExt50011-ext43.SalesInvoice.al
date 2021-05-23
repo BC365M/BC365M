@@ -1,5 +1,6 @@
 pageextension 50011 "Sales Invoice" extends "Sales Invoice"
 {
+    caption = 'Facture Vente';
     layout
     {
         // Add changes to page layout here

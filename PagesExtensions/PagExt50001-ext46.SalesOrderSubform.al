@@ -1,5 +1,6 @@
 pageextension 50001 "Sales Order Subform" extends "Sales Order Subform"
 {
+    Caption = 'Commande Vente ';
     layout
     {
         // Add changes to page layout here

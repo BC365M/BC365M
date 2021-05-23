@@ -1,5 +1,6 @@
 pageextension 50010 CustomizationResourceCard extends "Resource Card"
 {
+    Caption = 'Resource';
     layout
     {
         addlast(General)

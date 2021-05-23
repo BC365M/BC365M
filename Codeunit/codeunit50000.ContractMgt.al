@@ -1,5 +1,7 @@
 codeunit 50000 "Contract Managment"
+
 {
+
     trigger OnRun()
     begin
 

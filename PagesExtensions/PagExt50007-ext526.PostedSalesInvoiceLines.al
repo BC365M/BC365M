@@ -1,5 +1,6 @@
 pageextension 50007 "Posted Sales Invoice Lines" extends "Posted Sales Invoice Lines"
 {
+    caption = 'Facture Vente Ligne Enregistrer';
     layout
     {
         // Add changes to page layout here

@@ -1,5 +1,6 @@
 pageextension 50005 "Sales Invoice Subform" extends "Sales Invoice Subform"
 {
+    Caption = 'Facture Vente';
     layout
     {
         // Add changes to page layout here

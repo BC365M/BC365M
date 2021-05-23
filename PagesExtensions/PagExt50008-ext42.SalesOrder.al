@@ -1,5 +1,6 @@
 pageextension 50008 "Sales Order" extends "Sales Order"
 {
+    caption = 'Commande Vente';
     layout
     {
         // Add changes to page layout here

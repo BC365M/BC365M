@@ -1,5 +1,6 @@
 pageextension 50006 "Posted Sales Shipment Lines" extends "Posted Sales Shipment Lines"
 {
+    Caption = 'Expedition Ligne Vente Enregistrer';
     layout
     {
         // Add changes to page layout here

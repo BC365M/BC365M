@@ -1,6 +1,7 @@
 
 pageextension 50013 "Get Shipment Lines" extends "Get Shipment Lines"
 {
+
     layout
     {
         // Add changes to page layout here

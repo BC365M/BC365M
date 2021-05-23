@@ -1,5 +1,6 @@
 pageextension 50003 "Posted Sales Invoice Subform" extends "Posted Sales Invoice Subform"
 {
+    Caption = 'Facture Vente Enregistrer';
     layout
     {
         // Add changes to page layout here
