@@ -91,7 +91,11 @@ tableextension 50000 "Sales Line" extends "Sales Line"
         }
         field(50026; Matricule; Code[20])
         {
-            DataClassification = CustomerContent;
+            //DataClassification = ToBeClassified;
+            //SA
+            FieldClass = FlowField;
+            CalcFormula = lookup (Resource.Matricule where ("No." = field ("No.")));
+            //SA
         }
         field(50030; Avance; Decimal)
         {
