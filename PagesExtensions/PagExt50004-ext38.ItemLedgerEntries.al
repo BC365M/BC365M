@@ -12,6 +12,8 @@ pageextension 50004 "Item Ledger Entries" extends "Item Ledger Entries"
             field("Contract Line No."; "Contract Line No.") { ApplicationArea = All; Editable = false; }
             field(Level; Level) { ApplicationArea = All; }
             field("Lieu Livraison"; "Lieu Livraison") { ApplicationArea = All; }
+            field(Avance; Avance) { ApplicationArea = All; }
+            field(Matricule; Matricule) { ApplicationArea = All; }
 
         }
     }

@@ -19,6 +19,8 @@ pageextension 50001 "Sales Order Subform" extends "Sales Order Subform"
             field(DIFF; DIFF) { ApplicationArea = All; Editable = false; }
             field(kMREEL; kMREEL) { ApplicationArea = All; Editable = false; }
             field("Lieu Livraison"; "Lieu Livraison") { ApplicationArea = All; }
+            field(Matricule; Matricule) { ApplicationArea = All; }
+            field(Avance; Avance) { ApplicationArea = All; }
 
 
 

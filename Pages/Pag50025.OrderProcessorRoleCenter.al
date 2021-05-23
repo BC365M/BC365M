@@ -327,6 +327,7 @@ page 50025 "Order Processor RC Spec"
             group(Action63)
             {
                 Caption = 'Purchasing';
+                //CaptionML = ENU = 'Purchasing', FRA = 'Achat';
                 Image = FiledPosted;
                 ToolTip = 'View history for sales, shipments, and inventory.';
                 action(Vendors)

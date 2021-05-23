@@ -2,7 +2,7 @@ tableextension 50007 "Resource" extends Resource
 {
     fields
     {
-        field(50000; Matricule; Text[40])
+        field(50000; Matricule; Code[20])
         {
             DataClassification = CustomerContent;
         }

@@ -16,6 +16,9 @@ pageextension 50013 "Get Shipment Lines" extends "Get Shipment Lines"
             field("Ship-to Code"; "Ship-to Code") { ApplicationArea = All; }
 
 
+            field(Avance; Avance) { ApplicationArea = All; }
+
+
         }
     }
 

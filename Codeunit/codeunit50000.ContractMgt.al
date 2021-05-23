@@ -34,6 +34,7 @@ codeunit 50000 "Contract Managment"
     begin
         if (SalesHeader."Document Type" = SalesHeader."Document Type"::Order) and (SalesHeader."Contract Type" <> "Document Contract Type"::" ") then
             SalesHeader.TestField("External Document No.");
+
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Get Shipment", 'OnRunAfterFilterSalesShpLine', '', true, true)]

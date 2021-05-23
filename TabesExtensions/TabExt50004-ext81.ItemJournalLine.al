@@ -52,6 +52,14 @@ tableextension 50004 "Item Journal Line" extends "Item Journal Line"
         {
             DataClassification = ToBeClassified;
         }
+        field(50026; Matricule; Code[20])
+        {
+            DataClassification = CustomerContent;
+        }
+        field(50030; Avance; Decimal)
+        {
+            DataClassification = CustomerContent;
+        }
 
         //SA
     }

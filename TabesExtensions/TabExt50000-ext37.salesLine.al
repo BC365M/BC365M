@@ -88,6 +88,25 @@ tableextension 50000 "Sales Line" extends "Sales Line"
         {
             DataClassification = CustomerContent;
         }
+        field(50026; Matricule; Code[20])
+        {
+            DataClassification = CustomerContent;
+
+            trigger OnValidate()
+            var
+                MatriculChauffeur: Integer;
+                Res: Record Resource;
+            begin
+                if type = Type::Resource then
+                    // MatriculChauffeur := Format(Res.Matricule);
+                    Matricule := Res.Matricule;
+
+            end;
+        }
+        field(50030; Avance; Decimal)
+        {
+            DataClassification = CustomerContent;
+        }
         //SA
 
     }

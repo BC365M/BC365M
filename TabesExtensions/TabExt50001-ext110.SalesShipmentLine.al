@@ -59,6 +59,14 @@ tableextension 50001 "Sales Shipment Line" extends "Sales Shipment Line"
         {
             DataClassification = CustomerContent;
         }
+        field(50026; Matricule; Code[20])
+        {
+            DataClassification = CustomerContent;
+        }
+        field(50030; Avance; Decimal)
+        {
+            DataClassification = CustomerContent;
+        }
 
         //SA
     }

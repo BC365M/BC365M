@@ -29,26 +29,40 @@ tableextension 50003 "Item Ledger Entry" extends "Item Ledger Entry"
         }
         field(50012; "Ship-From Code"; Code[10])
         {
+            DataClassification = ToBeClassified;
         }
         field(50013; "Ship-to Code"; Code[10])
         {
+            DataClassification = ToBeClassified;
         }
         //SA
         field(50020; KMDEP; Decimal)
         {
+            DataClassification = ToBeClassified;
         }
         field(50021; KMARR; Decimal)
         {
+            DataClassification = ToBeClassified;
         }
         field(50022; DIFF; Decimal)
         {
+            DataClassification = ToBeClassified;
         }
         field(50023; kMREEL; Decimal)
         {
+            DataClassification = ToBeClassified;
         }
         field(50025; "Lieu Livraison"; Text[50])
         {
-
+            DataClassification = ToBeClassified;
+        }
+        field(50026; Matricule; Code[20])
+        {
+            DataClassification = CustomerContent;
+        }
+        field(50030; Avance; Decimal)
+        {
+            DataClassification = CustomerContent;
         }
 
         //SA
