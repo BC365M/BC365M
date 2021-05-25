@@ -22,11 +22,8 @@ pageextension 50001 "Sales Order Subform" extends "Sales Order Subform"
             field("Lieu Livraison"; "Lieu Livraison") { ApplicationArea = All; }
             field(Matricule; Matricule) { ApplicationArea = All; }
             field(Avance; Avance) { ApplicationArea = All; }
-
-
-
+            field("Transport Shipment No."; "Transport Shipment No.") { ApplicationArea = All; }
             //SA
-
         }
     }
 }

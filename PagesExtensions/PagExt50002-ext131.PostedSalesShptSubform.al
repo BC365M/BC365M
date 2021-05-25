@@ -18,7 +18,7 @@ pageextension 50002 "Posted Sales Shpt. Subform" extends "Posted Sales Shpt. Sub
             field("Lieu Livraison"; "Lieu Livraison") { ApplicationArea = All; }
             field(Avance; Avance) { ApplicationArea = All; }
             field(Matricule; Matricule) { ApplicationArea = All; }
-
+            field("Transport Shipment No."; "Transport Shipment No.") { ApplicationArea = All; }
         }
     }
 

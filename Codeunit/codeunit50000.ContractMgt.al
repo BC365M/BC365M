@@ -31,11 +31,30 @@ codeunit 50000 "Contract Managment"
         Lines.ModifyAll(Status, contract.Status);
     end;
 
+    [EventSubscriber(ObjectType::Table, database::"Sales Line", 'OnAfterAssignResourceValues', '', true, true)]
+    local procedure OnAfterAssignResourceValues(Resource: Record Resource; var SalesLine: Record "Sales Line")
+    begin
+        SalesLine."Resource Group No." := Resource."Resource Group No.";
+    end;
+
+    [EventSubscriber(ObjectType::Table, database::"Sales Line", 'OnValidateNoOnBeforeInitRec', '', true, true)]
+    local procedure OnValidateNoOnBeforeInitRec(var SalesLine: Record "Sales Line")
+    begin
+        SalesLine."Resource Group No." := '';
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnBeforeSalesShptLineInsert', '', true, true)]
+    local procedure OnBeforeSalesShptLineInsert(var SalesShptLine: Record "Sales Shipment Line")
+    begin
+        if (SalesShptLine."Contract Type" <> "Document Contract Type"::" ") and (SalesShptLine.Quantity <> 0) then
+            SalesShptLine.TestField("Transport Shipment No.");
+    end;
+
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnBeforePostSalesDoc', '', true, true)]
     local procedure OnBeforePostSalesDoc(var SalesHeader: Record "Sales Header")
     begin
-        if (SalesHeader."Document Type" = SalesHeader."Document Type"::Order) and (SalesHeader."Contract Type" <> "Document Contract Type"::" ") then
-            SalesHeader.TestField("External Document No.");
+        // if (SalesHeader."Document Type" = SalesHeader."Document Type"::Order) and (SalesHeader."Contract Type" <> "Document Contract Type"::" ") then
+        //     SalesHeader.TestField("External Document No.");
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Get Shipment", 'OnRunAfterFilterSalesShpLine', '', true, true)]
@@ -136,22 +155,31 @@ codeunit 50000 "Contract Managment"
             IF ("Document Type" = "Document Type"::Order) AND ("Delivery Date" <> 0D) AND ("Zone No." <> '') AND (SalesHeader."Contract Type" <> SalesHeader."Contract Type"::" ") THEN BEGIN //AND ("Contract No." = '')
                 case SalesHeader."Contract Type" of
                     SalesHeader."Contract Type"::Degressive:
-                        contractPriceLine.SetRange("Contract Type", ContractPriceLine."Contract Type"::Degressive);
+                        begin
+                            contractPriceLine.SetRange("Contract Type", ContractPriceLine."Contract Type"::Degressive);
+                            ContractPriceLine.SETRANGE("Zone No.", "Zone No.");
+                        end;
                     SalesHeader."Contract Type"::Local:
-                        contractPriceLine.SetRange("Contract Type", ContractPriceLine."Contract Type"::Local);
+                        begin
+                            ContractPriceLine.SETRANGE("Zone No.", "Zone No.");
+                            contractPriceLine.SetRange("Contract Type", ContractPriceLine."Contract Type"::Local);
+                        end;
                     SalesHeader."Contract Type"::"out of Local":
                         contractPriceLine.SetRange("Contract Type", ContractPriceLine."Contract Type"::"out of Local");
                     SalesHeader."Contract Type"::Package:
-                        contractPriceLine.SetRange("Contract Type", ContractPriceLine."Contract Type"::Package);
+                        begin
+                            ContractPriceLine.SETRANGE("Zone No.", "Zone No.");
+                            contractPriceLine.SetRange("Contract Type", ContractPriceLine."Contract Type"::Package);
+                        end;
                 end;
                 ContractPriceLine.SETRANGE("Customer No.", SalesHeader."Sell-to Customer No.");
                 ContractPriceLine.SETRANGE(Status, ContractPriceLine.Status::Released);
                 ContractPriceLine.SetRange(Type, Type);
-                ContractPriceLine.SetRange("No.", "No.");
+                //ContractPriceLine.SetRange("No.", "No.");
+                ContractPriceLine.SetRange("Resource Group No.", "Resource Group No.");
                 ContractPriceLine.SETRANGE("Starting Date", 0D, "Delivery Date");
                 ContractPriceLine.SETRANGE("Ending Date", "Delivery Date", 99991231D);
                 ContractPriceLine.SETRANGE("Unit of Measure Code", "Unit of Measure Code");
-                ContractPriceLine.SETRANGE("Zone No.", "Zone No.");
                 IF ContractPriceLine.FINDFIRST THEN BEGIN
                     CASE ContractPriceLine."Contract Type" OF
                         ContractPriceLine."Contract Type"::Degressive:
@@ -166,7 +194,8 @@ codeunit 50000 "Contract Managment"
                                 OtherSalesLines.SETRANGE("Document Type", "Document Type");
                                 OtherSalesLines.SETRANGE("Document No.", "Document No.");
                                 OtherSalesLines.SETRANGE(Type, Type);
-                                OtherSalesLines.SETRANGE("No.", "No.");
+                                //OtherSalesLines.SETRANGE("No.", "No.");
+                                OtherSalesLines.SetRange("Resource Group No.", "Resource Group No.");
                                 OtherSalesLines.SETRANGE("Unit of Measure Code", "Unit of Measure Code");
                                 OtherSalesLines.SETRANGE("Zone No.", "Zone No.");
                                 OtherSalesLines.SETRANGE("Delivery Date", "Delivery Date");
@@ -203,7 +232,8 @@ codeunit 50000 "Contract Managment"
                                 OtherSalesLines.SETRANGE("Document Type", "Document Type");
                                 OtherSalesLines.SETRANGE("Document No.", "Document No.");
                                 OtherSalesLines.SETRANGE(Type, Type);
-                                OtherSalesLines.SETRANGE("No.", "No.");
+                                //OtherSalesLines.SETRANGE("No.", "No.");
+                                OtherSalesLines.SetRange("Resource Group No.", "Resource Group No.");
                                 OtherSalesLines.SETRANGE("Unit of Measure Code", "Unit of Measure Code");
                                 //OtherSalesLines.SETRANGE("Zone No.", "Zone No.");
                                 OtherSalesLines.SETRANGE("Delivery Date", CalcDate('<-CM>', "Delivery Date"), CalcDate('<CM>', "Delivery Date"));

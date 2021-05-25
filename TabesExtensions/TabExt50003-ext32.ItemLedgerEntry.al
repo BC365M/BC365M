@@ -66,5 +66,14 @@ tableextension 50003 "Item Ledger Entry" extends "Item Ledger Entry"
         }
 
         //SA
+        field(50031; "Resource Group No."; Code[20])
+        {
+            TableRelation = "Resource Group";
+            Editable = false;
+        }
+        field(50032; "Transport Shipment No."; Code[20])
+        {
+            DataClassification = ToBeClassified;
+        }
     }
 }

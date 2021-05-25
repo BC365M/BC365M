@@ -69,5 +69,14 @@ tableextension 50001 "Sales Shipment Line" extends "Sales Shipment Line"
         }
 
         //SA
+        field(50031; "Resource Group No."; Code[20])
+        {
+            TableRelation = "Resource Group";
+            Editable = false;
+        }
+        field(50032; "Transport Shipment No."; Code[20])
+        {
+            DataClassification = ToBeClassified;
+        }
     }
 }

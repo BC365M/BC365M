@@ -19,6 +19,7 @@ page 50006 "Contract Line List"
                 field("Starting Date"; "Starting Date") { ApplicationArea = All; }
                 field("Ending Date"; "Ending Date") { ApplicationArea = All; }
                 field(Type; Type) { ApplicationArea = All; }
+                field("Resource Group No."; "Resource Group No.") { ApplicationArea = All; }
                 field("No."; "No.") { ApplicationArea = All; }
 
             }

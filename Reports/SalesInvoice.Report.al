@@ -751,7 +751,7 @@ report 50206 "Sales - Invoice spec"
                             lsalesShipmentHeader.Get("Shipment No.");
                             PackUnitPrice := lsalesInvoiceLine."Unit Price";
                             codeZone := lsalesShipmentLine."Zone No.";
-                            ShipmentNo := lsalesShipmentHeader."External Document No.";
+                            ShipmentNo := lsalesShipmentLine."Transport Shipment No.";//lsalesShipmentHeader."External Document No.";
                         end;
                     }
                     dataitem(VATCounter; "Integer")
@@ -1722,13 +1722,13 @@ report 50206 "Sales - Invoice spec"
 
                     TempSumSalesLine."No." := resource.Matricule;// salesInvoiceLine."No.";
                     TempSumSalesLine."Delivery Date" := salesshipmentLine."Delivery Date";
-                    TempSumSalesLine.Description := salesShipmentHeader."External Document No."; // salesShipmentHeader."No."; //
+                    TempSumSalesLine.Description := salesShipmentLine."Transport Shipment No.";// salesShipmentHeader."External Document No."; // salesShipmentHeader."No."; //
                     TempSumSalesLine."Document No." := shipInvoiced."Invoice No.";
                     LineNo += 10000;
                     TempSumSalesLine."Line No." := LineNo;
                     TempSumSalesLine.Insert();
                 end else begin
-                    TempSumSalesLine.Description := TempSumSalesLine.Description + '+' + salesShipmentHeader."External Document No."; //salesShipmentHeader."No."; //
+                    TempSumSalesLine.Description := TempSumSalesLine.Description + '+' + salesShipmentLine."Transport Shipment No.";//salesShipmentHeader."External Document No."; //salesShipmentHeader."No."; //
                 end;
                 TempSumSalesLine.Quantity += shipInvoiced."Qty. to Invoice";
                 TempSumSalesLine."Line Amount" += (shipInvoiced."Qty. to Invoice" * salesInvoiceLine."Unit Price");

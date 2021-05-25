@@ -102,6 +102,15 @@ tableextension 50000 "Sales Line" extends "Sales Line"
             DataClassification = CustomerContent;
         }
         //SA
+        field(50031; "Resource Group No."; Code[20])
+        {
+            TableRelation = "Resource Group";
+            Editable = false;
+        }
+        field(50032; "Transport Shipment No."; Code[20])
+        {
+            DataClassification = ToBeClassified;
+        }
 
     }
     local procedure validateShipingCodes()

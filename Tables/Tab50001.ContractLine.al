@@ -88,6 +88,10 @@ table 50001 "Contract Line"
             DataClassification = ToBeClassified;
             BlankZero = true;
         }
+        field(16; "Resource Group No."; Code[20])
+        {
+            TableRelation = "Resource Group";
+        }
         field(20; "Unit Price"; Decimal)
         {
             BlankZero = true;

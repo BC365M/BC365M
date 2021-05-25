@@ -20,6 +20,7 @@ page 50012 "Out Of Local Contract Lines"
                     ToolTip = 'Specifies the value of the Type field';
                     ApplicationArea = All;
                 }
+                field("Resource Group No."; "Resource Group No.") { ApplicationArea = All; }
                 field("No."; "No.") { ApplicationArea = All; }
                 field("Unit of Measure Code"; Rec."Unit of Measure Code")
                 {

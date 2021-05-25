@@ -17,6 +17,7 @@ pageextension 50003 "Posted Sales Invoice Subform" extends "Posted Sales Invoice
             field("Lieu Livraison"; "Lieu Livraison") { ApplicationArea = All; }
             field(Avance; Avance) { ApplicationArea = All; }
             field(Matricule; Matricule) { ApplicationArea = All; }
+            field("Transport Shipment No."; "Transport Shipment No.") { ApplicationArea = All; }
         }
     }
 
