@@ -187,12 +187,14 @@ table 50001 "Contract Line"
 
     trigger OnInsert()
     begin
-
+        TestField(Status, Status::Open);
+        checkStatus();
     end;
 
     trigger OnModify()
     begin
-
+        TestField(Status, Status::Open);
+        checkStatus();
     end;
 
     trigger OnDelete()
@@ -200,6 +202,7 @@ table 50001 "Contract Line"
         Slices: Record "Contract Line Slices";
     begin
         TestField(Status, Status::Open);
+        checkStatus();
         Slices.SetRange("Contract Type", "Contract Type");
         Slices.SetRange("Contract No.", "Contract No.");
         Slices.SetRange("Contract Line No.", "Line No.");
@@ -228,6 +231,14 @@ table 50001 "Contract Line"
         if ("Ship-to Code" <> '') and ("Ship-From Code" <> '') and ("Ship-From Code" = "Ship-to Code") then
             Error('Ship-from and Ship-to must be different');
         validate("Zone No.", format("Ship-from Code", 10) + format("Ship-to Code", 10));
+    end;
+
+    procedure checkStatus()
+    var
+        contractHeader: Record "Contract Header";
+    begin
+        contractHeader.Get("Contract Type", "Contract No.");
+        contractHeader.TestField(Status, contractHeader.Status::Open);
     end;
 
 }

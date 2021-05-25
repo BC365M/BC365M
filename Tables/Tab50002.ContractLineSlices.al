@@ -63,21 +63,29 @@ table 50002 "Contract Line Slices"
 
     trigger OnInsert()
     begin
-
+        checkStatus();
     end;
 
     trigger OnModify()
     begin
-
+        checkStatus();
     end;
 
     trigger OnDelete()
     begin
-
+        checkStatus();
     end;
 
     trigger OnRename()
     begin
 
+    end;
+
+    procedure checkStatus()
+    var
+        contractHeader: Record "Contract Header";
+    begin
+        contractHeader.Get("Contract Type", "Contract No.");
+        contractHeader.TestField(Status, contractHeader.Status::Open);
     end;
 }

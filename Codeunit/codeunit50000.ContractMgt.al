@@ -36,7 +36,6 @@ codeunit 50000 "Contract Managment"
     begin
         if (SalesHeader."Document Type" = SalesHeader."Document Type"::Order) and (SalesHeader."Contract Type" <> "Document Contract Type"::" ") then
             SalesHeader.TestField("External Document No.");
-
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Get Shipment", 'OnRunAfterFilterSalesShpLine', '', true, true)]
@@ -206,7 +205,7 @@ codeunit 50000 "Contract Managment"
                                 OtherSalesLines.SETRANGE(Type, Type);
                                 OtherSalesLines.SETRANGE("No.", "No.");
                                 OtherSalesLines.SETRANGE("Unit of Measure Code", "Unit of Measure Code");
-                                OtherSalesLines.SETRANGE("Zone No.", "Zone No.");
+                                //OtherSalesLines.SETRANGE("Zone No.", "Zone No.");
                                 OtherSalesLines.SETRANGE("Delivery Date", CalcDate('<-CM>', "Delivery Date"), CalcDate('<CM>', "Delivery Date"));
                                 OtherSalesLines.SETFILTER("Line No.", STRSUBSTNO('<>%1', "Line No."));
                                 OtherSalesLines.CalcSums("Outstanding Quantity");
