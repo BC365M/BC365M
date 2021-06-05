@@ -29,6 +29,10 @@ table 50005 "Ligne Flotte & Maintenance"
         field(5; Quantité; Decimal)
         {
             DataClassification = ToBeClassified;
+            trigger OnValidate()
+            begin
+                calcDiffSortie();
+            end;
         }
         field(6; "Cout Unitaire"; decimal)
         {
@@ -111,7 +115,7 @@ table 50005 "Ligne Flotte & Maintenance"
 
             begin
                 calcDiffKM();
-                calcDiffSortie();
+
             end;
 
         }
