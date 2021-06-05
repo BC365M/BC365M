@@ -6,7 +6,7 @@ pageextension 50008 "Sales Order" extends "Sales Order"
         // Add changes to page layout here
         addlast(General)
         {
-            field("Contract Type"; "Contract Type") { ApplicationArea = All; }
+            field("Contract Type"; "Contract Type") { ApplicationArea = All; Caption = 'Type Contrat'; }
         }
     }
 

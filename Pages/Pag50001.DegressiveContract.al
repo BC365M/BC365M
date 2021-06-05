@@ -20,6 +20,7 @@ page 50001 "Degressive Contract"
             {
                 ApplicationArea = All;
                 SubPageLink = "Contract No." = field ("No.");
+
             }
         }
     }

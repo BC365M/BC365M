@@ -7,5 +7,10 @@ tableextension 50006 "Sales & Receivables Setup" extends "Sales & Receivables Se
         {
             TableRelation = "No. Series";
         }
+        field(50001; "maintenance Nos."; Code[20])
+        {
+            TableRelation = "No. Series";
+        }
+
     }
 }

@@ -1,6 +1,7 @@
 page 50025 "Order Processor RC Spec"
 {
     Caption = 'Sales Order Processor', Comment = '{Dependency=Match,"ProfileDescription_ORDERPROCESSOR"}';
+
     PageType = RoleCenter;
 
     layout

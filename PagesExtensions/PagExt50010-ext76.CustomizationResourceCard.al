@@ -50,12 +50,29 @@ pageextension 50010 CustomizationResourceCard extends "Resource Card"
                 ApplicationArea = all;
 
             }
-            field("Date 1er Visite Technique"; "Date 1er Visite Technique")
+
+
+        }
+        addbefore(Invoicing)
+        {
+            group(Alerts)
             {
-                ApplicationArea = all;
+                field("Date Creation Assurance"; "Date Creation Assurance") { ApplicationArea = all; Caption = 'Date Création Assurance'; }
+                field("Notice date Assurance"; "Notice date Assurance") { ApplicationArea = all; Caption = 'Date Préavis Assurance'; }
+                field("Notice Period Assurance"; "Notice Period Assurance") { ApplicationArea = all; Caption = 'Délai Préavis Assurance'; }
+                field("Warning Date Assurance"; "Warning Date Assurance") { ApplicationArea = all; Caption = 'Date Alert Assurance'; }
+                field("Warning Period Assurance"; "Warning Period Assurance") { ApplicationArea = all; Caption = 'Délai Alert Assurance'; }
+                field("Date Creation V.Technique"; "Date Creation V.Technique") { ApplicationArea = all; Caption = 'Date Création Visite technique'; }
+                field("Notice date V.Technique"; "Notice date V.Technique") { ApplicationArea = all; Caption = 'Date Préavis V.Technique'; }
+                field("Notice Period V.Technique"; "Notice Period V.Technique") { ApplicationArea = all; Caption = 'Délai Préavis V.Technique'; }
+                field("Warning Date V.Technique"; "Warning Date V.Technique") { ApplicationArea = all; Caption = 'Date Alert V.Technique'; }
+                field("Warning Period V.Technique"; "Warning Period V.Technique") { ApplicationArea = all; Caption = 'Délai Alert V.Technique'; }
+                field("Date 1er Vidange"; "Date 1er Vidange") { ApplicationArea = all; Caption = 'Date 1er Vidange'; }
+                field("KLM Depart"; "KLM Depart") { ApplicationArea = all; Caption = 'KLM Depart'; }
+                field("Dernier KLM"; "Dernier KLM") { ApplicationArea = all; Caption = 'Dernier KLM'; }
+                field("Warnnin KM"; "Warnnin KM") { ApplicationArea = all; Caption = 'KM Alert'; }
 
             }
-
         }
 
     }

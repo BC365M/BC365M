@@ -18,6 +18,31 @@ codeunit 50000 "Contract Managment"
         Lines.SetRange("Contract No.", contract."No.");
         Lines.ModifyAll(Status, contract.Status);
     end;
+    //Maintenance Release
+    procedure Release1(var Maintenance: Record "Maintenance Header")
+    var
+        Lines: Record "Ligne Flotte & Maintenance";
+    begin
+        if Maintenance.statut <> Maintenance.statut::Open then exit;
+        Maintenance.statut := Maintenance.statut::Encours;
+        Maintenance.Modify();
+        Lines.SetRange(No_Maintenance, Maintenance.No_Maintenance);
+        Lines.ModifyAll(statut, Maintenance.statut);
+
+    end;
+
+    procedure Open1(var Maintenance: Record "Maintenance Header")
+    var
+        Lines: Record "Ligne Flotte & Maintenance";
+    begin
+        if Maintenance.statut <> Maintenance.statut::Encours then exit;
+        Maintenance.statut := Maintenance.statut::Open;
+        Maintenance.Modify();
+        Lines.SetRange(No_Maintenance, Maintenance.No_Maintenance);
+        Lines.ModifyAll(statut, Maintenance.statut);
+
+    end;
+    //Maintenance Release
 
     procedure Open(var contract: Record "Contract Header")
     var

@@ -8,5 +8,9 @@ pageextension 50009 "Sales & Receivables Setup" extends "Sales & Receivables Set
         {
             field("Contract Nos."; "Contract Nos.") { ApplicationArea = All; }
         }
+        addlast("Number Series")
+        {
+            field("maintenance Nos."; "maintenance Nos.") { ApplicationArea = All; }
+        }
     }
 }
