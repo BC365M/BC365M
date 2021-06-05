@@ -5,9 +5,14 @@ table 50005 "Ligne Flotte & Maintenance"
     fields
     {
 
-        field(50; "Type Ecriture"; Code[10])
+        field(49; "Type Ecriture"; Option)
+        {
+            OptionMembers = "","Consommation","Vidange";
+        }
+        field(50; "Type de Travail"; Code[10])
         {
             TableRelation = "Work Type".Code;
+
         }
         field(1; No_Maintenance; code[20])
         {
@@ -18,7 +23,8 @@ table 50005 "Ligne Flotte & Maintenance"
         field(2; DesignationMaintenance; Text[50])
         {
             DataClassification = ToBeClassified;
-            Caption = 'Designation';
+            Caption = 'Designation Intervention';
+
         }
         field(5; Quantité; Decimal)
         {
@@ -46,6 +52,7 @@ table 50005 "Ligne Flotte & Maintenance"
         {
             TableRelation = Item."No.";
 
+
         }
         field(25; "Location Code"; code[10])
         {
@@ -65,6 +72,7 @@ table 50005 "Ligne Flotte & Maintenance"
         field(23; Chauffeur; code[30])
         {
             DataClassification = ToBeClassified;
+
         }
         field(24; No_Bon; code[10])
         {
@@ -88,8 +96,8 @@ table 50005 "Ligne Flotte & Maintenance"
             trigger OnValidate()
 
             begin
-                calcDiffKM;
-                calcDiffSortie;
+                calcDiffKM();
+                calcDiffSortie();
 
             end;
         }
@@ -99,6 +107,12 @@ table 50005 "Ligne Flotte & Maintenance"
             DataClassification = ToBeClassified;
             Caption = 'Difference KLM';
             Editable = false;
+            trigger OnValidate()
+
+            begin
+                calcDiffKM();
+                calcDiffSortie();
+            end;
 
         }
         field(30; "%GASOIL_S/DIFF_KM"; Decimal)
@@ -141,16 +155,15 @@ table 50005 "Ligne Flotte & Maintenance"
 
     var
         myInt: Integer;
-
+        worktype: Record "Work Type";
+        item: Record item;
 
 
     trigger OnInsert()
     var
-        worktype: Record "Work Type";
+
     begin
-        if No_Maintenance = '' then
-            DesignationMaintenance := worktype.Description;
-        worktype.Get((No_Maintenance));
+
     end;
 
     trigger OnModify()
@@ -172,7 +185,7 @@ table 50005 "Ligne Flotte & Maintenance"
     var
         myInt: Integer;
     begin
-        if KM_President < kM_Actuel then
+        if KM_President <> kM_Actuel then
             Dif_KLM := (KM_President - kM_Actuel)
         else
             Dif_KLM := 0;
@@ -183,7 +196,7 @@ table 50005 "Ligne Flotte & Maintenance"
     var
         myInt: Integer;
     begin
-        If Dif_KLM < "Quantité" then
+        If Dif_KLM <> "Quantité" then
             "%GASOIL_S/DIFF_KM" := (Dif_KLM / "Quantité")
         else
             "%GASOIL_S/DIFF_KM" := 0;
@@ -197,6 +210,7 @@ table 50005 "Ligne Flotte & Maintenance"
         maintenanceHeader.Get("Type Maintenance", No_Maintenance);
         maintenanceHeader.TestField(statut, maintenanceHeader.statut::Open);
     end;
+
 
 
 
