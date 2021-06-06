@@ -29,6 +29,7 @@ table 50005 "Ligne Flotte & Maintenance"
             DataClassification = ToBeClassified;
             TableRelation = "Maintenance Header".No_Maintenance;
             Caption = 'N° Maintenance';
+            Editable = false;
         }
         field(2; DesignationMaintenance; Text[50])
         {
@@ -146,13 +147,19 @@ table 50005 "Ligne Flotte & Maintenance"
         }
         field(50000; "Date Document"; date)
         {
-            DataClassification = ToBeClassified;
+
             Caption = 'Date Document';
+            FieldClass = FlowField;
+            CalcFormula = lookup ("Maintenance Header"."Date Document" where ("Type Maintenance" = field ("Type Maintenance"), No_Maintenance = field (No_Maintenance)));
+            Editable = false;
+
+
         }
         field(50001; "Line No_"; Integer) { DataClassification = ToBeClassified; }
         field(30; "%GASOIL_S/DIFF_KM"; Decimal)
         {
             caption = '% GASOIL SORTIE/DIFF KM';
+            Editable = false;
         }
         field(8; "Type Maintenance"; enum "Type Maintenance")
         {

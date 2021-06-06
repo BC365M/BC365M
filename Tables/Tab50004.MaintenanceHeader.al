@@ -9,6 +9,7 @@ table 50004 "Maintenance Header"
         {
             DataClassification = ToBeClassified;
             Caption = 'N° maintenance';
+            Editable = false;
 
         }
 
@@ -22,7 +23,7 @@ table 50004 "Maintenance Header"
             DataClassification = ToBeClassified;
         }
 
-        field(6; statut; enum "Status maintenance") { DataClassification = ToBeClassified; }
+        field(6; statut; enum "Status maintenance") { DataClassification = ToBeClassified; Editable = false; }
         field(7; "Date Creation"; DateTime) { DataClassification = ToBeClassified; }
         field(8; "Type Maintenance"; enum "Type Maintenance")
         {

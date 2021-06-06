@@ -83,16 +83,24 @@ page 50031 "Gestion des Flottes"
                 end;
 
             }
-            action(Valider)
+            action(Post)
             {
                 ApplicationArea = All;
                 Promoted = true;
                 PromotedIsBig = true;
-                Image = ReleaseDoc;
+                Image = PostOrder;
+                Caption = 'Valider';
+                ShortcutKey = F9;
+
                 trigger OnAction()
+                var
+                    CurrentJnlBatchName: code[10];
 
                 begin
                     TestField(statut, statut::Encours);
+                    CODEUNIT.RUN(Codeunit::"Item Jnl.-Post", Rec);
+                    CurrPage.UPDATE(false);
+
 
                 end;
 
