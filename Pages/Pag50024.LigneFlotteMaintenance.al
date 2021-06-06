@@ -14,6 +14,7 @@ page 50024 "Ligne Flotte Maintenance"
             {
                 field(No; No_Maintenance) { ApplicationArea = all; caption = 'N° maintenance'; }
                 field("Type Ecriture"; "Type Ecriture") { ApplicationArea = all; Caption = 'Type écriture'; }
+                field("Date Document"; "Date Document") { ApplicationArea = all; Caption = 'Date Document '; }
                 field("Type de Travail"; "Type de Travail")
                 {
                     ApplicationArea = all;
@@ -24,6 +25,7 @@ page 50024 "Ligne Flotte Maintenance"
                 field(Ressource; Ressource) { ApplicationArea = all; Caption = 'Ressource'; }
                 field(No_Bon; No_Bon) { ApplicationArea = all; Caption = 'N° BON'; }
                 field("Item No_"; "Item No_") { ApplicationArea = all; caption = 'No Article'; }
+
 
                 field("Item Description"; "Item Description") { ApplicationArea = all; Caption = 'Description Article'; }
                 field("Location Code"; "Location Code") { ApplicationArea = all; Caption = 'Code Magasin'; }

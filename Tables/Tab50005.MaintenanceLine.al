@@ -144,6 +144,12 @@ table 50005 "Ligne Flotte & Maintenance"
             end;
 
         }
+        field(50000; "Date Document"; date)
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Date Document';
+        }
+        field(50001; "Line No_"; Integer) { DataClassification = ToBeClassified; }
         field(30; "%GASOIL_S/DIFF_KM"; Decimal)
         {
             caption = '% GASOIL SORTIE/DIFF KM';
@@ -169,7 +175,7 @@ table 50005 "Ligne Flotte & Maintenance"
 
     keys
     {
-        key(PK; No_Maintenance, "Type Maintenance")
+        key(PK; No_Maintenance, "Type Maintenance", "Line No_")
         {
             Clustered = true;
         }

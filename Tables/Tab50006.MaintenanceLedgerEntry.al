@@ -6,6 +6,7 @@ table 50006 "GMAO Ledger Entry"
     {
         field(1; No_Maintenance; code[20]) { DataClassification = CustomerContent; }
         field(2; DesignationMaintenance; Text[50]) { DataClassification = CustomerContent; }
+        field(50000; "date Document "; Date) { DataClassification = CustomerContent; }
         field(5; Quantité; Decimal) { DataClassification = CustomerContent; }
         field(6; "Cout Unitaire"; decimal) { DataClassification = CustomerContent; }
         field(7; Montant; Decimal) { DataClassification = CustomerContent; }
