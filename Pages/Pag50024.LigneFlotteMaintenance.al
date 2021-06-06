@@ -43,6 +43,7 @@ page 50024 "Ligne Flotte Maintenance"
                     ApplicationArea = all;
                     Caption = 'Chauffeur';
 
+
                 }
 
 

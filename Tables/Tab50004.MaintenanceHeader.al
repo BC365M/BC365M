@@ -11,11 +11,7 @@ table 50004 "Maintenance Header"
             Caption = 'N° maintenance';
 
         }
-        field(2; "Ressource No"; Code[10])
-        {
-            DataClassification = ToBeClassified;
-            TableRelation = Resource."No.";
-        }
+
         field(3; "Type Camion"; Option)
         {
             DataClassification = ToBeClassified;
@@ -42,7 +38,7 @@ table 50004 "Maintenance Header"
 
     keys
     {
-        key(PK; No_Maintenance)
+        key(PK; No_Maintenance, "Type Maintenance")
         {
             Clustered = true;
         }

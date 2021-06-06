@@ -4,6 +4,7 @@ page 50030 "Liste Flotte"
     SourceTable = "Maintenance Header";
     CardPageId = "Gestion des Flottes";
     Caption = 'Liste des maintenance';
+    UsageCategory = Lists;
 
     layout
     {
@@ -16,11 +17,7 @@ page 50030 "Liste Flotte"
                     ApplicationArea = All;
 
                 }
-                field("Ressource No"; "Ressource No")
-                {
-                    ApplicationArea = All;
 
-                }
                 field("Type Camion"; "Type Camion")
                 {
                     ApplicationArea = All;

@@ -154,7 +154,7 @@ table 50005 "Ligne Flotte & Maintenance"
         }
         field(55; "Shortcut Dimension 7 Code"; code[20])
         {
-            CaptionClass = '1,2,1';
+            CaptionClass = 'Chauffeur';
             TableRelation = "Dimension Value".Code WHERE ("Global Dimension No." = CONST (7));
             trigger OnValidate()
             begin
@@ -169,7 +169,7 @@ table 50005 "Ligne Flotte & Maintenance"
 
     keys
     {
-        key(PK; No_Maintenance)
+        key(PK; No_Maintenance, "Type Maintenance")
         {
             Clustered = true;
         }

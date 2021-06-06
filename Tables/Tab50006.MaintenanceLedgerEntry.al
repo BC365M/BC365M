@@ -24,9 +24,6 @@ table 50006 "GMAO Ledger Entry"
         field(28; Dif_KLM; Decimal) { DataClassification = CustomerContent; }
         field(30; "%GASOIL_S/DIFF_KM"; Decimal) { DataClassification = CustomerContent; }
 
-
-
-
     }
 
 

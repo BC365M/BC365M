@@ -16,11 +16,8 @@ page 50031 "Gestion des Flottes"
                     Caption = 'N° Maintenance';
 
                 }
-                field("Ressource No"; "Ressource No")
-                {
-                    ApplicationArea = ToBeClassified;
-                    Caption = 'N° Camion';
-                }
+                field("Date Document"; "Date Document") { ApplicationArea = all; Caption = 'Date Document'; }
+
                 field("Type Maintenance"; "Type Maintenance")
                 {
                     ApplicationArea = all;
