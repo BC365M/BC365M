@@ -12,6 +12,10 @@ page 50025 "Order Processor RC Spec"
             {
                 ApplicationArea = Basic, Suite;
             }
+            part(maintenanceAct; "Maintenance Activities")
+            {
+                ApplicationArea = Basic, Suite;
+            }
             part(Control1901851508; "SO Processor Activities")
             {
                 AccessByPermission = TableData "Sales Shipment Header" = R;
