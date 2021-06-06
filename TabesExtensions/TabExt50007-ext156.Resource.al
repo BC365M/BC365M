@@ -31,6 +31,17 @@ tableextension 50007 "Resource" extends Resource
 
             end;
         }
+        field(50041; "Date Alerte V.Technique"; Date)
+        {
+            Caption = 'Date Alerte Visite technique';
+            DataClassification = ToBeClassified;
+            trigger OnValidate()
+            var
+                myInt: Integer;
+            begin
+
+            end;
+        }
 
         field(50043; "Warning Period V.Technique"; DateFormula)
         {

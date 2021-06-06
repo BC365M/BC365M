@@ -24,13 +24,14 @@ table 50006 "GMAO Ledger Entry"
         field(27; kM_Actuel; Decimal) { DataClassification = CustomerContent; }
         field(28; Dif_KLM; Decimal) { DataClassification = CustomerContent; }
         field(30; "%GASOIL_S/DIFF_KM"; Decimal) { DataClassification = CustomerContent; }
+        field(50001; "Line No_"; Integer) { DataClassification = ToBeClassified; }
 
     }
 
 
     keys
     {
-        key(PK; No_Maintenance)
+        key(PK; No_Maintenance, "Line No_")
         {
             Clustered = true;
         }

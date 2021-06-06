@@ -32,7 +32,8 @@ page 50026 "Maintenance Activities"
                         res: Record Resource;
                     begin
                         res.Reset();
-                        res.SetRange("Date Creation V.Technique", 0D, Today);
+                        // res.SetRange("Date Alerte V.Technique", 0D, Today);
+                        res.SetRange("Date Alerte V.Technique", 0D, Today);
                         page.Run(0, res);
                     end;
                 }
@@ -99,8 +100,16 @@ page 50026 "Maintenance Activities"
         emp: Record Employee;
     begin
         res.Reset();
-        res.SetRange("Date Creation V.Technique", 0D, Today);
+        res.SetRange("Date Alerte V.Technique", Today);
         NbreVisite := res.Count;
+
+
+        /* res.Reset();
+         res.SetRange("Date Alerte V.Technique", 0D, Today);
+         NbreAssurance := res.Count;
+         res.Reset();
+         res.SetRange("Date Creation V.Technique", 0D, Today);
+         NbreAssurance := res.Count;*/
     end;
 
     var

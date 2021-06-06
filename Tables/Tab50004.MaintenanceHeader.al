@@ -12,6 +12,11 @@ table 50004 "Maintenance Header"
             Editable = false;
 
         }
+        field(2; "Journal Batch Name"; code[10])
+        {
+            DataClassification = ToBeClassified;
+            TableRelation = "Item Journal Batch".Name WHERE ("Journal Template Name" = FIELD ("Journal Batch Name"));
+        }
 
         field(3; "Type Camion"; Option)
         {
