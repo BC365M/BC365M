@@ -105,7 +105,8 @@ page 50031 "Gestion des Flottes"
 
                 begin
                     TestField(statut, statut::Encours);
-
+                    itemJlLine.SetRange("Journal Template Name", 'ARTICLE');
+                    itemJlLine.SetRange("Journal Batch Name", 'DEFAUT');
                     lines.SetRange(No_Maintenance, rec.No_Maintenance);
                     GmaoHeader.SetRange("Journal Batch Name", "Journal Batch Name", 'Default');
 
@@ -128,27 +129,20 @@ page 50031 "Gestion des Flottes"
                             ManLedgerEntry.Validate("Type Maintenance", lines."Type Maintenance");
                             ManLedgerEntry.Validate(No_Bon, lines.No_Bon);
                             ManLedgerEntry.Validate(statut, lines.statut);
-                            //   until lines.Next() = 0;
 
 
                             itemJlLine.Init();
+                            itemJlLine.Validate("Journal Template Name", 'ARTICLE');
+                            itemJlLine.Validate("Journal Batch Name", 'DEFAUT');
+                            itemJlLine.Validate("Line No.", lines."Line No_");
+                            itemJlLine.Insert(true);
+                            itemJlLine.Validate("Posting Date", today);
+                            itemJlLine.Validate("Document No.", rec.No_Maintenance);
+                            itemJlLine.Validate("Entry Type", itemJlLine."Entry Type"::"Negative Adjmt.");
                             itemJlLine.validate("Item No.", lines."Item No_");
                             itemJlLine.Validate(Quantity, lines."Quantité");
                             itemJlLine.validate("Location Code", lines."Location Code");
-                            itemJlLine.validate(kM_Actuel, lines.kM_Actuel);
-                            itemJlLine.validate(KM_President, lines.KM_President);
-                            itemJlLine.validate(Dif_KLM, lines.Dif_KLM);
-                            itemJlLine.validate("%GASOIL_S/DIFF_KM", lines."%GASOIL_S/DIFF_KM");
-                            itemJlLine.validate("Type Ecriture", lines."Type Ecriture");
-                            itemJlLine.Validate("Type de Travail", lines."Type de Travail");
-                            itemJlLine.Validate("Type Maintenance", lines."Type Maintenance");
-                            itemJlLine.validate(No_Bon, lines.No_Bon);
-                            itemJlLine.validate(No_Maintenance, lines.No_Maintenance);
-                            itemJlLine.Validate("Line No_", lines."Line No_");
-                            itemJlLine.Validate("Posting Date", lines."Date Document");
-
-
-
+                            itemJlLine.Modify();
                         until lines.Next() = 0;
 
 
