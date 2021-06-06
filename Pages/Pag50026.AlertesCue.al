@@ -32,8 +32,8 @@ page 50026 "Maintenance Activities"
                         res: Record Resource;
                     begin
                         res.Reset();
-                        // res.SetRange("Date Alerte V.Technique", 0D, Today);
                         res.SetRange("Date Alerte V.Technique", 0D, Today);
+
                         page.Run(0, res);
                     end;
                 }
