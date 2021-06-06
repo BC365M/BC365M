@@ -14,28 +14,7 @@ tableextension 50017 Employe extends 5200
 
             end;
         }
-        field(50001; "Notice Period V.Medical"; DateFormula)
-        {
-            Caption = 'Délai Préavis V.Medical';
-            trigger OnValidate()
-            var
-                myInt: Integer;
-            begin
-                IF Format("Notice Period V.Medical") = '' then begin
-                    "Notice date V.Medical" := 0D;
-                    Evaluate("Warning Period V.Medical", '');
-                    "Warning Date V.Medical" := 0D;
-                END ELSE BEGIN
-                    "Notice date V.Medical" := CalcDate("Notice Period V.Medical", "Date Viste Medical ");
-                    if Format("Warning Period V.Medical") <> '' then
-                        "Warning Date V.Medical" := CalcDate("Warning Period V.Medical", "Notice date V.Medical");
 
-                END;
-            end;
-
-        }
-
-        field(50002; "Notice date V.Medical"; date) { Caption = 'Date Préavis V.Medical'; Editable = false; }
         field(50003; "Warning Period V.Medical"; DateFormula)
         {
             Caption = 'Délai Alert V.Medical';
@@ -46,7 +25,7 @@ tableextension 50017 Employe extends 5200
                 IF Format("Warning Period V.Medical") = '' then
                     "Warning Date V.Medical" := 0D
                 else
-                    "Warning Date V.Medical" := CalcDate("Warning Period V.Medical", "Notice date V.Medical");
+                    "Warning Date V.Medical" := CalcDate("Warning Period V.Medical");
             end;
 
         }
@@ -63,31 +42,10 @@ tableextension 50017 Employe extends 5200
 
             end;
         }
-        field(50009; "Notice Period E.Permi"; DateFormula)
-        {
-            Caption = 'Délai Préavis E.Permi';
-            trigger OnValidate()
-            var
-                myInt: Integer;
-            begin
-                IF Format("Notice Period E.Permi") = '' then begin
-                    "Notice date E.Permi" := 0D;
-                    Evaluate("Warning Period E.Permi", '');
-                    "Warning Date E.Permi" := 0D;
-                END ELSE BEGIN
-                    "Notice date E.Permi" := CalcDate("Notice Period E.Permi", "Date Creation Permi");
-                    if Format("Warning Period E.Permi") <> '' then
-                        "Warning Date E.Permi" := CalcDate("Warning Period E.Permi", "Notice date E.Permi");
 
-                END;
-            end;
-
-        }
-
-        field(50010; "Notice date E.Permi"; date) { Caption = 'Date Préavis E.Permi'; Editable = false; }
         field(50011; "Warning Period E.Permi"; DateFormula)
         {
-            Caption = 'Délai Alert E.Permi';
+            Caption = 'Délai Préavie E.Permi';
             trigger OnValidate()
             var
                 myInt: Integer;
@@ -95,7 +53,7 @@ tableextension 50017 Employe extends 5200
                 IF Format("Warning Period E.Permi") = '' then
                     "Warning Date E.Permi" := 0D
                 else
-                    "Warning Date E.Permi" := CalcDate("Warning Period E.Permi", "Notice date E.Permi");
+                    "Warning Date E.Permi" := CalcDate("Warning Period E.Permi");
             end;
 
         }
@@ -112,28 +70,7 @@ tableextension 50017 Employe extends 5200
 
             end;
         }
-        field(50014; "Notice Period Carte Prof"; DateFormula)
-        {
-            Caption = 'Délai Préavis Carte Prof';
-            trigger OnValidate()
-            var
-                myInt: Integer;
-            begin
-                IF Format("Notice Period Carte Prof") = '' then begin
-                    "Notice date Carte Prof" := 0D;
-                    Evaluate("Warning Period Carte Prof", '');
-                    "Warning Date Carte Prof" := 0D;
-                END ELSE BEGIN
-                    "Notice date Carte Prof" := CalcDate("Notice Period Carte Prof", "Date Creation Carte Prof");
-                    if Format("Warning Period Carte Prof") <> '' then
-                        "Warning Date Carte Prof" := CalcDate("Warning Period Carte Prof", "Notice date Carte Prof");
 
-                END;
-            end;
-
-        }
-
-        field(50015; "Notice date Carte Prof"; date) { Caption = 'Date Préavis Carte Prof'; Editable = false; }
         field(50016; "Warning Period Carte Prof"; DateFormula)
         {
             Caption = 'Délai Alert Carte Prof';
@@ -144,7 +81,7 @@ tableextension 50017 Employe extends 5200
                 IF Format("Warning Period Carte Prof") = '' then
                     "Warning Date Carte Prof" := 0D
                 else
-                    "Warning Date Carte Prof" := CalcDate("Warning Period Carte Prof", "Notice date Carte Prof");
+                    "Warning Date Carte Prof" := CalcDate("Warning Period Carte Prof");
             end;
 
         }

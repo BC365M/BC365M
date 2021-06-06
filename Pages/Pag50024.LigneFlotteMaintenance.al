@@ -3,7 +3,7 @@ page 50024 "Ligne Flotte Maintenance"
     PageType = ListPart;
     UsageCategory = Lists;
     SourceTable = "Ligne Flotte & Maintenance";
-    // AutoSplitKey = true;
+    AutoSplitKey = true;
     PopulateAllFields = true;
 
     layout
