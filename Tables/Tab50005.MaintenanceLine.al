@@ -12,6 +12,16 @@ table 50005 "Ligne Flotte & Maintenance"
         field(50; "Type de Travail"; Code[10])
         {
             TableRelation = "Work Type".Code;
+            trigger OnValidate()
+            var
+
+            begin
+                if "Type de Travail" <> '' then Begin
+                    If worktype.Get("Type de Travail") then
+                        DesignationMaintenance := worktype.Description;
+
+                End;
+            end;
 
         }
         field(1; No_Maintenance; code[20])
@@ -55,6 +65,20 @@ table 50005 "Ligne Flotte & Maintenance"
         field(15; "Item No_"; code[20])
         {
             TableRelation = Item."No.";
+            trigger OnValidate()
+            begin
+
+                if "Item No_" <> '' then begin
+                    IF item.Get("Item No_") then
+                        "Item Description" := item.Description;
+                end;
+
+                if "Quantité" <> 0 then begin
+                    Montant := "Quantité" * "Cout Unitaire";
+
+                end;
+
+            end;
 
 
         }
@@ -73,9 +97,10 @@ table 50005 "Ligne Flotte & Maintenance"
             CalcFormula = sum ("Item Ledger Entry".Quantity where ("Item No." = field ("Item No_"), "Location Code" = field ("Location Code")));
             FieldClass = FlowField;
         }
-        field(23; Chauffeur; code[30])
+        field(23; Ressource; code[30])
         {
             DataClassification = ToBeClassified;
+            TableRelation = Resource."No.";
 
         }
         field(24; No_Bon; code[10])
@@ -127,24 +152,17 @@ table 50005 "Ligne Flotte & Maintenance"
         {
             DataClassification = ToBeClassified;
         }
-        field(55; "Shortcut Dimension 1 Code"; code[20])
+        field(55; "Shortcut Dimension 7 Code"; code[20])
         {
             CaptionClass = '1,2,1';
-            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No." = CONST (1));
+            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No." = CONST (7));
             trigger OnValidate()
             begin
 
             end;
         }
-        field(56; "Shortcut Dimension 2 Code"; code[20])
-        {
-            CaptionClass = '1,2,1';
-            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No." = CONST (1));
-            trigger OnValidate()
-            begin
 
-            end;
-        }
+
 
 
     }

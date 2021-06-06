@@ -21,7 +21,7 @@ page 50024 "Ligne Flotte Maintenance"
 
                 }
                 field(Designation; DesignationMaintenance) { ApplicationArea = All; Caption = 'Description Maintenance'; }
-                field(Chauffeur; Chauffeur) { ApplicationArea = all; Caption = 'Chauffeur'; }
+                field(Ressource; Ressource) { ApplicationArea = all; Caption = 'Ressource'; }
                 field(No_Bon; No_Bon) { ApplicationArea = all; Caption = 'N° BON'; }
                 field("Item No_"; "Item No_") { ApplicationArea = all; caption = 'No Article'; }
 
@@ -38,7 +38,12 @@ page 50024 "Ligne Flotte Maintenance"
 
                 }
                 field("%GASOIL_S/DIFF_KM"; "%GASOIL_S/DIFF_KM") { ApplicationArea = all; Caption = '% Gasoil S/DIF'; }
+                field("Shortcut Dimension 7 Code"; "Shortcut Dimension 7 Code")
+                {
+                    ApplicationArea = all;
+                    Caption = 'Chauffeur';
 
+                }
 
 
             }
