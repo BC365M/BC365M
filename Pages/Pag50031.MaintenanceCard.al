@@ -106,7 +106,9 @@ page 50031 "Gestion des Flottes"
                 begin
                     TestField(statut, statut::Encours);
                     itemJlLine.SetRange("Journal Template Name", 'ARTICLE');
-                    itemJlLine.SetRange("Journal Batch Name", 'DEFAUT');
+                    itemJlLine.SetRange("Journal Batch Name", 'MT');
+                    itemJlLine.DeleteAll();
+
                     lines.SetRange(No_Maintenance, rec.No_Maintenance);
                     GmaoHeader.SetRange("Journal Batch Name", "Journal Batch Name", 'Default');
 
@@ -133,7 +135,7 @@ page 50031 "Gestion des Flottes"
 
                             itemJlLine.Init();
                             itemJlLine.Validate("Journal Template Name", 'ARTICLE');
-                            itemJlLine.Validate("Journal Batch Name", 'DEFAUT');
+                            itemJlLine.Validate("Journal Batch Name", 'MT');
                             itemJlLine.Validate("Line No.", lines."Line No_");
                             itemJlLine.Insert(true);
                             itemJlLine.Validate("Posting Date", today);

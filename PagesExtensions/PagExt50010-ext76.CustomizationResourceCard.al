@@ -67,6 +67,11 @@ pageextension 50010 CustomizationResourceCard extends "Resource Card"
                 field("KLM Depart"; "KLM Depart") { ApplicationArea = all; Caption = 'KLM Depart'; }
                 field("Dernier KLM"; "Dernier KLM") { ApplicationArea = all; Caption = 'Dernier KLM'; }
                 field("Warnnin KM"; "Warnnin KM") { ApplicationArea = all; Caption = 'KM Alert'; }
+                field("Date Debut Assurance"; "Date Debut Assurance") { ApplicationArea = all; }
+                field("Date fin Assurance"; "Date fin Assurance") { ApplicationArea = all; }
+                field("Delai Alerte Assurance"; "Delai Alerte Assurance") { ApplicationArea = all; }
+                field("Date Alerte Assurance"; "Date Alerte Assurance") { ApplicationArea = all; }
+
 
             }
         }

@@ -42,8 +42,12 @@ page 50026 "Maintenance Activities"
                     Caption = 'Assurance';
                     ApplicationArea = Basic, Suite;
                     trigger OnDrillDown()
+                    var
+                        res: Record Resource;
                     begin
-
+                        res.Reset();
+                        res.SetRange("Date Alerte Assurance", 20000101D, Today);
+                        page.Run(0, res);
                     end;
                 }
             }
@@ -104,12 +108,10 @@ page 50026 "Maintenance Activities"
         NbreVisite := res.Count;
 
 
-        /* res.Reset();
-         res.SetRange("Date Alerte V.Technique", 0D, Today);
-         NbreAssurance := res.Count;
-         res.Reset();
-         res.SetRange("Date Creation V.Technique", 0D, Today);
-         NbreAssurance := res.Count;*/
+        res.Reset();
+        res.SetRange("Date Alerte Assurance", 20000101D, Today);
+        NbreAssurance := res.Count;
+
     end;
 
     var

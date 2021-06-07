@@ -95,6 +95,30 @@ tableextension 50007 "Resource" extends Resource
         field(50056; "Date Creation Vidange"; Date) { Caption = 'Date dérniere Vidange'; }
         field(50057; "Dernier KLM"; code[50]) { caption = 'Dernier KLM'; }
         field(50080; "KLM Depart"; Decimal) { caption = 'KLM Depart'; }
+
+        field(50100; "Date Debut Assurance"; date) { caption = 'Date début Assurance'; }
+        field(50101; "Date Fin Assurance"; date)
+        {
+            caption = 'Date fin Assurance';
+            trigger OnValidate()
+            begin
+                if ("Date Fin Assurance" <> 0D) and (format("Delai Alerte Assurance") <> '') then
+                    Validate("Date Alerte Assurance", CalcDate("Delai Alerte Assurance", "Date Fin Assurance"));
+            end;
+        }
+        field(50102; "Delai Alerte Assurance"; DateFormula)
+        {
+            caption = 'Delai Alerte Assurance';
+            trigger OnValidate()
+            begin
+                if ("Date Fin Assurance" <> 0D) and (format("Delai Alerte Assurance") <> '') then
+                    Validate("Date Alerte Assurance", CalcDate("Delai Alerte Assurance", "Date Fin Assurance"));
+            end;
+        }
+        field(50103; "Date Alerte Assurance"; date) { caption = 'Date Alerte Assurance'; }
+
+
+
     }
 
 }
