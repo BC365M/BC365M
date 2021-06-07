@@ -19,83 +19,7 @@ tableextension 50007 "Resource" extends Resource
             // CalcFormula = lookup (Resource."N° IMMO" where ("N° IMMO" =Record.field()));
             //  "FA Depreciation Book"."Acquisition Cost" where ("FA No." = ));
         }
-        //  Calcule D'alert 
-        field(50040; "Date Creation V.Technique"; Date)
-        {
-            Caption = 'Date Création Visite technique';
-            DataClassification = ToBeClassified;
-            trigger OnValidate()
-            var
-                myInt: Integer;
-            begin
-
-            end;
-        }
-        field(50041; "Date Alerte V.Technique"; Date)
-        {
-            Caption = 'Date Alerte Visite technique';
-            DataClassification = ToBeClassified;
-            trigger OnValidate()
-            var
-                myInt: Integer;
-            begin
-
-            end;
-        }
-
-        field(50043; "Warning Period V.Technique"; DateFormula)
-        {
-            Caption = 'Délai Alert V.Technique';
-            trigger OnValidate()
-            var
-                myInt: Integer;
-            begin
-                IF Format("Warning Period V.Technique") = '' then
-                    "Warning Date V.Technique" := 0D
-                else
-                    "Warning Date V.Technique" := CalcDate("Warning Period V.Technique");
-            end;
-
-        }
-        field(50044; "Warning Date V.Technique"; Date) { Caption = 'Date Alert V.Technique'; Editable = false; }
-        //
-        field(50050; "Date Creation Assurance"; Date)
-        {
-            Caption = 'Date Création Assurance';
-            DataClassification = ToBeClassified;
-            trigger OnValidate()
-            var
-                myInt: Integer;
-            begin
-
-            end;
-        }
-
-        field(50053; "Warning Period Assurance"; DateFormula)
-        {
-            Caption = 'Délai Alert Assurance';
-            trigger OnValidate()
-            var
-                myInt: Integer;
-            begin
-                IF Format("Warning Period Assurance") = '' then
-                    "Warning Date Assurance" := 0D
-                else
-                    "Warning Date Assurance" := CalcDate("Warning Period Assurance");
-            end;
-
-        }
-        field(50054; "Warning Date Assurance"; Date) { Caption = 'Date Alert Assurance'; Editable = false; }
-
-        /// Alert Vidange
-        field(50055; "Warnnin KM"; Decimal)
-        {
-            Caption = 'KLM Alert';
-        }
-        field(50056; "Date Creation Vidange"; Date) { Caption = 'Date dérniere Vidange'; }
-        field(50057; "Dernier KLM"; code[50]) { caption = 'Dernier KLM'; }
-        field(50080; "KLM Depart"; Decimal) { caption = 'KLM Depart'; }
-
+        //  Calcule D'alert        
         field(50100; "Date Debut Assurance"; date) { caption = 'Date début Assurance'; }
         field(50101; "Date Fin Assurance"; date)
         {
@@ -115,7 +39,40 @@ tableextension 50007 "Resource" extends Resource
                     Validate("Date Alerte Assurance", CalcDate("Delai Alerte Assurance", "Date Fin Assurance"));
             end;
         }
-        field(50103; "Date Alerte Assurance"; date) { caption = 'Date Alerte Assurance'; }
+        field(50103; "Date Alerte Assurance"; date) { caption = 'Date Alerte Assurance'; Editable = false; }
+        // Calcule La date echeance Visite Technique
+        field(50105; "Date Debut V.Technique"; date) { caption = 'Date Debut V.Technique'; }
+        field(50106; "Date Fin V.Technique"; date)
+        {
+            caption = 'Date fin V.Technique';
+            trigger OnValidate()
+            begin
+                if ("Date Fin V.Technique" <> 0D) and (format("Delai Alerte V.Technique") <> '') then
+                    Validate("Date Alerte V.Technique", CalcDate("Delai Alerte V.Technique", "Date Fin V.Technique"));
+            end;
+        }
+        field(50107; "Delai Alerte V.Technique"; DateFormula)
+        {
+            caption = 'Delai Alerte V.Technique';
+
+            trigger OnValidate()
+            begin
+                if ("Date Fin V.Technique" <> 0D) and (format("Delai Alerte V.Technique") <> '') then
+                    Validate("Date Alerte V.Technique", CalcDate("Delai Alerte V.Technique", "Date Fin V.Technique"));
+            end;
+        }
+        field(50108; "Date Alerte V.Technique"; date) { caption = 'Date Alerte V.Technique'; Editable = false; }
+        //Calcule De Date Prochaine Vidange
+        /// Alert Vidange
+        field(50055; "Warnnin KM"; Decimal) { Caption = 'KLM Alert'; }
+        field(50056; "Date Prochaine Vidange"; Date) { Caption = 'Date Prochaine Vidange'; }
+
+        field(50057; "Dernier KLM"; code[50])
+        {
+            caption = 'Dernier KLM';
+
+        }
+        field(50080; "KLM Depart"; Decimal) { caption = 'KLM Depart'; }
 
 
 

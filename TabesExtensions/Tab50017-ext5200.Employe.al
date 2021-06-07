@@ -3,89 +3,70 @@ tableextension 50017 Employe extends 5200
     fields
     {
         // Add changes to table fields here
-        field(50000; "Date Viste Medical "; Date)
+        field(50105; "Date Debut V.Medical"; date) { caption = 'Date Debut V.Medical'; }
+        field(50106; "Date Fin V.Medical"; date)
         {
-            Caption = 'Date V.Medical';
-            DataClassification = ToBeClassified;
+            caption = 'Date fin V.Medical';
             trigger OnValidate()
-            var
-                myInt: Integer;
             begin
-
+                if ("Date Fin V.Medical" <> 0D) and (format("Delai Alerte V.Medical") <> '') then
+                    Validate("Date Alerte V.Medical", CalcDate("Delai Alerte V.Medical", "Date Fin V.Medical"));
             end;
         }
-
-        field(50003; "Warning Period V.Medical"; DateFormula)
+        field(50107; "Delai Alerte V.Medical"; DateFormula)
         {
-            Caption = 'Délai Alert V.Medical';
+            caption = 'Delai Alerte V.Medical';
             trigger OnValidate()
-            var
-                myInt: Integer;
             begin
-                IF Format("Warning Period V.Medical") = '' then
-                    "Warning Date V.Medical" := 0D
-                else
-                    "Warning Date V.Medical" := CalcDate("Warning Period V.Medical");
-            end;
-
-        }
-        field(50004; "Warning Date V.Medical"; Date) { Caption = 'Date Alert V.Medical'; Editable = false; }
-        // Calc Expiration Date Permi
-        field(50008; "Date Creation Permi"; Date)
-        {
-            Caption = 'Date Création Permi';
-            DataClassification = ToBeClassified;
-            trigger OnValidate()
-            var
-                myInt: Integer;
-            begin
-
+                if ("Date Fin V.Medical" <> 0D) and (format("Delai Alerte V.Medical") <> '') then
+                    Validate("Date Alerte V.Medical", CalcDate("Delai Alerte V.Medical", "Date Fin V.Medical"));
             end;
         }
+        field(50108; "Date Alerte V.Medical"; date) { caption = 'Date Alerte V.Medical'; Editable = false; }
 
-        field(50011; "Warning Period E.Permi"; DateFormula)
+        //Calcule Permi
+        field(50109; "Date Debut Permi"; date) { caption = 'Date DebutPermi'; }
+        field(50110; "Date Fin Permi"; date)
         {
-            Caption = 'Délai Préavie E.Permi';
+            caption = 'Date fin Permi';
             trigger OnValidate()
-            var
-                myInt: Integer;
             begin
-                IF Format("Warning Period E.Permi") = '' then
-                    "Warning Date E.Permi" := 0D
-                else
-                    "Warning Date E.Permi" := CalcDate("Warning Period E.Permi");
-            end;
-
-        }
-        field(50012; "Warning Date E.Permi"; Date) { Caption = 'Date Alert E.Permi'; Editable = false; }
-        // Calcule Date Expiration Carte Professionnelle
-        field(50013; "Date Creation Carte Prof"; Date)
-        {
-            Caption = 'Date Création Carte Profesionnel';
-            DataClassification = ToBeClassified;
-            trigger OnValidate()
-            var
-                myInt: Integer;
-            begin
-
+                if ("Date Fin Permi" <> 0D) and (format("Delai Alerte Permi") <> '') then
+                    Validate("Date Alerte Permi", CalcDate("Delai Alerte Permi", "Date Fin Permi"));
             end;
         }
-
-        field(50016; "Warning Period Carte Prof"; DateFormula)
+        field(50112; "Delai Alerte Permi"; DateFormula)
         {
-            Caption = 'Délai Alert Carte Prof';
+            caption = 'Delai Alerte Permi';
             trigger OnValidate()
-            var
-                myInt: Integer;
             begin
-                IF Format("Warning Period Carte Prof") = '' then
-                    "Warning Date Carte Prof" := 0D
-                else
-                    "Warning Date Carte Prof" := CalcDate("Warning Period Carte Prof");
+                if ("Date Fin Permi" <> 0D) and (format("Delai Alerte Permi") <> '') then
+                    Validate("Date Alerte Permi", CalcDate("Delai Alerte Permi", "Date Fin Permi"));
             end;
-
         }
-        field(50017; "Warning Date Carte Prof"; Date) { Caption = 'Date Alert Carte Prof'; Editable = false; }
+        field(50113; "Date Alerte Permi"; date) { caption = 'Date Alerte Permi'; Editable = false; }
+        //Calcule Carte Professionnelle
+        field(50114; "Date Debut Carte Prof"; date) { caption = 'Date Carte Prof'; }
+        field(50115; "Date Fin Carte Prof"; date)
+        {
+            caption = 'Date fin Carte Prof';
+            trigger OnValidate()
+            begin
+                if ("Date Fin Carte Prof" <> 0D) and (format("Delai Alerte Carte Prof") <> '') then
+                    Validate("Date Alerte Carte Prof", CalcDate("Delai Alerte Carte Prof", "Date Fin Carte Prof"));
+            end;
+        }
+        field(50116; "Delai Alerte Carte Prof"; DateFormula)
+        {
+            caption = 'Delai Alerte Carte Prof';
+            trigger OnValidate()
+            begin
+                if ("Date Fin Carte Prof" <> 0D) and (format("Delai Alerte Carte Prof") <> '') then
+                    Validate("Date Alerte Carte Prof", CalcDate("Delai Alerte Carte Prof", "Date Fin Carte Prof"));
+            end;
+        }
+        field(50117; "Date Alerte Carte Prof"; date) { caption = 'Date Alerte Carte Prof'; Editable = false; }
+
     }
 
     var

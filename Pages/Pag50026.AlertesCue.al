@@ -32,7 +32,7 @@ page 50026 "Maintenance Activities"
                         res: Record Resource;
                     begin
                         res.Reset();
-                        res.SetRange("Date Alerte V.Technique", 0D, Today);
+                        res.SetRange("Date Alerte V.Technique", 20000101D, Today);
 
                         page.Run(0, res);
                     end;
@@ -60,8 +60,12 @@ page 50026 "Maintenance Activities"
                     Caption = 'Permis';
                     ApplicationArea = Basic, Suite;
                     trigger OnDrillDown()
+                    var
+                        emp: Record Employee;
                     begin
-
+                        emp.Reset();
+                        emp.SetRange("Date Alerte Permi", 20000101D, Today);
+                        page.Run(0, emp);
                     end;
                 }
                 field(NbreVisiteMed; NbreVisiteMed)
@@ -72,6 +76,23 @@ page 50026 "Maintenance Activities"
                     var
                         emp: Record Employee;
                     begin
+                        emp.Reset();
+                        emp.SetRange("Date Alerte V.Medical", 20000101D, Today);
+                        page.Run(0, emp);
+
+                    end;
+                }
+                field(NbrCartProf; NbrCartProf)
+                {
+                    Caption = 'Echeance Carte profesional';
+                    ApplicationArea = Basic, Suite;
+                    trigger OnDrillDown()
+                    var
+                        emp: Record Employee;
+                    begin
+                        emp.Reset();
+                        emp.SetRange("Date Alerte Carte Prof", 20000101D, Today);
+                        page.Run(0, emp);
 
                     end;
                 }
@@ -104,13 +125,32 @@ page 50026 "Maintenance Activities"
         emp: Record Employee;
     begin
         res.Reset();
-        res.SetRange("Date Alerte V.Technique", Today);
+        res.SetRange("Date Alerte V.Technique", 20000101D, Today);
         NbreVisite := res.Count;
 
 
         res.Reset();
         res.SetRange("Date Alerte Assurance", 20000101D, Today);
         NbreAssurance := res.Count;
+
+        res.Reset();
+        res.SetRange("Date Prochaine Vidange");
+        NbreVidange := res.Count;
+
+        emp.Reset();
+        emp.SetRange("Date Alerte Carte Prof", 20000101D, Today);
+        NbrCartProf := emp.count;
+
+        emp.Reset();
+        emp.SetRange("Date Alerte permi", 20000101D, Today);
+        NbrCartProf := emp.count;
+
+        emp.Reset();
+        emp.SetRange("Date Alerte V.Medical", 20000101D, Today);
+        NbrCartProf := emp.count;
+
+
+
 
     end;
 
@@ -120,4 +160,5 @@ page 50026 "Maintenance Activities"
         NbreAssurance: Integer;
         NbreVisiteMed: Integer;
         NbrePermis: Integer;
+        NbrCartProf: Integer;
 }
