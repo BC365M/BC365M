@@ -7,7 +7,6 @@ page 50031 "Gestion des Flottes"
 
     layout
     {
-
         area(Content)
         {
             group("Gestion Des Flotte & Maintenance")
@@ -46,11 +45,13 @@ page 50031 "Gestion des Flottes"
                 ApplicationArea = All;
                 SubPageLink = No_Maintenance = field (No_Maintenance), "Type Maintenance" = field ("Type Maintenance");
                 SubPageView = sorting (No_Maintenance);
-
+                Editable = iseditable;
             }
 
         }
     }
+
+
 
     actions
     {
@@ -118,8 +119,14 @@ page 50031 "Gestion des Flottes"
 
                     if lines.FindFirst() then
                         repeat
+                            lines.TestField(kM_Actuel);
+                            res.get(lines.Ressource);
+                            res."Dernier KLM" := lines.kM_Actuel;
+                            res.Modify();
+
                             ManLedgerEntry.Init();
                             ManLedgerEntry.SetCurrentKey(No_Maintenance, "Line No_");
+                            ManLedgerEntry.Validate(No_Maintenance, No_Maintenance);
                             ManLedgerEntry.Validate("Line No_", lines."Line No_");
                             ManLedgerEntry.Validate("Item No_", lines."Item No_");
 
@@ -139,10 +146,6 @@ page 50031 "Gestion des Flottes"
                             ManLedgerEntry.Validate(No_Bon, lines.No_Bon);
                             ManLedgerEntry.Validate(statut, lines.statut);
                             ManLedgerEntry.Insert(true);
-                            // ManLedgerEntry.Modify(true);
-
-
-
 
                             itemJlLine.Init();
                             itemJlLine.Validate("Journal Template Name", 'ARTICLE');
@@ -155,9 +158,8 @@ page 50031 "Gestion des Flottes"
                             itemJlLine.validate("Item No.", lines."Item No_");
                             itemJlLine.Validate(Quantity, lines."Quantité");
                             itemJlLine.validate("Location Code", lines."Location Code");
-
-
                             itemJlLine.Modify();
+
                         until lines.Next() = 0;
 
                     TestField(statut, statut::Encours);
@@ -183,8 +185,14 @@ page 50031 "Gestion des Flottes"
         }
     }
 
+    trigger OnAfterGetRecord()
+    begin
+        iseditable := not (statut = statut::"Validée");
+    end;
+
     var
         myInt: Integer;
         CurrentJnlBatchName: code[10];
 
+        iseditable: Boolean;
 }
