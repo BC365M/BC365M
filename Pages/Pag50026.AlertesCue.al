@@ -134,7 +134,7 @@ page 50026 "Maintenance Activities"
         NbreAssurance := res.Count;
 
         res.Reset();
-        res.SetRange("Date Prochaine Vidange");
+        res.SetRange("Prochaine Vidange");
         NbreVidange := res.Count;
 
         emp.Reset();

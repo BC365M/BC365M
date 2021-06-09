@@ -14,8 +14,10 @@ table 50004 "Maintenance Header"
         }
         field(2; "Journal Batch Name"; code[10])
         {
-            DataClassification = ToBeClassified;
+            // DataClassification = ToBeClassified;
             TableRelation = "Item Journal Batch".Name WHERE ("Journal Template Name" = FIELD ("Journal Batch Name"));
+            Enabled = false;
+
         }
 
         field(3; "Type Camion"; Option)
@@ -39,6 +41,7 @@ table 50004 "Maintenance Header"
         {
             TableRelation = Currency;
         }
+        field(50130; validé; Boolean) { DataClassification = ToBeClassified; Editable = false; }
 
     }
 
@@ -68,7 +71,8 @@ table 50004 "Maintenance Header"
 
     trigger OnModify()
     begin
-
+        if (statut <> statut::Encours) AND (statut <> statut::Open) then
+            TestField(statut, statut::Encours);
     end;
 
     trigger OnDelete()

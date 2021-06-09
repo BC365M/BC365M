@@ -16,8 +16,6 @@ tableextension 50007 "Resource" extends Resource
         field(50020; "Coute D'aquisition"; Code[10])
         {
             FieldClass = FlowField;
-            // CalcFormula = lookup (Resource."N° IMMO" where ("N° IMMO" =Record.field()));
-            //  "FA Depreciation Book"."Acquisition Cost" where ("FA No." = ));
         }
         //  Calcule D'alert        
         field(50100; "Date Debut Assurance"; date) { caption = 'Date début Assurance'; }
@@ -64,17 +62,17 @@ tableextension 50007 "Resource" extends Resource
         field(50108; "Date Alerte V.Technique"; date) { caption = 'Date Alerte V.Technique'; Editable = false; }
         //Calcule De Date Prochaine Vidange
         /// Alert Vidange
-        field(50055; "Warnnin KM"; Decimal) { Caption = 'KLM Alert'; }
-        field(50056; "Date Prochaine Vidange"; Date) { Caption = 'Date Prochaine Vidange'; }
-
-        field(50057; "Dernier KLM"; code[50])
+        field(50055; "Warnnin KM"; Decimal)
         {
-            caption = 'Dernier KLM';
+            Caption = 'KLM Alert';
 
         }
+        field(50056; "Prochaine Vidange"; Decimal) { Caption = 'Date Prochaine Vidange'; }
+        field(50057; "Dernier KLM"; Decimal)
+        {
+            caption = 'Dernier KLM';
+        }
         field(50080; "KLM Depart"; Decimal) { caption = 'KLM Depart'; }
-
-
 
     }
 

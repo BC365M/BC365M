@@ -25,6 +25,14 @@ table 50006 "GMAO Ledger Entry"
         field(28; Dif_KLM; Decimal) { DataClassification = CustomerContent; }
         field(30; "%GASOIL_S/DIFF_KM"; Decimal) { DataClassification = CustomerContent; }
         field(50001; "Line No_"; Integer) { DataClassification = ToBeClassified; }
+        field(50002; "Entry No"; Integer) { DataClassification = ToBeClassified; caption = 'N° Sequence'; }
+        field(50003; Ressource; code[30])
+        {
+            DataClassification = ToBeClassified;
+            TableRelation = Resource."No.";
+
+        }
+
 
     }
 

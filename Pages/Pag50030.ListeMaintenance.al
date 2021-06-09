@@ -1,6 +1,7 @@
 page 50030 "Liste Flotte"
 {
-    PageType = ListPart;
+    PageType = List;
+    ApplicationArea = all;
     SourceTable = "Maintenance Header";
     CardPageId = "Gestion des Flottes";
     Caption = 'Liste des maintenance';
@@ -33,6 +34,8 @@ page 50030 "Liste Flotte"
                     ApplicationArea = All;
 
                 }
+                field(statut; statut) { ApplicationArea = all; }
+
             }
         }
     }

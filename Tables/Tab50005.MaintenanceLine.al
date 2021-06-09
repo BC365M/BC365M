@@ -156,6 +156,7 @@ table 50005 "Ligne Flotte & Maintenance"
 
         }
         field(50001; "Line No_"; Integer) { DataClassification = ToBeClassified; }
+        field(50130; validé; Boolean) { DataClassification = ToBeClassified; Editable = false; }
         field(30; "%GASOIL_S/DIFF_KM"; Decimal)
         {
             caption = '% GASOIL SORTIE/DIFF KM';

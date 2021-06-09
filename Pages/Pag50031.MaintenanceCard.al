@@ -7,6 +7,7 @@ page 50031 "Gestion des Flottes"
 
     layout
     {
+
         area(Content)
         {
             group("Gestion Des Flotte & Maintenance")
@@ -23,7 +24,7 @@ page 50031 "Gestion des Flottes"
                 {
                     ApplicationArea = all;
                 }
-
+                field("validé"; "validé") { ApplicationArea = all; }
 
                 field(statut; statut)
                 {
@@ -53,6 +54,7 @@ page 50031 "Gestion des Flottes"
 
     actions
     {
+
         area(Processing)
         {
             action(Release)
@@ -83,6 +85,7 @@ page 50031 "Gestion des Flottes"
                     Reo.Open1(Rec);
                     IF statut = statut::"Validée" then
                         Message(('Ecriture Validé , vous nous pouvez pas Modifier'));
+                    TestField("Date Document");
                 end;
 
             }
@@ -102,6 +105,7 @@ page 50031 "Gestion des Flottes"
                     lines: Record "Ligne Flotte & Maintenance";
                     ManLedgerEntry: Record "GMAO Ledger Entry";
                     GmaoHeader: Record "Maintenance Header";
+                    res: Record Resource;
 
                 begin
                     TestField(statut, statut::Encours);
@@ -115,8 +119,10 @@ page 50031 "Gestion des Flottes"
                     if lines.FindFirst() then
                         repeat
                             ManLedgerEntry.Init();
+                            ManLedgerEntry.SetCurrentKey(No_Maintenance, "Line No_");
                             ManLedgerEntry.Validate("Line No_", lines."Line No_");
                             ManLedgerEntry.Validate("Item No_", lines."Item No_");
+
                             ManLedgerEntry.Validate(DesignationMaintenance, lines.DesignationMaintenance);
                             ManLedgerEntry.Validate(kM_Actuel, lines.kM_Actuel);
                             ManLedgerEntry.Validate(KM_President, lines.KM_President);
@@ -129,8 +135,13 @@ page 50031 "Gestion des Flottes"
                             ManLedgerEntry.Validate("Type de Travail", lines."Type de Travail");
                             ManLedgerEntry.Validate("Type Ecriture", lines."Type Ecriture");
                             ManLedgerEntry.Validate("Type Maintenance", lines."Type Maintenance");
+
                             ManLedgerEntry.Validate(No_Bon, lines.No_Bon);
                             ManLedgerEntry.Validate(statut, lines.statut);
+                            ManLedgerEntry.Insert(true);
+                            // ManLedgerEntry.Modify(true);
+
+
 
 
                             itemJlLine.Init();
@@ -144,19 +155,30 @@ page 50031 "Gestion des Flottes"
                             itemJlLine.validate("Item No.", lines."Item No_");
                             itemJlLine.Validate(Quantity, lines."Quantité");
                             itemJlLine.validate("Location Code", lines."Location Code");
+
+
                             itemJlLine.Modify();
                         until lines.Next() = 0;
 
+                    TestField(statut, statut::Encours);
+                    TestField("Date Document");
+                    Validate(statut, statut::"Validée");
+                    Validate("validé", true);
+
+
+
+                    Modify();
 
                     CODEUNIT.RUN(Codeunit::"Item Jnl.-Post", itemJlLine);
+
 
                     //CurrentJnlBatchName := GETRANGEMAX("Journal Batch Name");
                     CurrPage.UPDATE(false);
 
 
                 end;
-
             }
+
 
         }
     }
@@ -164,4 +186,5 @@ page 50031 "Gestion des Flottes"
     var
         myInt: Integer;
         CurrentJnlBatchName: code[10];
+
 }

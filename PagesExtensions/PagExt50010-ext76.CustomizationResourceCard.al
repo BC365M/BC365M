@@ -37,7 +37,7 @@ pageextension 50010 CustomizationResourceCard extends "Resource Card"
                 field("KLM Depart"; "KLM Depart") { ApplicationArea = all; }
                 field("Dernier KLM"; "Dernier KLM") { ApplicationArea = all; }
                 field("Warnnin KM"; "Warnnin KM") { ApplicationArea = all; }
-                field("Date Prochaine Vidange"; "Date Prochaine Vidange") { ApplicationArea = all; }
+                field("Prochaine Vidange"; "Prochaine Vidange") { ApplicationArea = all; }
             }
         }
 

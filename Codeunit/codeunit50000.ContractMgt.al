@@ -41,6 +41,14 @@ codeunit 50000 "Contract Managment"
         Lines.SetRange(No_Maintenance, Maintenance.No_Maintenance);
         Lines.ModifyAll(statut, Maintenance.statut);
 
+
+    end;
+
+    procedure Valider(Var Maintenance: Record "Maintenance Header")
+    var
+        Lines: Record "Ligne Flotte & Maintenance";
+    begin
+
     end;
     //Maintenance Release
 
@@ -116,6 +124,7 @@ codeunit 50000 "Contract Managment"
         ItemJnlLine."Contract Level" := SalesLine.Level;
         ItemJnlLine."Delivery Date" := SalesLine."Delivery Date";
     end;
+
 
     [EventSubscriber(ObjectType::Codeunit, codeunit::"Item Jnl.-Post Line", 'OnBeforeInsertItemLedgEntry', '', true, true)]
     local procedure OnBeforeInsertItemLedgEntry(ItemJournalLine: Record "Item Journal Line"; var ItemLedgerEntry: Record "Item Ledger Entry")
