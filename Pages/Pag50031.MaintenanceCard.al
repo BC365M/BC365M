@@ -69,6 +69,7 @@ page 50031 "Gestion des Flottes"
                     Rel: Codeunit "Contract Managment";
                 begin
                     rel.Release1(Rec);
+
                 end;
 
 
@@ -120,8 +121,18 @@ page 50031 "Gestion des Flottes"
                     if lines.FindFirst() then
                         repeat
                             lines.TestField(kM_Actuel);
+                            lines.TestField(No_Bon);
+                            lines.TestField("Item No_");
+                            lines.TestField(Ressource);
+                            lines.TestField("Unit of Measure Code");
+                            lines.TestField("Shortcut Dimension 7 Code");
+                            lines.TestField("Location Code");
+                            if (lines.kM_Actuel = lines.KM_President) OR (lines.kM_Actuel < lines.KM_President)
+                                or (lines.kM_Actuel < res."Dernier KLM") then
+                                Error('Le kilometrage Actuel ne peut pas etre i ferieur de km precente');
                             res.get(lines.Ressource);
                             res."Dernier KLM" := lines.kM_Actuel;
+
                             res.Modify();
 
                             ManLedgerEntry.Init();
@@ -166,6 +177,7 @@ page 50031 "Gestion des Flottes"
                     TestField("Date Document");
                     Validate(statut, statut::"Validée");
                     Validate("validé", true);
+
 
 
 

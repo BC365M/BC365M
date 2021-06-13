@@ -72,6 +72,7 @@ table 50005 "Ligne Flotte & Maintenance"
                 if "Item No_" <> '' then begin
                     IF item.Get("Item No_") then
                         "Item Description" := item.Description;
+                    "Unit of Measure Code" := item."Base Unit of Measure";
                 end;
 
                 if "Quantité" <> 0 then begin
@@ -102,7 +103,19 @@ table 50005 "Ligne Flotte & Maintenance"
         {
             DataClassification = ToBeClassified;
             TableRelation = Resource."No.";
-
+            trigger OnValidate()
+            var
+                itemledgerENtry: Record "Ligne Flotte & Maintenance";
+                res: Record Resource;
+            begin
+                res.SetRange("No.", itemledgerENtry.Ressource);
+                if res.FindFirst() then
+                    repeat
+                        res.get(itemledgerENtry."Ressource");
+                        res."KLM Depart" := itemledgerENtry.KM_President;
+                        res.Modify(true);
+                    until itemledgerENtry.Next() = 0;
+            end;
         }
         field(24; No_Bon; code[10])
         {

@@ -60,6 +60,7 @@ tableextension 50004 "Item Journal Line" extends "Item Journal Line"
         {
             DataClassification = CustomerContent;
         }
+        field(50100; "Resource No_"; code[20]) { DataClassification = CustomerContent; }
 
         //SA
         //Maintenance

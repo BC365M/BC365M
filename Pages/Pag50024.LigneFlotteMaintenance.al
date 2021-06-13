@@ -22,7 +22,11 @@ page 50024 "Ligne Flotte Maintenance"
 
                 }
                 field(Designation; DesignationMaintenance) { ApplicationArea = All; Caption = 'Description Maintenance'; }
-                field(Ressource; Ressource) { ApplicationArea = all; Caption = 'Ressource'; }
+                field(Ressource; Ressource)
+                {
+                    ApplicationArea = all;
+                    Caption = 'Ressource';
+                }
                 field(No_Bon; No_Bon) { ApplicationArea = all; Caption = 'N° BON'; }
                 field("Item No_"; "Item No_") { ApplicationArea = all; caption = 'No Article'; }
 
@@ -30,6 +34,7 @@ page 50024 "Ligne Flotte Maintenance"
                 field("Item Description"; "Item Description") { ApplicationArea = all; Caption = 'Description Article'; }
                 field("Location Code"; "Location Code") { ApplicationArea = all; Caption = 'Code Magasin'; }
                 field("Quantité"; "Quantité") { ApplicationArea = all; Caption = 'Quantité'; }
+                field("Unit of Measure Code"; "Unit of Measure Code") { ApplicationArea = all; caption = 'Code Unite'; }
                 field(KM_President; KM_President) { ApplicationArea = all; Caption = 'KM President'; }
                 field(kM_Actuel; kM_Actuel) { ApplicationArea = all; Caption = 'KM Actuel'; }
                 field(Dif_KLM; Dif_KLM) { ApplicationArea = all; caption = 'Difference KLM'; }

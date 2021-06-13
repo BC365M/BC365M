@@ -19,8 +19,12 @@ page 50026 "Maintenance Activities"
                     Caption = 'Vidange';
                     ApplicationArea = Basic, Suite;
                     trigger OnDrillDown()
+                    var
+                        res: Record Resource;
                     begin
-
+                        res.Reset();
+                        res.SetRange("Prochaine Vidange");
+                        page.Run(0, res);
                     end;
                 }
                 field(NbreVisite; NbreVisite)

@@ -67,12 +67,26 @@ tableextension 50007 "Resource" extends Resource
             Caption = 'KLM Alert';
 
         }
-        field(50056; "Prochaine Vidange"; Decimal) { Caption = 'Date Prochaine Vidange'; }
+        field(50056; "Prochaine Vidange"; Decimal)
+        {
+            Caption = 'Prochaine Vidange';
+
+        }
         field(50057; "Dernier KLM"; Decimal)
         {
             caption = 'Dernier KLM';
+            trigger OnValidate()
+            begin
+                if ("Dernier KLM" <> 0) AND (FORMAT("Warnnin KM") <> '') then
+                    "Prochaine Vidange" := (("Dernier KLM") - ("warnnin KM"));
+                Validate("Prochaine Vidange",0,warnnin);
+            end;
         }
-        field(50080; "KLM Depart"; Decimal) { caption = 'KLM Depart'; }
+        field(50080; "KLM Depart"; Decimal)
+        {
+            caption = 'KLM Depart';
+
+        }
 
     }
 
