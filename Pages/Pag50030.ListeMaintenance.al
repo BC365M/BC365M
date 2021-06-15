@@ -19,11 +19,7 @@ page 50030 "Liste Flotte"
 
                 }
 
-                field("Type Camion"; "Type Camion")
-                {
-                    ApplicationArea = All;
 
-                }
                 field("Date Document"; "Date Document")
                 {
                     ApplicationArea = All;

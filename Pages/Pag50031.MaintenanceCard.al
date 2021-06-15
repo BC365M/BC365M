@@ -34,11 +34,7 @@ page 50031 "Gestion des Flottes"
                 {
                     ApplicationArea = all;
                 }
-                field("Type Camion"; "Type Camion")
-                {
-                    caption = 'Type Camion';
 
-                }
             }
             part(line; "Ligne Flotte Maintenance")
             {
@@ -165,7 +161,8 @@ page 50031 "Gestion des Flottes"
                             itemJlLine.Insert(true);
                             itemJlLine.Validate("Posting Date", today);
                             itemJlLine.Validate("Document No.", rec.No_Maintenance);
-                            itemJlLine.Validate("Entry Type", itemJlLine."Entry Type"::"Negative Adjmt.");
+                            //itemJlLine.Validate("Entry Type", itemJlLine."Entry Type"::"Negative Adjmt.");
+                            itemJlLine.validate("Entry Type", itemJlLine."Entry Type"::Consumption);
                             itemJlLine.validate("Item No.", lines."Item No_");
                             itemJlLine.Validate(Quantity, lines."Quantité");
                             itemJlLine.validate("Location Code", lines."Location Code");

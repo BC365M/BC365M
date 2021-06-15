@@ -4,6 +4,6 @@ enum 50003 "Type Maintenance"
 
     value(0; "") { }
     value(1; corrective) { Caption = 'Suivie Gasoil'; }
-    value(2; predictive) { Caption = 'Vidange'; }
+
 
 }

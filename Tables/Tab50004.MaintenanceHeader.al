@@ -20,11 +20,7 @@ table 50004 "Maintenance Header"
 
         }
 
-        field(3; "Type Camion"; Option)
-        {
-            DataClassification = ToBeClassified;
-            OptionMembers = "","SOLO","Remorque";
-        }
+
         field(4; "Date Document"; Date)
         {
             DataClassification = ToBeClassified;

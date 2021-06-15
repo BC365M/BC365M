@@ -246,7 +246,7 @@ table 50005 "Ligne Flotte & Maintenance"
         myInt: Integer;
     begin
         If Dif_KLM <> "Quantité" then
-            "%GASOIL_S/DIFF_KM" := (Dif_KLM / "Quantité")
+            "%GASOIL_S/DIFF_KM" := (Dif_KLM / "Quantité" * 100)
         else
             "%GASOIL_S/DIFF_KM" := 0;
 

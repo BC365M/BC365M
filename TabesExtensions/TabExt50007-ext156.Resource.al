@@ -79,13 +79,13 @@ tableextension 50007 "Resource" extends Resource
             begin
                 if ("Dernier KLM" <> 0) AND (FORMAT("Warnnin KM") <> '') then
                     "Prochaine Vidange" := (("Dernier KLM") - ("warnnin KM"));
-                Validate("Prochaine Vidange",0,warnnin);
+                Validate("Prochaine Vidange");
             end;
         }
         field(50080; "KLM Depart"; Decimal)
         {
             caption = 'KLM Depart';
-
+            // 
         }
 
     }
