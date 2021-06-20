@@ -264,7 +264,7 @@ table 50005 "Ligne Flotte & Maintenance"
     begin
         OldDimSetID := "Dimension Setr ID";
         //   "Dimension Setr ID" := DimMgt.EditDimensionSet2("Dimension Setr ID", StrSubstNo('%1 %2 %3', "Type Maintenance", No_Maintenance, "Line No_"),
-        //"Shortcut Dimension 1 Code");
+        //   "Shortcut Dimension 1 Code");
 
         if OldDimSetID <> "Dimension Setr ID" THEN begin
             Modify();

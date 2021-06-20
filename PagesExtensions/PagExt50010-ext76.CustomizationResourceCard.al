@@ -39,7 +39,31 @@ pageextension 50010 CustomizationResourceCard extends "Resource Card"
                 field("Warnnin KM"; "Warnnin KM") { ApplicationArea = all; }
                 field("Prochaine Vidange"; "Prochaine Vidange") { ApplicationArea = all; }
             }
-        }
 
+        }
+        addbefore(Alerts)
+
+        {
+            group("Gestion De Pneu Devant")
+            {
+                field(Pdevant_Gauche; Pdevant_Gauche) { Caption = 'DG1'; }
+                field(Pdevant_Gauche2; Pdevant_Gauche2) { caption = 'DG2'; }
+
+                field("D_Kilometrage Echange"; "D_Kilometrage Echange") { caption = 'Kilometrage echange Pneu devant'; }
+                field("D_Date echeange"; "D_Date echeange") { caption = 'Date d&echeange'; }
+                field(D_Kilometrage; D_Kilometrage) { caption = 'Kilometrage Pneu devant'; }
+                field(DNo_Serie; DNo_Serie) { caption = 'N° serie P devant'; }
+                field(Pdevant_Secours1; Pdevant_Secours1) { caption = 'Emplacement Secours 1'; }
+                field(Pdevant_Secours2; Pdevant_Secours2) { Caption = 'Emplacement Secours 2'; }
+                field(Pdevant_Droit1; Pdevant_Droit1) { Caption = 'Devant Droit 1'; }
+                field(Pdevant_Droit2; Pdevant_Droit2) { caption = 'Devant Droit 2'; }
+
+            }
+            group("Gestion De Pneu Arriere")
+            {
+                // field(){ }
+            }
+
+        }
     }
 }

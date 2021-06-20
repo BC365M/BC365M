@@ -88,26 +88,25 @@ tableextension 50007 "Resource" extends Resource
             // 
         }
         /// Gestion des Pneus
-        field(50050; "Pneu"; option)
-        {
-            Caption = 'Emplacement Pneu';
-            OptionMembers = Devant,Derriére;
-        }
+
         field(50051; Pdevant_Gauche; Option)
         {
-            Caption = 'Emplacement Pneu';
-            OptionMembers = DG1,DG2;
+            Caption = 'Devant Gauche 1';
+            OptionMembers = ,DG1;
         }
-        field(50052; Pdevant_Droit; Option)
+        field(50063; Pdevant_Gauche2; Option) { Caption = 'Devant Gauche 2'; OptionMembers = ,DG2; }
+        field(50052; Pdevant_Droit1; Option)
         {
-            Caption = 'Emplacement Pneu';
-            OptionMembers = DD1,DD2;
+            Caption = 'Devant Droit 1';
+            OptionMembers = ,DD1;
         }
-        field(50053; Pdevant_Secours; Option)
+        field(50064; Pdevant_Droit2; Option) { Caption = 'Devant Droit 2'; OptionMembers = ,DD2; }
+        field(50053; Pdevant_Secours1; Option)
         {
-            Caption = 'Emplacement Pneu';
-            OptionMembers = DS1,DS2;
+            Caption = 'Emplacement Secours 1';
+            OptionMembers = ,DS1;
         }
+        field(50062; Pdevant_Secours2; Option) { caption = 'Emplacement Secours 2'; OptionMembers = ,DS2; }
         field(50054; DNo_Serie; Integer)
         {
             Caption = 'N° serie P devant';
