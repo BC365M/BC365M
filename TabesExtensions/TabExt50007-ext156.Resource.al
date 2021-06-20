@@ -87,6 +87,43 @@ tableextension 50007 "Resource" extends Resource
             caption = 'KLM Depart';
             // 
         }
+        /// Gestion des Pneus
+        field(50050; "Pneu"; option)
+        {
+            Caption = 'Emplacement Pneu';
+            OptionMembers = Devant,Derriére;
+        }
+        field(50051; Pdevant_Gauche; Option)
+        {
+            Caption = 'Emplacement Pneu';
+            OptionMembers = DG1,DG2;
+        }
+        field(50052; Pdevant_Droit; Option)
+        {
+            Caption = 'Emplacement Pneu';
+            OptionMembers = DD1,DD2;
+        }
+        field(50053; Pdevant_Secours; Option)
+        {
+            Caption = 'Emplacement Pneu';
+            OptionMembers = DS1,DS2;
+        }
+        field(50054; DNo_Serie; Integer)
+        {
+            Caption = 'N° serie P devant';
+        }
+        field(50059; "D_Date echeange"; Date)
+        {
+            Caption = 'Date d&echeange';
+        }
+        field(50060; "D_Kilometrage"; Decimal)
+        {
+            Caption = 'Kilometrage Pneu devant';
+        }
+        field(50061; "D_Kilometrage Echange"; Decimal)
+        {
+            Caption = 'Kilometrage echange Pneu devant';
+        }
 
     }
 

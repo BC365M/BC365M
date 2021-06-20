@@ -22,6 +22,7 @@ page 50031 "Gestion des Flottes"
                 field("Type Maintenance"; "Type Maintenance")
                 {
                     ApplicationArea = all;
+                    Visible = false;
                 }
                 field("validé"; "validé") { ApplicationArea = all; }
 
@@ -136,7 +137,6 @@ page 50031 "Gestion des Flottes"
                             ManLedgerEntry.Validate(No_Maintenance, No_Maintenance);
                             ManLedgerEntry.Validate("Line No_", lines."Line No_");
                             ManLedgerEntry.Validate("Item No_", lines."Item No_");
-
                             ManLedgerEntry.Validate(DesignationMaintenance, lines.DesignationMaintenance);
                             ManLedgerEntry.Validate(kM_Actuel, lines.kM_Actuel);
                             ManLedgerEntry.Validate(KM_President, lines.KM_President);
@@ -149,19 +149,16 @@ page 50031 "Gestion des Flottes"
                             ManLedgerEntry.Validate("Type de Travail", lines."Type de Travail");
                             ManLedgerEntry.Validate("Type Ecriture", lines."Type Ecriture");
                             ManLedgerEntry.Validate("Type Maintenance", lines."Type Maintenance");
-
                             ManLedgerEntry.Validate(No_Bon, lines.No_Bon);
                             ManLedgerEntry.Validate(statut, lines.statut);
                             ManLedgerEntry.Insert(true);
-
                             itemJlLine.Init();
                             itemJlLine.Validate("Journal Template Name", 'ARTICLE');
                             itemJlLine.Validate("Journal Batch Name", 'MT');
                             itemJlLine.Validate("Line No.", lines."Line No_");
                             itemJlLine.Insert(true);
                             itemJlLine.Validate("Posting Date", today);
-                            itemJlLine.Validate("Document No.", rec.No_Maintenance);
-                            //itemJlLine.Validate("Entry Type", itemJlLine."Entry Type"::"Negative Adjmt.");
+                            itemJlLine.Validate("Entry Type", itemJlLine."Entry Type"::"Negative Adjmt.");
                             itemJlLine.validate("Entry Type", itemJlLine."Entry Type"::Consumption);
                             itemJlLine.validate("Item No.", lines."Item No_");
                             itemJlLine.Validate(Quantity, lines."Quantité");
@@ -202,6 +199,5 @@ page 50031 "Gestion des Flottes"
     var
         myInt: Integer;
         CurrentJnlBatchName: code[10];
-
         iseditable: Boolean;
 }

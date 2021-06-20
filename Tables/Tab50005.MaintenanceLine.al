@@ -188,6 +188,9 @@ table 50005 "Ligne Flotte & Maintenance"
 
             end;
         }
+        field(100; "Shortcut Dimension 1 Code"; Code[20]) { }
+        field(101; "Shortcut Dimension 2 Code"; Code[20]) { }
+        field(102; "Dimension Setr ID"; Integer) { }
 
 
 
@@ -206,6 +209,9 @@ table 50005 "Ligne Flotte & Maintenance"
         myInt: Integer;
         worktype: Record "Work Type";
         item: Record item;
+        DimMgt: Codeunit DimensionManagement;
+
+        ManiLine: Record "Ligne Flotte & Maintenance";
 
 
     trigger OnInsert()
@@ -250,6 +256,65 @@ table 50005 "Ligne Flotte & Maintenance"
         else
             "%GASOIL_S/DIFF_KM" := 0;
 
+    end;
+
+    procedure ShowDoc()
+    var
+        OldDimSetID: Integer;
+    begin
+        OldDimSetID := "Dimension Setr ID";
+        //   "Dimension Setr ID" := DimMgt.EditDimensionSet2("Dimension Setr ID", StrSubstNo('%1 %2 %3', "Type Maintenance", No_Maintenance, "Line No_"),
+        //"Shortcut Dimension 1 Code");
+
+        if OldDimSetID <> "Dimension Setr ID" THEN begin
+            Modify();
+            if maintenancelineExit then
+                updateAllLineDim("Dimension Setr ID", OldDimSetID);
+        END;
+
+    end;
+
+    local procedure maintenancelineExit(): Boolean
+    var
+    begin
+        ManiLine.Reset();
+        ManiLine.SetRange("Type Maintenance", "Type Maintenance");
+        ManiLine.SetRange(No_Maintenance, No_Maintenance);
+        exit(ManiLine.Find('-'));
+    end;
+
+    local procedure updateAllLineDim(NewParentDimSetID: Integer; OldParentDimSetID: Integer)
+    var
+        NewDimSetID: Integer;
+    begin
+        if NewParentDimSetID = OldParentDimSetID then
+            exit;
+        if not Confirm('vous avez probabelment modifier un axe analytique') Then
+            exit;
+        ManiLine.Reset();
+        ManiLine.SetRange("Type Maintenance", "Type Maintenance");
+        ManiLine.SetRange(No_Maintenance, No_Maintenance);
+        ManiLine.LockTable();
+        if ManiLine.find('-') then
+            repeat
+                NewDimSetID := DimMgt.GetDeltaDimSetID(ManiLine."Dimension Setr ID", NewParentDimSetID, OldParentDimSetID);
+                if ManiLine."Dimension Setr ID" <> NewDimSetID then begin
+                    ManiLine."Dimension Setr ID" := NewDimSetID;
+                    DimMgt.UpdateGlobalDimFromDimSetID(
+                        ManiLine."Dimension Setr ID", ManiLine."Shortcut Dimension 1 Code", ManiLine."Shortcut Dimension 2 Code");
+                    ManiLine.Modify();
+                end;
+            until ManiLine.Next = 0;
+
+
+    end;
+
+    local procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
+
+    var
+
+    begin
+        DimMgt.ValidateShortcutDimValues(FieldNumber, ShortcutDimCode, "Dimension Setr ID");
     end;
 
     procedure checkStatus()

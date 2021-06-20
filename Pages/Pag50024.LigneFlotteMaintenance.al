@@ -57,10 +57,27 @@ page 50024 "Ligne Flotte Maintenance"
             }
         }
     }
+    actions
+    {
+        area(Processing)
+        {
+            action("Axe Analytique")
+            {
+                ApplicationArea = Dimension;
+                Image = Dimensions;
+                Promoted = true;
+                AccessByPermission = TableData Dimension = R;
+                Caption = 'Axes Analytiques';
 
+                trigger OnAction()
+                var
 
-
+                begin
+                    ShowDoc();
+                    CurrPage.SAVERECORD;
+                end;
+            }
+        }
+    }
     var
-
-
 }
