@@ -78,6 +78,10 @@ table 50008 "Resource Ledger Entry"
         {
             DataClassification = ToBeClassified;
         }
+        field(107; "Document No."; Code[20])
+        {
+            DataClassification = ToBeClassified;
+        }
     }
 
     keys

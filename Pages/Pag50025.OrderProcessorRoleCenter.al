@@ -12,6 +12,10 @@ page 50025 "Order Processor RC Spec"
             {
                 ApplicationArea = Basic, Suite;
             }
+            part(FollowingNotification; "Following Notification")
+            {
+                ApplicationArea = Basic, Suite;
+            }
             part(maintenanceAct; "Maintenance Activities")
             {
                 ApplicationArea = Basic, Suite;

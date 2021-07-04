@@ -124,6 +124,21 @@ tableextension 50007 "Resource" extends Resource
             Caption = 'Kilometrage echange Pneu devant';
         }
 
+        field(50122; "Total Mileage"; Decimal)
+        {
+            BlankZero = true;
+            FieldClass = FlowField;
+            CalcFormula = sum ("Resource Ledger Entry"."Diff. Mileage" where ("Resource No." = field ("No.")));
+            Editable = false;
+        }
+        field(50130; "Total Cost"; Decimal)
+        {
+            BlankZero = true;
+            FieldClass = FlowField;
+            CalcFormula = sum ("Resource Ledger Entry"."Total Cost" where ("Resource No." = field ("No."), "Posting Date" = field ("Date Filter")));
+            Editable = false;
+        }
+
     }
 
 }

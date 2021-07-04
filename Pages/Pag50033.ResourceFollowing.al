@@ -43,6 +43,14 @@ page 50033 "Resource Following"
                 {
                     ApplicationArea = All;
                 }
+                field("Notify Date Before";"Notify Date Before")
+                {
+                    ApplicationArea = All;
+                }
+                field("Notify Date Replacement";"Notify Date Replacement")
+                {
+                    ApplicationArea = All;
+                }
                 field("Replace Every"; "Replace Every")
                 {
                     ApplicationArea = All;
@@ -52,6 +60,14 @@ page 50033 "Resource Following"
                     ApplicationArea = All;
                 }
                 field("Next Mileage Replacement"; "Next Mileage Replacement")
+                {
+                    ApplicationArea = All;
+                }
+                field("Notify Mileage Before";"Notify Mileage Before")
+                {
+                    ApplicationArea = All;
+                }
+                field("Notify Mileage Replacement";"Notify Mileage Replacement")
                 {
                     ApplicationArea = All;
                 }

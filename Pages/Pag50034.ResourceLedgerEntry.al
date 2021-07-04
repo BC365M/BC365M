@@ -19,6 +19,10 @@ page 50034 "Resource Ledger Entry"
                 {
                     ApplicationArea = All;
                 }
+                field("Document No.";"Document No.")
+                {
+                    ApplicationArea = All;
+                }
                 field("Resource No."; "Resource No.")
                 {
                     ApplicationArea = All;

@@ -17,6 +17,10 @@ page 50036 "Resource Following Card"
                 {
                     ApplicationArea = All;
                 }
+                field("No. AsP"; "No. As")
+                {
+                    ApplicationArea = All;
+                }
                 field("No."; "No.")
                 {
                     ApplicationArea = All;
@@ -32,6 +36,10 @@ page 50036 "Resource Following Card"
                     begin
                         setGrVisibility();
                     end;
+                }
+                field(Blocked; Blocked)
+                {
+                    ApplicationArea = All;
                 }
                 field("Total Mileage"; "Total Mileage")
                 {
@@ -59,6 +67,14 @@ page 50036 "Resource Following Card"
                 {
                     ApplicationArea = All;
                 }
+                field("Notify Date Before"; "Notify Date Before")
+                {
+                    ApplicationArea = All;
+                }
+                field("Notify Date Replacement"; "Notify Date Replacement")
+                {
+                    ApplicationArea = All;
+                }
             }
             group(grMileage)
             {
@@ -74,6 +90,14 @@ page 50036 "Resource Following Card"
                     ApplicationArea = All;
                 }
                 field("Next Mileage Replacement"; "Next Mileage Replacement")
+                {
+                    ApplicationArea = All;
+                }
+                field("Notify Mileage Before"; "Notify Mileage Before")
+                {
+                    ApplicationArea = All;
+                }
+                field("Notify Mileage Replacement"; "Notify Mileage Replacement")
                 {
                     ApplicationArea = All;
                 }

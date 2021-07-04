@@ -20,6 +20,14 @@ pageextension 50010 CustomizationResourceCard extends "Resource Card"
 
             }
 
+            field("Total Mileage"; "Total Mileage")
+            {
+                ApplicationArea = all;
+            }
+            field("Total Cost"; "Total Cost")
+            {
+                ApplicationArea = all;
+            }
 
         }
         addbefore(Invoicing)

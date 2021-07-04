@@ -18,6 +18,20 @@ table 50010 "Following"
         {
             DataClassification = ToBeClassified;
         }
+        field(5; "Mileage Tracking"; Boolean)
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(9; "Notify"; Boolean)
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(10; "Following Count"; Integer)
+        {
+            FieldClass = FlowField;
+            CalcFormula = count ("Resource Following" where (code = field (code)));
+            BlankZero = true;
+        }
     }
 
 
