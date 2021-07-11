@@ -90,6 +90,10 @@ table 50008 "Resource Ledger Entry"
         {
             Clustered = true;
         }
+        key(PD; "Posting Date")
+        {
+
+        }
     }
 
     var

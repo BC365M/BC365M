@@ -8,11 +8,38 @@ report 50001 "Resource Stat"
         dataitem(Resource; Resource)
         {
             RequestFilterFields = "No.", "Resource Group No.", "Date Filter";
+            PrintOnlyIfDetail = true;
             column(No_; "No.") { }
             column(Name; Name) { }
             column(Sales__Cost_; "Sales (Cost)") { }
             column(Sales__Price_; "Sales (Price)") { }
             column(Total_Cost; "Total Cost") { }
+
+            dataitem("Resource Following"; "Resource Following")
+            {
+                DataItemLink = "Resource No." = FIELD ("No.");
+                DataItemTableView = sorting ("Resource No.");
+                PrintOnlyIfDetail = true;
+                column(followCode; code) { }
+                column(followNo; "No.") { }
+                column(followDesc; description) { }
+                dataitem("Resource Ledger Entry"; "Resource Ledger Entry")
+                {
+                    DataItemLink = "Resource No." = FIELD ("Resource No."), "Code" = FIELD ("Code");
+                    DataItemTableView = sorting ("posting Date");
+                    
+                    column(Entry_No_; "Entry No.") { }
+                    column(Posting_Date; format("Posting Date")) { }
+                    column(Item_No_; "Item No.") { }
+                    column(RLEDesc; description) { }
+                    column(RLETotal_Cost; "Total Cost") { }
+                    trigger OnPreDataItem()
+                    begin
+                        if Resource.GetFilter("Date Filter") <> '' then
+                            SetFilter("Posting Date", Resource.GetFilter("Date Filter"));
+                    end;
+                }
+            }
         }
     }
     // requestpage
