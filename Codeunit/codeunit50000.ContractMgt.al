@@ -228,7 +228,7 @@ codeunit 50000 "Contract Managment"
                                 OtherSalesLines.SETRANGE("Document Type", "Document Type");
                                 OtherSalesLines.SETRANGE("Document No.", "Document No.");
                                 OtherSalesLines.SETRANGE(Type, Type);
-                                //OtherSalesLines.SETRANGE("No.", "No.");
+                                OtherSalesLines.SETRANGE("No.", "No.");
                                 OtherSalesLines.SetRange("Resource Group No.", "Resource Group No.");
                                 OtherSalesLines.SETRANGE("Unit of Measure Code", "Unit of Measure Code");
                                 OtherSalesLines.SETRANGE("Zone No.", "Zone No.");
