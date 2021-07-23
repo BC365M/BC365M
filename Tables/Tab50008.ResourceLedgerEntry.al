@@ -69,6 +69,8 @@ table 50008 "Resource Ledger Entry"
             DataClassification = ToBeClassified;
             BlankZero = true;
         }
+        //
+        field(50000; "N° Serie"; code[60]) { }
         field(100; "Entry No."; Integer)
         {
             DataClassification = ToBeClassified;
@@ -82,6 +84,7 @@ table 50008 "Resource Ledger Entry"
         {
             DataClassification = ToBeClassified;
         }
+        field(30; "%GASOIL_S/DIFF_KM"; Decimal) { DataClassification = CustomerContent; }
     }
 
     keys
@@ -111,6 +114,7 @@ table 50008 "Resource Ledger Entry"
 
     trigger OnDelete()
     begin
+        Error('Vous nous pouvez pas Supprimer Une ressource Avec Des écritures Enregistrer');
 
     end;
 

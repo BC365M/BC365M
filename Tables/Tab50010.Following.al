@@ -3,6 +3,7 @@ table 50010 "Following"
     DataClassification = ToBeClassified;
     LookupPageId = "Following List";
     DrillDownPageId = "Following List";
+    caption = 'Liste Suivi';
 
     fields
     {
@@ -67,6 +68,7 @@ table 50010 "Following"
 
     trigger OnDelete()
     begin
+        Error('Vous nous pouvez pas Supprimer Une ressource Avec Des écritures Enregistrer');
 
     end;
 

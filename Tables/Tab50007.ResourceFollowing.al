@@ -9,6 +9,7 @@ table 50007 "Resource Following"
         {
             DataClassification = ToBeClassified;
             TableRelation = Resource;
+
         }
         field(2; "Code"; code[20])
         {
@@ -148,12 +149,14 @@ table 50007 "Resource Following"
 
     trigger OnDelete()
     begin
-
+        If ("Total Cost" <> 0) And ("Total Mileage" <> 0) then
+            Error('Vous nous pouvez pas Supprimer Une ressource Avec Des écritures Enregistrer');
     end;
 
     trigger OnRename()
     begin
-
+        If ("Total Cost" <> 0) And ("Total Mileage" <> 0) then
+            Error('Vous nous pouvez pas Supprimer Une ressource Avec Des écritures Enregistrer');
     end;
 
     local procedure UpdateNextDate()

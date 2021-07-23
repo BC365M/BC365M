@@ -1,9 +1,11 @@
 page 50035 "Following List"
 {
     PageType = List;
+    Caption = 'Liste Suivi';
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = Following;
+
     layout
     {
         area(Content)
@@ -17,18 +19,22 @@ page 50035 "Following List"
                 field(Description; Description)
                 {
                     ApplicationArea = All;
+                    Caption = 'Designation';
                 }
                 field("Following Type"; "Following Type")
                 {
                     ApplicationArea = All;
+                    Caption = 'Type Suivie';
                 }
                 field("Mileage Tracking"; "Mileage Tracking")
                 {
                     ApplicationArea = All;
+                    Caption = 'Suivi du kilométrage';
                 }
                 field(Notify; Notify)
                 {
                     ApplicationArea = All;
+                    Caption = 'Notifier';
                 }
             }
         }
@@ -58,6 +64,7 @@ page 50035 "Following List"
 page 50038 "Following Notification"
 {
     PageType = ListPart;
+    Caption = 'Suite à la notification';
     SourceTable = Following;
     SourceTableView = where (Notify = const (true));
     Editable = false;
@@ -74,16 +81,19 @@ page 50038 "Following Notification"
                 field(Description; Description)
                 {
                     ApplicationArea = All;
+                    Caption = 'Designation';
                 }
                 field("Following Count"; "Following Count")
                 {
                     ApplicationArea = All;
+                    Caption = 'Compte suivant';
                 }
                 field("Mileage Notify"; "Mileage Notify Count")
                 {
                     ApplicationArea = All;
                     BlankZero = true;
                     Editable = false;
+                    Caption = 'Nombre de notifications de kilométrage';
 
                     trigger OnDrillDown()
                     var
@@ -109,6 +119,7 @@ page 50038 "Following Notification"
                     ApplicationArea = All;
                     BlankZero = true;
                     Editable = false;
+                    Caption = 'Durée Notifier';
 
                     trigger OnDrillDown()
                     var

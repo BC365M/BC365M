@@ -2,6 +2,7 @@ page 50036 "Resource Following Card"
 {
     PageType = Card;
     SourceTable = "Resource Following";
+    Caption = 'Ressource Suivi';
 
     layout
     {

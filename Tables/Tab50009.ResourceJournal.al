@@ -51,7 +51,7 @@ table 50009 "Resource Follow Journal"
             begin
                 recFollowing.Get(code);
                 "Following Type" := recFollowing."Following Type";
-                validate("Mileage Tracking",recFollowing."Mileage Tracking");
+                validate("Mileage Tracking", recFollowing."Mileage Tracking");
                 if (Description = '') then
                     Description := recFollowing.Description;
             end;
@@ -64,7 +64,47 @@ table 50009 "Resource Follow Journal"
         {
             DataClassification = ToBeClassified;
             TableRelation = item;
+            trigger OnValidate()
+
+            begin
+                item.get("Item No.");
+                item.TestField(Blocked, false);
+                "Unit Cost" := item."Unit Cost";
+                "Unit Cost" := item."Last Direct Cost";
+
+
+            end;
         }
+        field(50000; "N° Serie"; code[20])
+        {
+            Caption = 'N° serie';
+
+        }
+        field(5005; "Variant Code"; code[10])
+        {
+            TableRelation = "Item Variant".Code WHERE ("Item No." = FIELD ("Item No."));
+        }
+        field(50001; "Lot No."; code[50])
+        {
+            Editable = false;
+        }
+        field(50002; "Quantity (Base)"; Decimal)
+        {
+
+        }
+        field(50003; "Invoiced Qty. (Base)"; Decimal)
+        {
+            trigger OnValidate()
+            begin
+                // TestField("Qty. per Unit of Measure", 1);
+                // Validate(Quantity, "Quantity (Base)");
+            end;
+        }
+        field(50004; "Qty. per Unit of Measure"; Decimal)
+        {
+
+        }
+
         field(14; "Unit of Measure Code"; Code[10])
         {
             Caption = 'Unit of Measure Code';
@@ -72,13 +112,23 @@ table 50009 "Resource Follow Journal"
             ELSE
             "Unit of Measure";
         }
+        field(25; "Location Code"; code[10])
+        {
+            TableRelation = Location.Code;
+            DataClassification = ToBeClassified;
+
+        }
         field(15; Quantity; Decimal)
         {
             DataClassification = ToBeClassified;
             BlankZero = true;
             trigger OnValidate()
+
             begin
                 UpdateAmount();
+                calcDiffSortie();
+
+
             end;
         }
         field(16; "Unit Cost"; Decimal)
@@ -86,7 +136,10 @@ table 50009 "Resource Follow Journal"
             DataClassification = ToBeClassified;
             BlankZero = true;
             trigger OnValidate()
+
             begin
+                TestField("Item No.");
+
                 UpdateAmount();
             end;
         }
@@ -137,7 +190,31 @@ table 50009 "Resource Follow Journal"
             DataClassification = ToBeClassified;
             BlankZero = true;
             Editable = false;
+            trigger OnValidate()
+            begin
+                calcDiffSortie();
+            end;
         }
+        field(30; "%GASOIL_S/DIFF_KM"; Decimal)
+        {
+            DataClassification = CustomerContent;
+            Editable = false;
+        }
+        field(31; StockDispo; Decimal)
+        {
+            CalcFormula = sum ("Item Ledger Entry".Quantity where ("Item No." = field ("Item No."), "Location Code" = field ("Location Code")));
+            FieldClass = FlowField;
+        }
+        field(55; "Shortcut Dimension 7 Code"; code[20])
+        {
+            CaptionClass = 'Chauffeur';
+            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No." = CONST (7));
+            trigger OnValidate()
+            begin
+
+            end;
+        }
+
     }
 
     keys
@@ -150,6 +227,12 @@ table 50009 "Resource Follow Journal"
 
     var
         myInt: Integer;
+        item: Record Item;
+        UOMMgt: Codeunit "Unit of Measure Management";
+        ReserveItemJnlLine: Codeunit 50000;
+        ItemTrackingMgt: Codeunit "Item Tracking Management";
+        serialNumber: Record "Serial No. Information";
+
 
     trigger OnInsert()
     begin
@@ -163,6 +246,8 @@ table 50009 "Resource Follow Journal"
 
     trigger OnDelete()
     begin
+        if rec."Entry No." <> xRec."Entry No." then
+            Error('Vous nous pouvez pas Supprimer Une ressource Avec Des écritures Enregistrer');
 
     end;
 
@@ -183,6 +268,21 @@ table 50009 "Resource Follow Journal"
             "Diff. Mileage" := "Actual Mileage" - "Last Mileage"
         else
             "Diff. Mileage" := 0;
+    end;
+    // Dev 18/07/2021 sa
+
+
+
+    local procedure calcDiffSortie()
+    var
+        myInt: Integer;
+        Folowres: Record 50009;
+    begin
+        If ("Diff. Mileage" <> Quantity) AND (Folowres.Code = 'VIDANGE') then
+            "%GASOIL_S/DIFF_KM" := ("Diff. Mileage" / Quantity * 100)
+        else
+            "%GASOIL_S/DIFF_KM" := 0;
+
     end;
 
 }

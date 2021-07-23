@@ -5733,7 +5733,7 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
               <Top>3.0886cm</Top>
               <Left>0.03748cm</Left>
               <Height>11pt</Height>
-              <Width>2.58116cm</Width>
+              <Width>3.08387cm</Width>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
               </Style>
@@ -5758,7 +5758,7 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
               <Top>3.54015cm</Top>
               <Left>0.03748cm</Left>
               <Height>11pt</Height>
-              <Width>2.58116cm</Width>
+              <Width>3.08387cm</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <VerticalAlign>Middle</VerticalAlign>
@@ -5784,7 +5784,7 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
                 </Paragraph>
               </Paragraphs>
               <Top>3.08861cm</Top>
-              <Left>2.61864cm</Left>
+              <Left>3.25364cm</Left>
               <Height>11pt</Height>
               <Width>4.78452cm</Width>
               <ZIndex>2</ZIndex>
@@ -5812,7 +5812,7 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
                 </Paragraph>
               </Paragraphs>
               <Top>3.54016cm</Top>
-              <Left>2.61864cm</Left>
+              <Left>3.25364cm</Left>
               <Height>11pt</Height>
               <Width>4.78452cm</Width>
               <ZIndex>3</ZIndex>
@@ -6036,7 +6036,7 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
                 </Paragraph>
               </Paragraphs>
               <Top>3.97055cm</Top>
-              <Left>2.61864cm</Left>
+              <Left>3.25364cm</Left>
               <Height>11pt</Height>
               <Width>4.78452cm</Width>
               <ZIndex>6</ZIndex>
@@ -6064,7 +6064,7 @@ Cstr(Fields!CompanyInfoFaxNo.Value)
               <Top>3.96028cm</Top>
               <Left>0.10513cm</Left>
               <Height>0.39831cm</Height>
-              <Width>2.48176cm</Width>
+              <Width>3.01622cm</Width>
               <ZIndex>7</ZIndex>
               <Style>
                 <Border>

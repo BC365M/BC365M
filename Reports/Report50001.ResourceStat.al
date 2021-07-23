@@ -20,19 +20,23 @@ report 50001 "Resource Stat"
                 DataItemLink = "Resource No." = FIELD ("No.");
                 DataItemTableView = sorting ("Resource No.");
                 PrintOnlyIfDetail = true;
-                column(followCode; code) { }
-                column(followNo; "No.") { }
-                column(followDesc; description) { }
+                column(followCode; code) { Caption = 'Code Suivi'; }
+                column(followNo; "No.") { Caption = 'No'; }
+                column(followDesc; description) { Caption = 'Designation'; }
                 dataitem("Resource Ledger Entry"; "Resource Ledger Entry")
                 {
                     DataItemLink = "Resource No." = FIELD ("Resource No."), "Code" = FIELD ("Code");
                     DataItemTableView = sorting ("posting Date");
-                    
+
                     column(Entry_No_; "Entry No.") { }
                     column(Posting_Date; format("Posting Date")) { }
                     column(Item_No_; "Item No.") { }
                     column(RLEDesc; description) { }
                     column(RLETotal_Cost; "Total Cost") { }
+                    column(GASOIL_S_DIFF_KM; "%GASOIL_S/DIFF_KM")
+                    {
+
+                    }
                     trigger OnPreDataItem()
                     begin
                         if Resource.GetFilter("Date Filter") <> '' then

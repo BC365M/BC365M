@@ -136,6 +136,60 @@ codeunit 50000 "Contract Managment"
         ItemLedgerEntry."Delivery Date" := ItemJournalLine."Delivery Date";
     end;
 
+    // SA JNL SerialLine SerialN° managment
+    var
+        ReservMgt: Codeunit "Reservation Management";
+        CreateReservEntry: Codeunit "Create Reserv. Entry";
+        ReservEngineMgt: Codeunit "Reservation Engine Mgt.";
+        /*
+            procedure CallItemTracking1(VAR ItemJnlResLine: Record "Resource Follow Journal"; IsReclass: Boolean)
+
+            var
+                TrackingSpecification: Record "Tracking Specification";
+                ReservEntry: Record "Reservation Entry";
+                ItemTrackingLines: Page "Item Tracking Lines";
+            begin
+                ItemJnlResLine.TestField("Item No.");
+                ReservEngineMgt.InitFilterAndSortingFor(ReservEntry, false);
+                FilterReservFor1(ReservEntry, ItemJnlResLine);
+                ReservEntry.ClearTrackingFilter();
+                if ReservEntry.IsEmpty then
+                    Error('<Vous ne pouvez pas définir de traçabilité pour l enregistrement %1 %2.>');
+                TrackingSpecification.InitFromItemJnlLine1(ItemJnlResLine);
+                if IsReclass then
+                    ItemTrackingLines.SetFormRunMode(1);
+                // InitTrackingSpecification(ItemJnlResLine, TrackingSpecification);
+                ItemTrackingLines.SetSourceSpec(TrackingSpecification, ItemJnlResLine."Posting Date");
+                ItemTrackingLines.SetInbound(ItemJnlResLine.IsInbound);
+                ItemTrackingLines.RunModal();
+            end;*/
+
+        /* procedure InitTrackingSpecification(var JournResline: record "Resource Follow Journal"; Var TrackingSpecification: Record "Tracking Specification")
+         begin
+             TrackingSpecification.init;
+             TrackingSpecification."Source Type" := Database::"Resource Follow Journal";
+             with JournResline do begin
+                 TrackingSpecification."Item No." := "Item No.";
+                 TrackingSpecification."Location Code" := "Location Code";
+                 TrackingSpecification.Description := Description;
+                 TrackingSpecification."Source ID" := "Document No.";
+                 TrackingSpecification."Source Batch Name" := '';
+                 TrackingSpecification."Source Ref. No." := "Entry No.";
+                 TrackingSpecification."Quantity (Base)" := Quantity;
+
+             end;
+         end;*/
+        /*
+            procedure FilterReservFor1(VAR FilterReservEntry: Record "Reservation Entry"; ItemJnlResLine: Record "Resource Follow Journal")
+            var
+
+            begin
+
+                FilterReservEntry.SetTrackingFilterFromItemJnlLine1(ItemJnlResLine);
+            end;*/
+        // SA JNL SerialLine SerialN° managment
+
+
     [EventSubscriber(ObjectType::Codeunit, 700, 'OnConditionalCardPageIDNotFound', '', true, true)]
     local procedure OnConditionalCardPageIDNotFound(RecordRef: RecordRef; var CardPageID: Integer);
     var
@@ -228,7 +282,7 @@ codeunit 50000 "Contract Managment"
                                 OtherSalesLines.SETRANGE("Document Type", "Document Type");
                                 OtherSalesLines.SETRANGE("Document No.", "Document No.");
                                 OtherSalesLines.SETRANGE(Type, Type);
-                                OtherSalesLines.SETRANGE("No.", "No.");
+                                OtherSalesLines.SETRANGE("No.", "No.");// separation ressource prix
                                 OtherSalesLines.SetRange("Resource Group No.", "Resource Group No.");
                                 OtherSalesLines.SETRANGE("Unit of Measure Code", "Unit of Measure Code");
                                 OtherSalesLines.SETRANGE("Zone No.", "Zone No.");
@@ -266,7 +320,7 @@ codeunit 50000 "Contract Managment"
                                 OtherSalesLines.SETRANGE("Document Type", "Document Type");
                                 OtherSalesLines.SETRANGE("Document No.", "Document No.");
                                 OtherSalesLines.SETRANGE(Type, Type);
-                                //OtherSalesLines.SETRANGE("No.", "No.");
+                                OtherSalesLines.SETRANGE("No.", "No.");// separation ressource sabe
                                 OtherSalesLines.SetRange("Resource Group No.", "Resource Group No.");
                                 OtherSalesLines.SETRANGE("Unit of Measure Code", "Unit of Measure Code");
                                 //OtherSalesLines.SETRANGE("Zone No.", "Zone No.");

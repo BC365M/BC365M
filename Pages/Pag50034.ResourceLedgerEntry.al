@@ -4,6 +4,7 @@ page 50034 "Resource Ledger Entry"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = "Resource Ledger Entry";
+    Caption = 'Ecritures Comptable Ressource';
 
     layout
     {
@@ -19,7 +20,7 @@ page 50034 "Resource Ledger Entry"
                 {
                     ApplicationArea = All;
                 }
-                field("Document No.";"Document No.")
+                field("Document No."; "Document No.")
                 {
                     ApplicationArea = All;
                 }
@@ -62,6 +63,10 @@ page 50034 "Resource Ledger Entry"
                 field("Last Mileage"; "Last Mileage")
                 {
                     ApplicationArea = All;
+                }
+                field("N° Serie"; "N° Serie")
+                {
+                    ApplicationArea = all;
                 }
                 field("Actual Mileage"; "Actual Mileage")
                 {

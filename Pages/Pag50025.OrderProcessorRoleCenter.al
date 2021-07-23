@@ -1,6 +1,6 @@
 page 50025 "Order Processor RC Spec"
 {
-    Caption = 'Sales Order Processor', Comment = '{Dependency=Match,"ProfileDescription_ORDERPROCESSOR"}';
+    Caption = 'Préparateur de Commande SMIMI', Comment = '{Dependency=Match,"ProfileDescription_ORDERPROCESSOR"}';
 
     PageType = RoleCenter;
 
@@ -16,10 +16,10 @@ page 50025 "Order Processor RC Spec"
             {
                 ApplicationArea = Basic, Suite;
             }
-            part(maintenanceAct; "Maintenance Activities")
+            /*part(maintenanceAct; "Maintenance Activities")
             {
                 ApplicationArea = Basic, Suite;
-            }
+            }*/
             part(Control1901851508; "SO Processor Activities")
             {
                 AccessByPermission = TableData "Sales Shipment Header" = R;

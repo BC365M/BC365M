@@ -16,6 +16,7 @@ pageextension 50004 "Item Ledger Entries" extends "Item Ledger Entries"
             field(Avance; Avance) { ApplicationArea = All; }
             field(Matricule; Matricule) { ApplicationArea = All; }
 
+
         }
     }
 

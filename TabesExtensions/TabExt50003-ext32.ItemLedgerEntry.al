@@ -76,5 +76,7 @@ tableextension 50003 "Item Ledger Entry" extends "Item Ledger Entry"
             DataClassification = ToBeClassified;
         }
         field(50100; "Resource No_"; code[20]) { DataClassification = CustomerContent; }
+        field(500101; "Serial Number"; code[60]) { DataClassification = CustomerContent; }
+
     }
 }
